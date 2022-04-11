@@ -3,6 +3,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
 }
 
 
@@ -15,3 +17,19 @@ h2 {
   line-height: 63px;
   letter-spacing:-0.1px;
 }
+
+
+section {
+  font-size: 24px;
+  line-height: 1.618;
+}
+
+section b {
+  font-weight: 500;
+}
+
+
+footer {
+  font-size: 200px;
+}
+

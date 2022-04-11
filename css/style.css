@@ -1,7 +1,17 @@
 @import url("fonts.css");
 @import url("colors.css");
 
+.hero {
+  text-align: center;
+}
 
 section {
   height: 100vh;
+  margin: 0 40px;
+}
+
+footer {
+  background-color: var(--white);
+  color: var(--black);
+  white-space: nowrap;
 }
