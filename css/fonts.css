@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@600&family=Inter:wght@300;500&display=swap');
+
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+
+h1, h2 {
+  font-family: 'Epilogue', sans-serif;
+}
+
+h2 {
+  font-size: 60px;
+  line-height: 63px;
+  letter-spacing:-0.1px;
+}
