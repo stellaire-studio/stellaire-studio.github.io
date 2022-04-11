@@ -12,6 +12,31 @@
     </head>
     <body>
 
-        <p>Landing Page</p>
+      <p>Landing Page</p>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script>
+      function smooth() {
+        let scrollContainer = document.querySelector('[data-scroll-container]');
+        scroll = new LocomotiveScroll({
+          el: scrollContainer,
+          smooth: true,
+          getDirection: true,
+          lerp: 0.1,
+          getSpeed: true,
+          smartphone: {
+           smooth: false
+          },
+          tablet: {
+            smooth: true
+          }
+        });
+
+        setTimeout(() => {
+          scroll.update();
+        }, 500);
+      }
+      let scroll;
+      smooth();
+    </script>
     </body>
 </html>
