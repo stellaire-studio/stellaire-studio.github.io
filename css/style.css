@@ -12,6 +12,7 @@ section {
   margin: 0 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  position: relative;
 }
 
 .align-right {
@@ -26,5 +27,11 @@ footer {
 footer span {
   color: var(--black);
   white-space: nowrap;
+}
+
+/* ANIMATIONS */
+lottie-player {
+  position: absolute;
+  right: 0;
 }
 
