@@ -1,0 +1,19 @@
+@import url("colors.css");
+
+.gradient {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  filter: blur(100px);
+  animation: gradientAnimation 10s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100vw);
+  }
+}

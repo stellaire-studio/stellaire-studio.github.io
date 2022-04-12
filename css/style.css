@@ -1,17 +1,30 @@
 @import url("fonts.css");
 @import url("colors.css");
+@import url("gradients.css");
 
 .hero {
   text-align: center;
+  height: 100vh;
 }
 
 section {
   height: 100vh;
   margin: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.align-right {
+  grid-column: 2;
 }
 
 footer {
   background-color: var(--white);
+  overflow: hidden;
+}
+
+footer span {
   color: var(--black);
   white-space: nowrap;
 }
+
