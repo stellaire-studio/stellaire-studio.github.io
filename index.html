@@ -7,10 +7,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
   </head>
   <body data-scroll-container>
     <div class="cursor"></div>
@@ -40,38 +43,42 @@
 
     <section id="after-hero">
       <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_7ktxaqhj.json" background="transparent"  speed=".5"  style="width: 1440px; height: 500px;" loop autoplay></lottie-player>
-      <div data-aos="fade-up" class="content">
-        Viser les étoiles c’est important, mais au quotidien, ce qui compte c’est que votre petite planète continue à tourner. <br><br>
+      <div class="content">
+        <span data-aos="fade-up">
+          Viser les étoiles c’est important, mais au quotidien, ce qui compte c’est que votre petite planète continue à tourner. <br><br>
 
-        Vous le sentez, ça pourrait être plus pratique pour vos équipes et vos clients, plus rapide, moins répétitif. <br><br>
+          Vous le sentez, ça pourrait être plus pratique pour vos équipes et vos clients, plus rapide, moins répétitif. <br><br>
 
-        <b>Avec des outils de travail numériques personnalisés, vous pourriez rendre le temps aux choses utiles.</b>
+          <b>Avec des outils de travail numériques personnalisés, vous pourriez rendre le temps aux choses utiles.</b>
+        </span>
       </div>
     </section>
 
     <section>
-      <div class="content align-right">
-        <span class="overtitre">Notre pari</span>
-        <h2>Viser les étoiles avec vous en éclaireur. </h2>
+      <div data-aos="fade-up" class="content align-right">
+        <span data-aos="fade-up" class="overtitre">Notre pari</span>
+        <h2 data-aos="fade-up">Viser les étoiles avec vous en éclaireur. </h2>
+        <span data-aos="fade-up" >
+          Vous connaissez bien votre écosystème, vous vous dites qu’il y a un coup à jouer, en construisant la bonne fusée pour profiter du basculement gravitationnel en cours.<br><br>
 
-        Vous connaissez bien votre écosystème, vous vous dites qu’il y a un coup à jouer, en construisant la bonne fusée pour profiter du basculement gravitationnel en cours.<br><br>
+          <b>Soyez notre pionnier, faites nous découvrir tout ce qui tourne autour de votre sphère.</b><br><br>
 
-        <b>Soyez notre pionnier, faites nous découvrir tout ce qui tourne autour de votre sphère.</b><br><br>
-
-        À nous, explorateurs, architectes, bâtisseurs et designer de votre évolution numérique.
+          À nous, explorateurs, architectes, bâtisseurs et designer de votre évolution numérique.
+        </span>
       </div>
     </section>
 
     <section>
       <div class="content">
-        <span class="overtitre">Notre SAAS odyssée</span>
-        <h2>Comprendre votre planète, conquérir la galaxie. </h2>
+        <span data-aos="fade-up" class="overtitre">Notre SAAS odyssée</span>
+        <h2 data-aos="fade-up">Comprendre votre planète, conquérir la galaxie. </h2>
+          <span data-aos="fade-up">
+            Une fois déployées, nos solutions logicielles apportent une réponse collective à un besoin partagé. <br><br>
 
-          Une fois déployées, nos solutions logicielles apportent une réponse collective à un besoin partagé. <br><br>
+            Nous ne visons pas les marchés planétaires, nous permettons aux organisations d’un même univers d'être plus efficaces avec le même produit. <br><br>
 
-          Nous ne visons pas les marchés planétaires, nous permettons aux organisations d’un même univers d'être plus efficaces avec le même produit. <br><br>
-
-          Rendre les humains plus heureux au travail, pour nous c’est atteindre les étoiles. Avec vous, ça serait encore mieux.
+            Rendre les humains plus heureux au travail, pour nous c’est atteindre les étoiles. Avec vous, ça serait encore mieux.
+          </span>
       </div>
     </section>
     <marquee class="footer">
@@ -81,10 +88,13 @@
 
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/shader.js"></script>
   <script>
+    AOS.init();
+
+
     // Wrap every letter in a span
     var textWrapper = document.querySelector('.ml16');
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -112,8 +122,7 @@
         delay: (el, i) => 30 * i
       });
 
-    // Init AOS Fade on scroll library
-    AOS.init();
+
 
     // Initialize locomotive scroll
     function smooth() {

@@ -13,7 +13,7 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 60px;
   margin-top: 8px;
   overflow: hidden;
   opacity: 0;
@@ -26,7 +26,7 @@ h1 {
 
 h2 {
   font-size: 60px;
-  line-height: 63px;
+  line-height: 64px;
   letter-spacing:-0.1px;
   margin-top: 16px;
 }
