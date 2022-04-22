@@ -16,7 +16,7 @@
     <div class="cursor"></div>
     <main class="hero">
       <div class="content">
-        <img src="images/stellaire-studio-logo.svg" alt="stellaire studio">
+        <img src="images/stellaire-studio-logo.svg" class="logo" alt="stellaire studio">
         <h1 class="ml16">Votre monde en révolution</h1>
       </div>
       <div class="main-animation">
@@ -74,9 +74,9 @@
           Rendre les humains plus heureux au travail, pour nous c’est atteindre les étoiles. Avec vous, ça serait encore mieux.
       </div>
     </section>
-    <footer>
-      <span data-scroll-direction="horizontal" data-scroll data-scroll-speed="10">Bienvenue à bord ! Bienvenue à bord ! Bienvenue à bord ! Bienvenue à bord !</span>
-    </footer>
+    <marquee class="footer">
+     Bienvenue à bord ! Bienvenue à bord ! Bienvenue à bord ! Bienvenue à bord !
+    </marquee>
   </body>
 
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
@@ -85,6 +85,32 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="js/shader.js"></script>
   <script>
+    // Wrap every letter in a span
+    var textWrapper = document.querySelector('.ml16');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({})
+    .add({
+        targets: '.logo ',
+        opacity: [0,1],
+        easing: "easeOutQuad",
+        delay:300,
+        duration: 600
+      })
+    .add({
+        targets: '.ml16 ',
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 10
+      })
+      .add({
+        targets: '.ml16 .letter',
+        translateY: [-100,0],
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 1400,
+        delay: (el, i) => 30 * i
+      });
 
     // Init AOS Fade on scroll library
     AOS.init();
@@ -94,9 +120,9 @@
       let scrollContainer = document.querySelector('[data-scroll-container]');
       scroll = new LocomotiveScroll({
         el: scrollContainer,
-        smooth: true,
+        //smooth: true,
         getDirection: true,
-        lerp: 0.1,
+        lerp: 1,
         getSpeed: true,
         smartphone: {
          smooth: false

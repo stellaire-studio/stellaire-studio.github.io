@@ -13,7 +13,10 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
+}
 
+.logo {
+  opacity:0;
 }
 
 section {
@@ -32,16 +35,16 @@ section {
   grid-column: 2;
 }
 
-footer {
+.footer {
   background-color: var(--white);
+  color: var(--black);
   overflow: hidden;
   margin-top: 200px;
-}
-
-footer span {
-  color: var(--black);
+  opacity: 1 !important;
   white-space: nowrap;
 }
+
+
 
 .content {
   padding-top: 40vh;

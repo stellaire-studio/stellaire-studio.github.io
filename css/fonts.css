@@ -16,6 +16,7 @@ h1 {
   font-size: 50px;
   margin-top: 8px;
   overflow: hidden;
+  opacity: 0;
 }
 
 .ml16 .letter {
@@ -39,7 +40,7 @@ section b {
   font-weight: 500;
 }
 
-footer {
+.footer {
   font-size: 200px;
 }
 
