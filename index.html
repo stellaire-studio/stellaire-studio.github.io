@@ -8,19 +8,69 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
+        <script src="js/script.js"></script>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body data-scroll-container>
+
+      <div class="cursor"></div>
       <main class="hero">
-        <div class="gradient"></div>
-        <img src="images/stellaire-studio-logo.svg" alt="stellaire studio">
-        <h1>Votre monde en révolution.</h1>
-      </main>
-      <section>
+        <video autoplay muted loop id="myVideo">
+          <source src="images/gradient.mp4" type="video/mp4">
+        </video>
+        <!--
+        <svg width="100%" height="100%">
+          <defs>
+              <filter id="f1" x="5%" y="5%" width="100%" height="100%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="200" />
+              </filter>
+          </defs>
+
+          <g>
+            <circle fill="green" class="green" r="200" cx="0" cy="400" width="100vw" height="100%">
+              <animate attributeType="XML" attributeName="cx" from="0px" to="1920"
+              dur="1s" repeatCount="indefinite" filter="url(#f1)" />
+            </circle>
+          </g>
+      </svg> -->
         <div class="content">
-          <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_7ktxaqhj.json" background="transparent"  speed=".5"  style="width: 1440px; height: 500px;" loop autoplay></lottie-player>
+          <img src="images/stellaire-studio-logo.svg" alt="stellaire studio">
+          <h1>Votre monde en révolution.</h1>
+        </div>
+        <div class="main-animation">
+
+          <svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" version="1.1"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+
+          <path d="M1267 478C1267 651.97 1125.97 793 952 793C778.03 793 637 651.97 637 478C637 304.03 778.03 163 952 163C1125.97 163 1267 304.03 1267 478Z" fill="#232025" id="planetMain"/>
+
+          <path d="M 952 881 C 1174.57 881 1355 700.571 1355 478 C 1355 255.429 1174.57 75 952 75 C 729.429 75 549 255.429 549 478 C 549 700.571 729.429 881 952 881 Z M 952 882 Z" stroke="lightgrey" stroke-width="1" fill="none" id="planetClose"/>
+
+          <circle r="5" fill="#C4C4C4">
+            <animateMotion dur="8s" repeatCount="indefinite">
+              <mpath xlink:href="#planetClose" />
+            </animateMotion>
+          </circle>
+
+
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 952 1067 C 1277.3 1067 1541 803.296 1541 478 C 1541 152.704 1277.3 -111 952 -111 C 626.704 -111 363 152.704 363 478 C 363 803.296 626.704 1067 952 1067 Z M 952 1068 Z" stroke="lightgrey" stroke-width=".5" fill="none" id="planetFar"/>
+
+          <circle r="25" fill="#C4C4C4">
+            <animateMotion begin="2s" keyPoints="1;0" keyTimes="0;1" calcMode="linear" dur="12s" repeatCount="indefinite">
+              <mpath xlink:href="#planetFar"/>
+            </animateMotion>
+          </circle>
+        </svg>
+
+
+        </div>
+      </main>
+
+      <section>
+        <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_7ktxaqhj.json" background="transparent"  speed=".5"  style="width: 1440px; height: 500px;" loop autoplay></lottie-player>
+        <div data-aos="fade-up" class="content">
 
           Viser les étoiles c’est important, mais au quotidien, ce qui compte c’est que votre petite planète continue à tourner. <br><br>
 
@@ -31,9 +81,7 @@
       </section>
 
       <section>
-        <div class="content align-right">
-
-
+        <div  class="content align-right">
 
           <span class="overtitre">Notre pari</span>
           <h2>Viser les étoiles avec vous en éclaireur. </h2>
@@ -46,16 +94,16 @@
         </div>
       </section>
 
-       <section>
-          <div class="content">
+      <section>
+        <div  class="content">
           <span class="overtitre">Notre SAAS odyssée</span>
           <h2>Comprendre votre planète, <br> conquérir la galaxie. </h2>
 
-          Une fois déployées, nos solutions logicielles apportent une réponse collective à un besoin partagé. <br><br>
+            Une fois déployées, nos solutions logicielles apportent une réponse collective à un besoin partagé. <br><br>
 
-          Nous ne visons pas les marchés planétaires, nous permettons aux organisations d’un même univers d'être plus efficaces avec le même produit. <br><br>
+            Nous ne visons pas les marchés planétaires, nous permettons aux organisations d’un même univers d'être plus efficaces avec le même produit. <br><br>
 
-          Rendre les humains plus heureux au travail, pour nous c’est atteindre les étoiles. Avec vous, ça serait encore mieux.
+            Rendre les humains plus heureux au travail, pour nous c’est atteindre les étoiles. Avec vous, ça serait encore mieux.
         </div>
       </section>
       <footer>
@@ -63,7 +111,13 @@
       </footer>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+
+
+      AOS.init();
+
       function smooth() {
         let scrollContainer = document.querySelector('[data-scroll-container]');
         scroll = new LocomotiveScroll({
@@ -86,6 +140,46 @@
       }
       let scroll;
       smooth();
+
+      window.addEventListener('load',(e) => {
+        console.log('Loaded')
+        const gradients = document.querySelectorAll('.gradient');
+        gradients.forEach(gradient => {
+          gradient.classList.add('o-70')
+        })
+      });
+
+      // Custom Cursor
+      var cursor = document.querySelector('.cursor');
+      document.addEventListener('mousemove', function(e){
+
+
+        var x = e.clientX;
+        var y = e.clientY;
+        cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+      });
+
+      document.addEventListener('mousedown', function(){
+        cursor.classList.add('click');
+      });
+
+      document.addEventListener('mouseup', function(){
+        cursor.classList.remove('click')
+      });
+
+
+
+      //Line Animation
+      anime({
+        targets: '#planetClose path',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        duration: 1500,
+        delay: function(el, i) { return i * 250 },
+        direction: 'alternate',
+        loop: true
+      });
+
     </script>
 
 </html>

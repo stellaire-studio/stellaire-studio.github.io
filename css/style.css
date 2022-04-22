@@ -1,10 +1,30 @@
 @import url("fonts.css");
 @import url("colors.css");
 @import url("gradients.css");
+@import url("animation.css");
+@import url("cursor.css");
+
+body {
+  overscroll-behavior: none;
+}
 
 .hero {
   text-align: center;
   height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: .7;
+  z-index: -1;
 }
 
 section {
@@ -27,6 +47,12 @@ footer {
 footer span {
   color: var(--black);
   white-space: nowrap;
+}
+
+.content {
+  padding-top: 40vh;
+  z-index: 999;
+  position: relative;
 }
 
 /* ANIMATIONS */

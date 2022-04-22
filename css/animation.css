@@ -1,0 +1,10 @@
+.main-animation {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+#planetMain {
+  z-index: 99;
+}
