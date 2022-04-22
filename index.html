@@ -17,7 +17,7 @@
     <main class="hero">
       <div class="content">
         <img src="images/stellaire-studio-logo.svg" alt="stellaire studio">
-        <h1>Votre monde en révolution</h1>
+        <h1 class="ml16">Votre monde en révolution</h1>
       </div>
       <div class="main-animation">
         <svg width="620" height="700" viewBox="0 0 620 700" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,8 +86,10 @@
   <script src="js/shader.js"></script>
   <script>
 
+    // Init AOS Fade on scroll library
     AOS.init();
 
+    // Initialize locomotive scroll
     function smooth() {
       let scrollContainer = document.querySelector('[data-scroll-container]');
       scroll = new LocomotiveScroll({
@@ -111,7 +113,7 @@
     let scroll;
     smooth();
 
-    // Custom Cursor
+    // Custom Cursor NOT USED
     var cursor = document.querySelector('.cursor');
     document.addEventListener('mousemove', function(e){
       var x = e.clientX;
@@ -125,19 +127,6 @@
 
     document.addEventListener('mouseup', function(){
       cursor.classList.remove('click')
-    });
-
-
-
-    //Line Animation
-    anime({
-      targets: '#planetClose path',
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: 'easeInOutSine',
-      duration: 1500,
-      delay: function(el, i) { return i * 250 },
-      direction: 'alternate',
-      loop: true
     });
 
   </script>
@@ -186,58 +175,56 @@
     varying vec2 vUv;
 
     void main() {
-        vUv = uv;
-        vDistortion = snoise(vUv.xx * 3. - u_randomisePosition * 0.15);
-        xDistortion = snoise(vUv.yy * 1. - u_randomisePosition * 0.05);
-        vec3 pos = position;
-        pos.z += (vDistortion * 35.);
-        pos.x += (xDistortion * 25.);
+      vUv = uv;
+      vDistortion = snoise(vUv.xx * 3. - u_randomisePosition * 0.15);
+      xDistortion = snoise(vUv.yy * 1. - u_randomisePosition * 0.05);
+      vec3 pos = position;
+      pos.z += (vDistortion * 35.);
+      pos.x += (xDistortion * 25.);
 
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
     }
   </script>
 
   <script id="fragment-shader" type="x-shader/x-fragment">
+    vec3 rgb(float r, float g, float b) {
+      return vec3(r / 255., g / 255., b / 255.);
+    }
 
-      vec3 rgb(float r, float g, float b) {
-          return vec3(r / 255., g / 255., b / 255.);
-      }
+    vec3 rgb(float c) {
+      return vec3(c / 255., c / 255., c / 255.);
+    }
 
-      vec3 rgb(float c) {
-          return vec3(c / 255., c / 255., c / 255.);
-      }
+    uniform vec3 u_bg;
+    uniform vec3 u_bgMain;
+    uniform vec3 u_color1;
+    uniform vec3 u_color2;
+    uniform float u_time;
 
-      uniform vec3 u_bg;
-      uniform vec3 u_bgMain;
-      uniform vec3 u_color1;
-      uniform vec3 u_color2;
-      uniform float u_time;
+    varying vec2 vUv;
+    varying float vDistortion;
 
-      varying vec2 vUv;
-      varying float vDistortion;
+    void main() {
+      vec3 bg = vec3(0.137,0.125,0.145);
+      // Purp
+      vec3 c1 = vec3(u_bg.r,0.075,0.31);
+      vec3 c2 = rgb(u_color2.r, u_color2.g, u_color2.b);
+      vec3 bgMain = rgb(u_bgMain.r, u_bgMain.g, u_bgMain.b);
 
-      void main() {
-          vec3 bg = vec3(0.137,0.125,0.145);
-          // Purp
-          vec3 c1 = vec3(u_bg.r,0.075,0.31);
-          vec3 c2 = rgb(u_color2.r, u_color2.g, u_color2.b);
-          vec3 bgMain = rgb(u_bgMain.r, u_bgMain.g, u_bgMain.b);
+      float noise1 = snoise(vUv + u_time * 0.08);
+      float noise2 = snoise(vUv * 2. + u_time * 0.1);
 
-          float noise1 = snoise(vUv + u_time * 0.08);
-          float noise2 = snoise(vUv * 2. + u_time * 0.1);
+      vec3 color = bg;
+      color = mix(color, c1, noise1 * 0.6);
+      color = mix(color, c2, noise2 * .4);
 
-          vec3 color = bg;
-          color = mix(color, c1, noise1 * 0.6);
-          color = mix(color, c2, noise2 * .4);
+      color = mix(color, mix(c1, c2, vUv.x), vDistortion);
 
-          color = mix(color, mix(c1, c2, vUv.x), vDistortion);
+      float border = smoothstep(0.1, 0.6, vUv.x);
 
-          float border = smoothstep(0.1, 0.6, vUv.x);
+      color = mix(color, bgMain, 1. -border);
 
-          color = mix(color, bgMain, 1. -border);
-
-          gl_FragColor = vec4(color, 1.0);
-      }
+      gl_FragColor = vec4(color, 1.0);
+    }
   </script>
-
 </html>
