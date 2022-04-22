@@ -16,23 +16,16 @@ body {
 
 }
 
-/* Style the video: 100% width and height to cover the entire window */
-#myVideo {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: .7;
-  z-index: -1;
-}
-
 section {
   height: 100vh;
   margin: 0 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
+}
+
+.hero {
+  background: linear-gradient(0deg, #232025 0%, rgba(35, 32, 37, 0) 100%);
 }
 
 .align-right {
