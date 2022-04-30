@@ -6,7 +6,6 @@ function rgb(r, g, b) {
     return new THREE.Vector3(r, g, b);
 }
 document.addEventListener("DOMContentLoaded", function(e) {
-
     // Lets create a rendering process
     const renderer = new THREE.WebGLRenderer();
     // And make it full screen
@@ -42,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
     // Lets make a rectangle
     let geometry = new THREE.PlaneGeometry(window.innerWidth / 2, 400, 100, 100);
 
+
     // And define its material using the shaders.
     let material = new THREE.ShaderMaterial({
 
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
             // Purp
             u_color2: {type: 'v3', value: rgb(1, 1, 1)},
 
-            u_time: {type: 'f', value: 30},
+            u_time: {type: 'f', value: 3},
             u_randomisePosition: { type: 'v2', value: randomisePosition }
         },
         fragmentShader: sNoise + document.querySelector('#fragment-shader').textContent,
@@ -81,6 +81,14 @@ document.addEventListener("DOMContentLoaded", function(e) {
     const animate = function () {
         requestAnimationFrame( animate );
         renderer.render( scene, camera );
+
+        document.body.addEventListener('mousemove', (e) => {
+
+          mesh.material.uniforms.u_bgMain.value.x = e.clientX;
+          //mesh.position.y = e.clientY
+          //material.uniforms.u_bgMain.value.x = e.clientY;
+        })
+
         mesh.material.uniforms.u_randomisePosition.value = new THREE.Vector2(j, j);
 
         mesh.material.uniforms.u_color1.value = new THREE.Vector3(R(x,y,t/2), G(x,y,t/2), B(x,y,t/2));

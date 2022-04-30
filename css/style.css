@@ -13,6 +13,7 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  /*background: linear-gradient(0deg, #232025 0%, rgba(35, 32, 37, 0) 100%);*/
 }
 
 .logo {
@@ -25,10 +26,6 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
-}
-
-.hero {
-  background: linear-gradient(0deg, #232025 0%, rgba(35, 32, 37, 0) 100%);
 }
 
 .align-right {
