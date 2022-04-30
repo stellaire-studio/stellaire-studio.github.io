@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
     let mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(-200, 270, -280);
-    mesh.scale.multiplyScalar(6);
+    mesh.scale.multiplyScalar(5);
     mesh.rotationX = -1.0;
     mesh.rotationY = 0.0;
     mesh.rotationZ = 0.1;
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
           mesh.material.uniforms.u_bgMain.value.x = e.clientX;
           mesh.material.uniforms.u_bgMain.value.y = e.clientY;
-          mesh.rotation.z = e.clientY / 400
+          mesh.rotation.z = e.clientY / 800
           mesh.position.x = e.clientX / 4
           material.uniforms.u_bgMain.value.x = e.clientY;
         })
@@ -112,8 +112,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
         }
 
         // Increase t by a certain value every frame
-        j = 0.002;
-        t = 0.003;
+        j = j + 0.0025;
+        t = t + 0.010;
     };
     animate();
 
