@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
           mesh.material.uniforms.u_bgMain.value.x = e.clientX;
           mesh.material.uniforms.u_bgMain.value.y = e.clientY;
           mesh.rotation.z = e.clientY / 400
-          mesh.position.x = e.clientX / 2
+          mesh.position.x = e.clientX / 4
           material.uniforms.u_bgMain.value.x = e.clientY;
         })
 
@@ -112,8 +112,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
         }
 
         // Increase t by a certain value every frame
-        j = j + 0.005;
-        t = t + 0.005;
+        j = j + 0.001;
+        t = t + 0.001;
     };
     animate();
 
