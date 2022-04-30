@@ -50,13 +50,13 @@ document.addEventListener("DOMContentLoaded", function(e) {
         // in real time
         uniforms: {
             // Black
-            u_bg: {type: 'v3', value: rgb(1, 1, 1)},
+            u_bg: {type: 'v3', value: rgb(255, 255, 255)},
             // Purp
             u_bgMain: {type: 'v3', value: rgb(248, 80, 255)},
             // Orange
-            u_color1: {type: 'v3', value: rgb(1, 1, 255)},
+            u_color1: {type: 'v3', value: rgb(255, 1, 255)},
             // Purp
-            u_color2: {type: 'v3', value: rgb(255, 255, 255)},
+            u_color2: {type: 'v3', value: rgb(1, 255, 255)},
 
             u_time: {type: 'f', value: 3},
             u_randomisePosition: { type: 'v2', value: randomisePosition }
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
     let mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(-200, 270, -280);
-    mesh.scale.multiplyScalar(4);
+    mesh.scale.multiplyScalar(6);
     mesh.rotationX = -1.0;
     mesh.rotationY = 0.0;
     mesh.rotationZ = 0.1;
@@ -86,8 +86,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
           mesh.material.uniforms.u_bgMain.value.x = e.clientX;
           mesh.material.uniforms.u_bgMain.value.y = e.clientY;
-          //mesh.position.y = e.clientY
-          //material.uniforms.u_bgMain.value.x = e.clientY;
+          mesh.rotation.z = e.clientY / 400
+          mesh.position.x = e.clientX / 2
+          material.uniforms.u_bgMain.value.x = e.clientY;
         })
 
         mesh.material.uniforms.u_randomisePosition.value = new THREE.Vector2(j, j);
@@ -111,8 +112,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
         }
 
         // Increase t by a certain value every frame
-        j = j + 0.005;
-        t = t + 0.005;
+        j = j + 0.01;
+        t = t + 0.05;
     };
     animate();
 
