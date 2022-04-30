@@ -63,6 +63,14 @@
         bottom: 0;
         background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
        }
+       .stars {
+        position: absolute;
+        top: 0;
+        left: 0;
+       }
+       .star {
+        opacity: 0
+      }
     </style>
 
   </head>
@@ -75,6 +83,24 @@
 pour des projets qui décollent.</h1>
         <section>Transformons de jolies idées en entreprises incroyables. 🖖</div>
       </div>
+      <svg width="1440" height="800" viewBox="0 0 1440 800" class="stars" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_939_1725)">
+        <circle class="star" cx="172.5" cy="142.5" r="3.5" fill="white"/>
+        <circle class="star" cx="203.5" cy="609.5" r="3.5" fill="white"/>
+        <circle class="star" cx="1242.5" cy="616.5" r="3.5" fill="white"/>
+        <circle class="star" cx="478.5" cy="238.5" r="3.5" fill="white"/>
+        <circle class="star" cx="943" cy="541" r="6" fill="white"/>
+        <circle class="star" cx="445.5" cy="699.5" r="3.5" fill="white"/>
+        <circle class="star" cx="799.5" cy="170.5" r="3.5" fill="white"/>
+        <circle class="star" cx="1237.5" cy="333.5" r="1.5" fill="white"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_939_1725">
+        <rect width="1440" height="800" fill="white"/>
+        </clipPath>
+        </defs>
+      </svg>
+
       <div class="hero-gradient">
 
       </div>
@@ -102,28 +128,17 @@ pour des projets qui décollent.</h1>
     // var textWrapper = document.querySelector('.ml16');
     // textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-    // anime.timeline({})
-    // .add({
-    //     targets: '.logo ',
-    //     opacity: [0,1],
-    //     easing: "easeOutQuad",
-    //     delay:300,
-    //     duration: 600
-    //   })
-    // .add({
-    //     targets: '.ml16 ',
-    //     opacity: [0,1],
-    //     easing: "easeOutExpo",
-    //     duration: 10
-    //   })
-    //   .add({
-    //     targets: '.ml16 .letter',
-    //     translateY: [-100,0],
-    //     opacity: [0,1],
-    //     easing: "easeOutExpo",
-    //     duration: 1400,
-    //     delay: (el, i) => 30 * i
-    //   });
+    let tl = anime.timeline({
+      complete: function() { tl.restart(); }
+    })
+    .add({
+        targets: '.star ',
+        opacity: [0,1,0],
+        easing: "easeOutQuad",
+        delay: anime.stagger(1000, {from: 'center'}),
+        duration: 6000,
+        direction: 'alternate'
+      })
 
 
 

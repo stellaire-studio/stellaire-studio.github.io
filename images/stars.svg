@@ -1,0 +1,17 @@
+<svg width="1440" height="800" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_939_1725)">
+<circle class="star" cx="172.5" cy="142.5" r="3.5" fill="white"/>
+<circle class="star" cx="203.5" cy="609.5" r="3.5" fill="white"/>
+<circle class="star" cx="1242.5" cy="616.5" r="3.5" fill="white"/>
+<circle class="star" cx="478.5" cy="238.5" r="3.5" fill="white"/>
+<circle class="star" cx="943" cy="541" r="6" fill="white"/>
+<circle class="star" cx="445.5" cy="699.5" r="3.5" fill="white"/>
+<circle class="star" cx="799.5" cy="170.5" r="3.5" fill="white"/>
+<circle class="star" cx="1237.5" cy="333.5" r="1.5" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_939_1725">
+<rect width="1440" height="800" fill="white"/>
+</clipPath>
+</defs>
+</svg>
