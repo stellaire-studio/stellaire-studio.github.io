@@ -129,11 +129,11 @@ pour des projets qui décollent.</h1>
     // textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
     let tl = anime.timeline({
-      complete: function() { tl.restart(); }
+      //complete: function() { tl.restart(); }
     })
     .add({
         targets: '.star ',
-        opacity: [0,1,0],
+        opacity: [0,1],
         easing: "easeOutQuad",
         delay: anime.stagger(anime.random(100,1000), {from: 'center'}),
         duration: 6000,
