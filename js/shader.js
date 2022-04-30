@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
         document.body.addEventListener('mousemove', (e) => {
 
           mesh.material.uniforms.u_bgMain.value.x = e.clientX;
+          mesh.material.uniforms.u_bgMain.value.y = e.clientY;
           //mesh.position.y = e.clientY
           //material.uniforms.u_bgMain.value.x = e.clientY;
         })
