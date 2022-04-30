@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
     let mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(-200, 270, -280);
-    mesh.scale.multiplyScalar(5);
+    mesh.scale.multiplyScalar(6);
     mesh.rotationX = -1.0;
     mesh.rotationY = 0.0;
     mesh.rotationZ = 0.1;
