@@ -9,3 +9,9 @@
 #planetMain {
   z-index: 99;
 }
+
+/* ANIMATIONS */
+lottie-player {
+  position: absolute;
+  right: 0;
+}

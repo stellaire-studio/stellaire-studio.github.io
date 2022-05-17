@@ -1,0 +1,11 @@
+:root {
+  --large-spacing: 80px;
+  --half-spacing:  40px;
+}
+
+@media (max-width:992px) {
+  :root {
+    --large-spacing: 24px;
+    --half-spacing:  16px;
+  }
+}

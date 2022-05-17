@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&family=Inter:wght@300;500&display=swap');
-
+@import url('colors.css');
 
 body {
   font-family: 'Inter', sans-serif;
@@ -13,8 +13,11 @@ h1, h2 {
 }
 
 h1 {
+  wdith: 780px;
   font-size: 60px;
   margin-top: 8px;
+  letter-spacing: -0.5px;
+  text-shadow: 0px 0px 10px rgba(0,0,0,.2);
   overflow: hidden;
   opacity: 0;
 }
@@ -31,7 +34,7 @@ h2 {
   margin-top: 16px;
 }
 
-section {
+section, .value-prop__subtitle {
   font-size: 24px;
   line-height: 1.618;
 }
@@ -53,3 +56,14 @@ section b {
   color: var(--white);
 }
 
+a {
+  text-decoration: none;
+  color: var(--white);
+  font-family: 'Epilogue';
+  font-size: 15px;
+  display: inline-block;
+}
+
+a:hover {
+  cursor: pointer;
+}

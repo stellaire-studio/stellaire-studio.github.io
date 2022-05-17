@@ -1,0 +1,18 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  padding: var(--half-spacing) var(--large-spacing);
+}
+
+nav .logo {
+  width: 180px;
+}
+.nav-links {
+  display: flex;
+}
+
+.nav-link {
+  padding: 0px 12px;
+}
