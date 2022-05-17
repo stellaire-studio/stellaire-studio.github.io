@@ -73,6 +73,7 @@
       </div>
      <iframe src="https://tally.so/r/nPdjpQ?transparentBackground=1" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="Lead generation form"></iframe>
     </section>
+  </main>
   </body>
 
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
@@ -80,7 +81,19 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/black-shader.js"></script>
+  <script src="https://unpkg.com/@barba/core"></script>
   <script>
+    barba.init({
+     transitions: [{
+      name: 'default-transition',
+      leave() {
+        // create your stunning leave animation here
+      },
+      enter() {
+        // create your amazing enter animation here
+      }
+    }]
+    })
     AOS.init();
 
 
@@ -99,49 +112,6 @@
         duration: 6000,
         direction: 'alternate'
       })
-
-
-
-    // Initialize locomotive scroll
-    function smooth() {
-      let scrollContainer = document.querySelector('[data-scroll-container]');
-      scroll = new LocomotiveScroll({
-        el: scrollContainer,
-        //smooth: true,
-        getDirection: true,
-        lerp: 1,
-        getSpeed: true,
-        smartphone: {
-         smooth: false
-        },
-        tablet: {
-          smooth: true
-        }
-      });
-
-      setTimeout(() => {
-        scroll.update();
-      }, 500);
-    }
-    let scroll;
-    smooth();
-
-    // Custom Cursor NOT USED
-    var cursor = document.querySelector('.cursor');
-    document.addEventListener('mousemove', function(e){
-      var x = e.clientX;
-      var y = e.clientY;
-      cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
-    });
-
-    document.addEventListener('mousedown', function(){
-      cursor.classList.add('click');
-    });
-
-    document.addEventListener('mouseup', function(){
-      cursor.classList.remove('click')
-    });
-
   </script>
 
 
