@@ -14,4 +14,11 @@
   .logo {
     width: 140px !important;
   }
+  /* AOS OVERRIDES */
+  [data-aos^=fade] {
+    opacity: 1 !important;
+  }
+  [data-aos=fade-up] {
+    transform: translate3d(0, 0, 0) !important;
+  }
 }
