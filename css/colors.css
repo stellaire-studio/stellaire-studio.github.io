@@ -10,3 +10,9 @@ body {
   background-color: var(--black);
   color: var(--white);
 }
+
+canvas {
+  top: 0;
+  z-index: -1;
+  position: fixed;
+}
