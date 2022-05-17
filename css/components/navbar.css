@@ -13,6 +13,6 @@ nav .logo {
   display: flex;
 }
 
-.nav-link {
-  padding: 0px 12px;
+.nav-link:first-child {
+  margin-right: var(--half-spacing);
 }
