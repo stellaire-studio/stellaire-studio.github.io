@@ -1,0 +1,21 @@
+@import url('../config/spacing.css');
+@import url('../config/colors.css');
+
+footer {
+  padding: var(--half-spacing) var(--large-spacing);
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+footer img{
+  width: 200px;
+  height: 100%;
+}
+
+
+footer a {
+  color: var(--black);
+  display: block;
+}

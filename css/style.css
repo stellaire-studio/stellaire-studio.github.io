@@ -1,6 +1,5 @@
 @import url("normalize.css");
 @import url("fonts.css");
-@import url("colors.css");
 @import url("animation.css");
 @import url("cursor.css");
 @import url("tally-form.css");
@@ -8,9 +7,11 @@
 
 /* Config */
 @import url('config/spacing.css');
+@import url('config/colors.css');
 
 /* Components */
 @import url('components/navbar.css');
+@import url('components/footer.css');
 
 /* Pages */
 @import url("pages/home.css");
