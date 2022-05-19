@@ -4,13 +4,17 @@
 @import url("animation.css");
 @import url("cursor.css");
 @import url("tally-form.css");
-@import url("pages/home.css");
+
 
 /* Config */
 @import url('config/spacing.css');
 
 /* Components */
 @import url('components/navbar.css');
+
+/* Pages */
+@import url("pages/home.css");
+@import url("pages/contact.css");
 
 /* Responsive */
 @import url('media-queries.css');

@@ -1,0 +1,160 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>stellaire.studio · SAAS Studio à Nantes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">
+        <img src="images/stellaire-studio-logo.svg" class="logo" alt="stellaire studio">
+      </a>
+      <div class="nav-links">
+        <a href="manifesto.html" class="nav-link">Manifesto</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+    </nav>
+    <section class="hero hero-contact">
+      <div class="value-prop">
+        <h1>Lorem ipsum contact</h1>
+        <span class="value-prop__subtitle" data-aos="fade-up">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, ratione, repudiandae. Quas, pariatur exercitationem.
+        </span>
+      </div>
+      <iframe src="https://tally.so/r/nPdjpQ?transparentBackground=1" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="Lead generation form"></iframe>
+    </section>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/black-shader.js"></script>
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script>
+    AOS.init();
+
+
+    // Wrap every letter in a span
+    // var textWrapper = document.querySelector('.ml16');
+    // textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    let tl = anime.timeline({
+      //complete: function() { tl.restart(); }
+    })
+    .add({
+        targets: '.star ',
+        opacity: [0,1],
+        easing: "easeOutQuad",
+        delay: anime.stagger(anime.random(100,1000), {from: 'center'}),
+        duration: 6000,
+        direction: 'alternate'
+      })
+  </script>
+
+
+  <script id="snoise-function" type="x-shader/x-vertex">
+    vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+    vec2 mod289(vec2 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+    vec3 permute(vec3 x) { return mod289(((x*34.0)+1.0)*x); }
+
+    float snoise(vec2 v) {
+      const vec4 C = vec4(0.211324865405187,  // (3.0-sqrt(3.0))/6.0
+                          0.366025403784439,  // 0.5*(sqrt(3.0)-1.0)
+                          -0.577350269189626,  // -1.0 + 2.0 * C.x
+                          0.024390243902439); // 1.0 / 41.0
+      vec2 i  = floor(v + dot(v, C.yy) );
+      vec2 x0 = v -   i + dot(i, C.xx);
+      vec2 i1;
+      i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+      vec4 x12 = x0.xyxy + C.xxzz;
+      x12.xy -= i1;
+      i = mod289(i); // Avoid truncation effects in permutation
+      vec3 p = permute( permute( i.y + vec3(0.0, i1.y, 1.0 ))
+          + i.x + vec3(0.0, i1.x, 1.0 ));
+
+      vec3 m = max(0.5 - vec3(dot(x0,x0), dot(x12.xy,x12.xy), dot(x12.zw,x12.zw)), 0.0);
+      m = m*m ;
+      m = m*m ;
+      vec3 x = 2.0 * fract(p * C.www) - 1.0;
+      vec3 h = abs(x) - 0.5;
+      vec3 ox = floor(x + 0.5);
+      vec3 a0 = x - ox;
+      m *= 1.79284291400159 - 0.85373472095314 * ( a0*a0 + h*h );
+      vec3 g;
+      g.x  = a0.x  * x0.x  + h.x  * x0.y;
+      g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+      return 130.0 * dot(m, g);
+    }
+  </script>
+  <script id="vertex-shader" type="x-shader/x-vertex">
+    uniform float u_time;
+    uniform vec2 u_randomisePosition;
+
+    varying float vDistortion;
+    varying float xDistortion;
+    varying vec2 vUv;
+
+    void main() {
+      vUv = uv;
+      vDistortion = snoise(vUv.xx * 3. - u_randomisePosition * 0.15);
+      xDistortion = snoise(vUv.yy * 1. - u_randomisePosition * 0.05);
+      vec3 pos = position;
+      pos.z += (vDistortion * 35.);
+      pos.x += (xDistortion * 25.);
+
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+    }
+  </script>
+
+  <script id="fragment-shader" type="x-shader/x-fragment">
+    vec3 rgb(float r, float g, float b) {
+      return vec3(r / 255., g / 255., b / 255.);
+    }
+
+    vec3 rgb(float c) {
+      return vec3(c / 255., c / 255., c / 255.);
+    }
+
+    uniform vec3 u_bg;
+    uniform vec3 u_bgMain;
+    uniform vec3 u_color1;
+    uniform vec3 u_color2;
+    uniform float u_time;
+
+    varying vec2 vUv;
+    varying float vDistortion;
+
+    void main() {
+      vec3 bg = vec3(0,0,0);
+      // Purp
+      vec3 c1 = vec3(1.,0.71,0.);
+      vec3 c2 = vec3(0.,0.761,0.537);
+      //IMPORTANT
+      vec3 bgMain = vec3(1.,0.537,0.416);
+
+      float noise1 = snoise(vUv + u_time * 0.08);
+      float noise2 = snoise(vUv * 2. + u_time * 0.1);
+
+      vec3 color = bg;
+      color = mix(color, c1, noise1 * 0.6);
+      color = mix(color, c2, noise2 * .4);
+
+      color = mix(color, mix(c1, c2, vUv.x), vDistortion);
+
+      float border = smoothstep(0.1, 0.6, vUv.x);
+
+      color = mix(color, bgMain, 1. -border);
+
+      gl_FragColor = vec4(color, 1.0);
+    }
+  </script>
+</html>

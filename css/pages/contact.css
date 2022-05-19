@@ -1,0 +1,8 @@
+.hero-contact {
+  background: transparent;
+}
+
+.hero-contact .value-prop {
+  margin-top: 0 !important;
+  width: 100% !important;
+}
