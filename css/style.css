@@ -32,7 +32,7 @@ body {
 
 section {
   min-height: 100vh;
-  padding: var(--half-spacing);
+  padding: var(--large-spacing) var(--half-spacing);
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -51,7 +51,7 @@ section {
 
 .hero .value-prop {
   width: 75%;
-  margin-top: 20vh;
+  margin-top: 12vh;
   padding: var(--large-spacing);
 }
 

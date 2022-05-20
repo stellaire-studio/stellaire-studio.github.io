@@ -1,3 +1,7 @@
 .tally-submit-button {
   background-color:red;
 }
+
+iframe  {
+width: 80% !important;
+}
