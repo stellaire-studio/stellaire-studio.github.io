@@ -15,9 +15,19 @@
 
 
   </head>
-  <body data-scroll-container>
-    <div class="cursor"></div>
-    <main class="hero">
+  <body>
+
+    <nav>
+       <a href="index.html">
+        <img src="images/stellaire-studio-logo.svg" class="logo" alt="stellaire studio">
+      </a>
+      <div class="nav-links">
+        <a href="manifesto.html" class="nav-link">Manifesto</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+    </nav>
+
+    <main class="hero hero-manifesto">
       <div class="content">
         <img src="images/stellaire-studio-logo.svg" class="logo" alt="stellaire studio">
         <h1 class="ml16">Votre monde en révolution</h1>
@@ -81,13 +91,25 @@
           </span>
       </div>
     </section>
+    <footer>
+      <img src="images/stellaire-studio-logo-black.svg" class="logo" alt="stellaire studio">
+      <div class="footer-links">
+        <h3>Nous contacter</h3>
+        <a href="">hello@stellaire.studio</a>
+        <a href="">01 02 03 04 05</a>
+      </div>
+      <div class="footer-links">
+        <h3>Nous rendre visite</h3>
+        <a href="">12 rue Voltaire <br> 44 000 Nantes</a>
+      </div>
+    </footer>
   </body>
 
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="js/shader.js"></script>
+  <script src="js/white-shader.js"></script>
   <script>
     AOS.init();
 
@@ -118,48 +140,6 @@
         duration: 1400,
         delay: (el, i) => 30 * i
       });
-
-
-
-    // Initialize locomotive scroll
-    function smooth() {
-      let scrollContainer = document.querySelector('[data-scroll-container]');
-      scroll = new LocomotiveScroll({
-        el: scrollContainer,
-        //smooth: true,
-        getDirection: true,
-        lerp: 1,
-        getSpeed: true,
-        smartphone: {
-         smooth: false
-        },
-        tablet: {
-          smooth: true
-        }
-      });
-
-      setTimeout(() => {
-        scroll.update();
-      }, 500);
-    }
-    let scroll;
-    smooth();
-
-    // Custom Cursor NOT USED
-    var cursor = document.querySelector('.cursor');
-    document.addEventListener('mousemove', function(e){
-      var x = e.clientX;
-      var y = e.clientY;
-      cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
-    });
-
-    document.addEventListener('mousedown', function(){
-      cursor.classList.add('click');
-    });
-
-    document.addEventListener('mouseup', function(){
-      cursor.classList.remove('click')
-    });
 
   </script>
 
@@ -237,7 +217,7 @@
     varying float vDistortion;
 
     void main() {
-      vec3 bg = vec3(0.137,0.125,0.145);
+      vec3 bg = vec3(0.9,0.9,0.9);
       // Purp
       vec3 c1 = vec3(u_bg.r,0.075,0.31);
       vec3 c2 = rgb(u_color2.r, u_color2.g, u_color2.b);
