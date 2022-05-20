@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
         // in real time
         uniforms: {
             // Black
-            u_bg: {type: 'v3', value: rgb(255, 255, 255)},
+            u_bg: {type: 'v3', value: rgb(1, 1, 1)},
             // Purp
             u_bgMain: {type: 'v3', value: rgb(248, 80, 255)},
             // Orange
