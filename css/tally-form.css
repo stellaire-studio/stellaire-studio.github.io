@@ -1,12 +1,53 @@
-.tally-submit-button {
-  background-color:red;
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&family=Inter:wght@300;500&display=swap');
+
+:root {
+  --black: #000000;
+  --white: #FFF8E7;
+  --green: #00C289;
+  --orange: #FF896A;
+  --gradient: linear-gradient(175.24deg, #F85044 7.96%, #3F5EFB 96.16%);
 }
 
-iframe  {
-  justify-self: right;
-  width: 80% !important;
+html, .tally-app {
+  /* no bg color for the contact page */
+  /* background-color: var(--black) !important; */
+  color: var(--white) !important;
 }
 
-iframe html {
-  color: red !important;
+body {
+  font-family: 'Inter', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  color: var(--white);
+}
+
+.tally-block-heading-1,
+.tally-block-heading-2 {
+  font-family: 'Epilogue', sans-serif;
+}
+
+.tally-block-heading-1 {
+  font-size: 60px;
+  line-height: 1.1;
+  margin-top: 8px;
+  letter-spacing: -0.5px;
+  text-shadow: 0px 0px 10px rgba(0,0,0,.2);
+  overflow: hidden;
+  opacity: 0;
+}
+
+.tally-block-heading-2 {
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing:-0.1px;
+  margin-top: 16px;
+}
+
+.tally-block input,
+.tally-block textarea {
+  background-color: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }

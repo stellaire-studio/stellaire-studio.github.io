@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&family=Inter:wght@300;500&display=swap');
-@import url('colors.css');
+@import url('config/colors.css');
 
 body {
   font-family: 'Inter', sans-serif;

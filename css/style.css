@@ -2,8 +2,6 @@
 @import url("fonts.css");
 @import url("animation.css");
 @import url("cursor.css");
-@import url("tally-form.css");
-
 
 /* Config */
 @import url('config/spacing.css');
@@ -40,7 +38,10 @@ section {
   align-items: center;
   position: relative;
   background-color: var(--black);
+}
 
+iframe {
+  min-height: 550px;
 }
 
 .hero {
@@ -88,7 +89,6 @@ section {
   padding: var(--large-spacing);
 }
 
-
-
-
-
+#contact .content {
+  padding-right: var(--half-spacing);
+}
