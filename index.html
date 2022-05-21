@@ -47,19 +47,20 @@
       <div class="value-prop">
         <h1>Le startup studio <br>qui vise les étoiles</h1>
         <span class="value-prop__subtitle" data-aos="fade-up">
-          Révolutionner le quotidien des entreprises, une startup après l’autre 🖖
-        </span>
+          Révolutionner le quotidien des entreprises, une startup après l’autre.
+        </span><br><br>
+        <a href="#after-hero" class="btn-primary">Découvrir le studio</a>
       </div>
 
       <!-- Stars -->
       <svg width="1440" class="stars" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M621 537L623.662 549.338L636 552L623.662 554.662L621 567L618.338 554.662L606 552L618.338 549.338L621 537Z" fill="#FFF8E7"/>
-<path d="M795.5 95L797.541 104.459L807 106.5L797.541 108.541L795.5 118L793.459 108.541L784 106.5L793.459 104.459L795.5 95Z" fill="#FFF8E7"/>
-<path d="M1233.5 607L1235.72 617.281L1246 619.5L1235.72 621.719L1233.5 632L1231.28 621.719L1221 619.5L1231.28 617.281L1233.5 607Z" fill="#FFF8E7"/>
-<path d="M276 104L277.42 110.58L284 112L277.42 113.42L276 120L274.58 113.42L268 112L274.58 110.58L276 104Z" fill="#FFF8E7"/>
-<circle cx="958.5" cy="231.5" r="3.5" fill="#FFF8E7"/>
-<circle cx="995" cy="537" r="3" fill="#FFF8E7"/>
-<circle cx="198" cy="437" r="3" fill="#FFF8E7"/>
+<path class="star" d="M621 537L623.662 549.338L636 552L623.662 554.662L621 567L618.338 554.662L606 552L618.338 549.338L621 537Z" fill="#FFF8E7"/>
+<path class="star" d="M795.5 95L797.541 104.459L807 106.5L797.541 108.541L795.5 118L793.459 108.541L784 106.5L793.459 104.459L795.5 95Z" fill="#FFF8E7"/>
+<path class="star" d="M1233.5 607L1235.72 617.281L1246 619.5L1235.72 621.719L1233.5 632L1231.28 621.719L1221 619.5L1231.28 617.281L1233.5 607Z" fill="#FFF8E7"/>
+<path class="star" d="M276 104L277.42 110.58L284 112L277.42 113.42L276 120L274.58 113.42L268 112L274.58 110.58L276 104Z" fill="#FFF8E7"/>
+<circle class="star" cx="958.5" cy="231.5" r="4.5" fill="#FFF8E7"/>
+<circle class="star" cx="995" cy="537" r="3" fill="#FFF8E7"/>
+<circle class="star" cx="198" cy="467" r="2" fill="#FFF8E7"/>
         </svg>
 
       <div class="hero-gradient">
@@ -67,6 +68,7 @@
     </main>
 
     <section id="after-hero">
+      <img src="" alt="">
       <div class="content">
         <h2 data-aos="fade-up">Tout commence par une problématique métier, la vôtre ! </h2>
           <span data-aos="fade-up" >
@@ -76,11 +78,9 @@
             <a href="manifesto.html" class="btn-primary">Découvrir le manifeste</a>
           </span>
       </div>
-      <img src="" alt="">
     </section>
 
     <section>
-      <img src="" alt="">
       <div class="content">
         <h2 data-aos="fade-up">Entreprendre ensemble, un produit, une startup </h2>
           <span data-aos="fade-up" >
@@ -92,21 +92,11 @@
             · développer la solution logicielle la plus adaptée pour le conquérir
           </span>
       </div>
+      <iframe data-aos="fade-up" src="https://tally.so/embed/nPdjpQ?alignLeft=1&hideTitle=1&transparentBackground=1" height="100%">
+      </iframe>
     </section>
 
-    <section id="contact">
 
-     <div class="content">
-        <h2 data-aos="fade-up">Lorem ipsum dolor sit.  </h2>
-          <span data-aos="fade-up" >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, quidem? Fuga, velit. Dignissimos beatae itaque voluptatibus laborum eveniet, fuga facilis laudantium delectus facere voluptate iste at repellendus vitae veritatis enim!
-          </span>
-      </div>
-
-      <iframe
-  src="https://tally.so/embed/nPdjpQ?alignLeft=1&hideTitle=1&transparentBackground=1" height="100%">
-</iframe>
-    </section>
     <footer>
       <img src="images/stellaire-studio-logo-black.svg" class="logo" alt="stellaire studio">
       <div class="footer-links">
@@ -138,12 +128,13 @@
 
     let tl = anime.timeline({
       //complete: function() { tl.restart(); }
+      loop:true
     })
     .add({
         targets: '.star ',
-        opacity: [0,1],
+        opacity: [0,1,0],
         easing: "easeOutQuad",
-        delay: anime.stagger(anime.random(100,1000), {from: 'center'}),
+        delay: anime.stagger(anime.random(100,2000), {from: 'center'}),
         duration: 6000,
         direction: 'alternate'
       })

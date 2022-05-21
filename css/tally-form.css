@@ -3,5 +3,10 @@
 }
 
 iframe  {
+  justify-self: right;
   width: 80% !important;
+}
+
+iframe html {
+  color: red !important;
 }
