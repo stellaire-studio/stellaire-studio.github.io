@@ -5,5 +5,6 @@
 .hero-contact .value-prop {
   margin-top: 0 !important;
   width: 100% !important;
-  padding: var(--half-spacing) !important;
+  padding: 0 !important;
+  text-align: left !important;
 }

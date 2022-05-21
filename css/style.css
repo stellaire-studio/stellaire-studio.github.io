@@ -34,7 +34,7 @@ body {
 
 section {
   min-height: 100vh;
-  padding: var(--large-spacing) var(--half-spacing);
+  padding: var(--large-spacing);
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
