@@ -13,8 +13,8 @@ h1, h2 {
 }
 
 h1 {
-  wdith: 780px;
   font-size: 60px;
+  line-height: 1.1;
   margin-top: 8px;
   letter-spacing: -0.5px;
   text-shadow: 0px 0px 10px rgba(0,0,0,.2);
