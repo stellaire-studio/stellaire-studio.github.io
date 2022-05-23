@@ -15,7 +15,7 @@ h1, h2 {
 h1 {
   font-size: 60px;
   line-height: 1.1;
-  margin-top: 8px;
+  margin: 8px auto;
   letter-spacing: -0.5px;
   text-shadow: 0px 0px 10px rgba(0,0,0,.2);
   overflow: hidden;

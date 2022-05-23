@@ -48,6 +48,9 @@ body {
   background-color: transparent;
   border: 1px solid var(--white);
   color: var(--white);
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding: 16px 0;
+}
+
+.tally-submit-button {
+  background-color: red !important;
 }
