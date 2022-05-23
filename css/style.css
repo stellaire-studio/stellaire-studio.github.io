@@ -26,6 +26,16 @@
   scroll-behavior: smooth !important;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: var(--black);
+  background: var(--white);
+}
+
+::selection {
+  color:  var(--black);
+  background: #F85044;
+}
+
 body {
   overscroll-behavior: none;
 }
@@ -72,6 +82,21 @@ iframe {
 
 .align-right {
   grid-column: 2;
+}
+
+ul {
+  padding: 0;
+}
+
+ul > li  {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+ul > li img {
+  width: 40px;
+  margin-right: 8px;
 }
 
 .footer {

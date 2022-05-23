@@ -49,7 +49,7 @@
         <span class="value-prop__subtitle" data-aos="fade-up">
           Révolutionner le quotidien des entreprises, une startup après l’autre.
         </span><br><br>
-        <a href="#after-hero" class="btn-primary">Découvrir le studio</a>
+        <a href="#after-hero" class="btn-primary btn-large">Découvrir le studio</a>
       </div>
 
       <!-- Stars -->
@@ -75,7 +75,7 @@
             Vous le sentez, ça pourrait être plus pratique pour vos équipes et vos clients, plus rapide, moins répétitif. Faites nous découvrir tout ce qui ne tourne pas rond dans votre sphère métier et dans votre marché.<br><br>
             <strong>Devenez notre pionnier, c’est le début de notre SaaS Odyssée</strong> <br><br>
 
-            <a href="manifesto.html" class="btn-primary">Découvrir le manifeste</a>
+            <a href="manifesto.html" class="btn-primary btn-large">Découvrir le manifeste</a>
           </span>
       </div>
     </section>
@@ -87,9 +87,12 @@
             Notre pari, c’est de viser les étoiles avec vous en éclaireur. Plus qu’un projet, c’est une startup que nous allons lancer. <br><br>
 
             Une équipe d’explorateurs, architectes, bâtisseurs et designer réunie pour <br>
-            · étudier votre problématique <br>
+            <ul>
+              <li> <img src="images/stars-2.png" alt="">étudier votre problématique </li>
+             <br>
             · en dégager les tendances qui traversent votre marché <br>
             · développer la solution logicielle la plus adaptée pour le conquérir
+            </ul>
           </span>
       </div>
       <iframe data-aos="fade-up" src="https://forms.stellaire.studio/nous-contacter?alignLeft=1&hideTitle=1&transparentBackground=1&embed=1" frameBorder=0 width="100%" height="100%">
@@ -112,10 +115,23 @@
   </main>
   </body>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/black-shader.js"></script>
   <script>
+    const buttons = document.querySelectorAll(".btn-primary");
+
+    buttons.forEach(button => {
+      button.addEventListener("mousemove", (e) => {
+        const { x, y } = button.getBoundingClientRect();
+        console.log(button.style.width)
+
+        button.style.setProperty("--x", e.clientX - x);
+        button.style.setProperty("--y", e.clientY - y);
+      })
+    })
+
     AOS.init();
 
     let tl = anime.timeline({

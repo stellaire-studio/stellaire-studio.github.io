@@ -54,3 +54,7 @@ body {
 .tally-submit-button {
   background-color: red !important;
 }
+
+[aria-hidden="true"] {
+  display: none;
+}
