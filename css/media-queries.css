@@ -36,4 +36,23 @@
   footer {
     flex-direction: column;
   }
+
+  /* ANIMATION */
+  .animation-wrapper {
+    overflow: hidden;
+  }
+  #astronaut-animation-svg {
+    width: 100vw;
+    height: 600px;
+  }
+  #astronaut {
+    width: 120%;
+    left: -60px;
+  }
+  #after-hero {
+    padding: 0 !important;
+  }
+  #after-hero .content {
+    padding: 0 var(--large-spacing);
+  }
 }
