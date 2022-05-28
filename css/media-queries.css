@@ -12,7 +12,7 @@
   }
 
   h2 {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .value-prop__subtitle {
@@ -44,6 +44,8 @@
 
   iframe {
     width: 100% !important;
+    padding: 0 !important;
+    height: 550px !important;
   }
   footer {
     flex-direction: column;
@@ -53,6 +55,11 @@
   .animation-wrapper {
     overflow: hidden;
   }
+
+  #home-astronaut-animation-wrapper {
+    order: 1;
+  }
+
   #astronaut-animation-svg {
     width: 100vw;
     height: 600px;
@@ -68,5 +75,9 @@
     padding: 80px var(--large-spacing);
     text-align: left !important;
     width: 100%;
+  }
+  #manifesto-planet-animation {
+    position: initial;
+    height: 100%;
   }
 }
