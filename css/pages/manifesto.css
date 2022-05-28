@@ -8,3 +8,15 @@
 .hero-manifesto .content {
   margin-top: 15vh;
 }
+
+.after-hero--manifesto {
+  padding: 200px var(--large-spacing) !important;
+  grid-template-columns: 1fr;
+  min-height: fit-content;
+}
+
+.after-hero--manifesto .content {
+  width: 45%;
+  margin: 0 auto;
+  text-align: center;
+}
