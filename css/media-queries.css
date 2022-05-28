@@ -6,7 +6,7 @@
     width: 100% !important;
   }
   h1 {
-    font-size: 40px;
+    font-size: 35px;
     width: 100%;
     text-align: center;
   }
@@ -15,12 +15,24 @@
     font-size: 32px;
   }
 
+  .value-prop__subtitle {
+    font-size: 22px;
+  }
+
+  #index-hero-cta {
+    margin-top: 80px;
+  }
+
   section {
     font-size: 18px;
   }
 
   .logo {
     width: 140px !important;
+  }
+
+  .hero-gradient {
+    height: 10vh !important;
   }
   /* AOS OVERRIDES */
   [data-aos^=fade] {
