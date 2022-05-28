@@ -15,3 +15,94 @@ lottie-player {
   position: absolute;
   right: 0;
 }
+
+.animation-wrapper {
+  position: relative;
+}
+
+#astronaute-animation-svg {
+  transform: translateX(-120px);
+  z-index: -1;
+}
+
+#astronaut {
+  position: absolute;
+  z-index:999;
+  left: 100px;
+  animation: spaceBreathing 10s ease-out infinite;
+}
+
+#astronaut-gradients {
+  position: absolute;
+}
+
+#stellar-sparkle {
+  opacity: .7;
+  transform-origin: 85% 79%;
+  transform: translateX(-100px);
+  animation: spaceRotate 20s linear infinite;
+}
+
+#network {
+  stroke-dasharray: 420;
+  animation: spaceDraw 15s linear infinite alternate;
+}
+
+#planet-background {
+  opacity: .2;
+  transform-origin: 50% 50%;
+  animation: spaceRotate 50s linear infinite alternate, spaceDrawPlanet 25s linear infinite alternate;
+}
+
+@keyframes spaceDraw {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes spaceDrawPlanet {
+  0% {
+
+    stroke-dasharray: 500;
+    stroke-dashoffset: 100;
+  }
+  100%{
+    stroke-dashoffset: 0;
+    stroke-dasharray: 200;
+  }
+}
+
+@keyframes spaceRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spaceBreathing {
+  0% {
+    transform: scale(0.9);
+    top: -10px;
+  }
+
+  25% {
+    transform: scale(1);
+    top: 10px;
+  }
+
+  60% {
+    transform: scale(0.9);
+    top: -10px;
+  }
+
+  100% {
+    transform: scale(0.9);
+    top: -10px;
+  }
+}

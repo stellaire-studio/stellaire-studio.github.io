@@ -5,30 +5,27 @@
   border: 1px solid var(--white);
   font-size: 18px;
   font-weight: 500;
-
   position: relative;
   overflow: hidden;
   background: transparent;
-  border-radius: 50px;
 }
 
 .btn-large {
   padding: 16px 24px;
 }
 
-
 .btn-primary::after {
   content: '';
   position: absolute;
   width: 180px;
   height: 180px;
-  top: calc(var(--y, 0) * 1px - 50px);
-  left: calc(var(--x, 0) * 1px - 50px);
+  top: calc(var(--y, 0) * 1px - 90px);
+  left: calc(var(--x, 0) * 1px - 90px);
   opacity: 0;
   transition: opacity 0.4s;
   background: radial-gradient(white, #3984ff00 80%);
 }
 
 .btn-primary:hover::after {
-  opacity: 0.4;
+  opacity: 0.3;
 }
