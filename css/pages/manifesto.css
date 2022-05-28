@@ -20,3 +20,8 @@
   margin: 0 auto;
   text-align: center;
 }
+
+#manifesto-planet-gradients {
+  position: absolute;
+  right: 0;
+}

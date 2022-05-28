@@ -5,13 +5,14 @@ footer {
   padding: var(--half-spacing) var(--large-spacing);
   display: flex;
   justify-content: space-between;
+  align-items:flex-start;
   background-color: var(--white);
   color: var(--black);
+
 }
 
 footer img{
   width: 200px;
-  height: 100%;
 }
 
 

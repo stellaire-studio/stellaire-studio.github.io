@@ -65,6 +65,8 @@
     padding: 0 !important;
   }
   #after-hero .content {
-    padding: 0 var(--large-spacing);
+    padding: 80px var(--large-spacing);
+    text-align: left !important;
+    width: 100%;
   }
 }

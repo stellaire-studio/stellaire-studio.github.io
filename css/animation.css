@@ -11,6 +11,13 @@ canvas {
 lottie-player {
   position: absolute;
   right: 0;
+}
+
+#home-hero-lottie {
+  width: 100vw;
+  height: 500px;
+  position:absolute;
+  top: 80px;
   z-index: -1;
 }
 
