@@ -8,14 +8,32 @@ h1, .logo {
 }
 
 
-
-
- .stars {
+.stars {
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
- }
+}
  .star {
   opacity: 0
+}
+
+
+.keypoints {
+  grid-template-columns: 1fr !important;
+  text-align: center;
+  min-height: auto !important;
+  padding: 0 var(--large-spacing);
+}
+
+.keypoints-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.keypoint img {
+  width: 80px;
+  height: 80px;
+  border: 1px solid white;
+  border-radius: 50%;
 }

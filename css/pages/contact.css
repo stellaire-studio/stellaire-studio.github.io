@@ -1,6 +1,7 @@
 .hero-contact {
   background: transparent;
   height: auto !important;
+  padding-top: 0 !important;
 }
 
 .hero-contact .value-prop {
