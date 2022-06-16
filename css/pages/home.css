@@ -15,15 +15,23 @@ h1, .logo {
   z-index: -1;
 }
  .star {
-  opacity: 0
+  opacity: 0;
 }
 
+#home-astronaut-animation-wrapper {
+  overflow: hidden;
+}
 
 .keypoints {
   grid-template-columns: 1fr !important;
   text-align: center;
   min-height: auto !important;
   padding: 0 var(--large-spacing);
+}
+
+.keypoints h2 {
+  width: 70%;
+  margin: 0 auto;
 }
 
 .keypoints-list {

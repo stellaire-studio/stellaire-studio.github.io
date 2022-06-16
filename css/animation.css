@@ -28,13 +28,14 @@ lottie-player {
 #astronaute-animation-svg {
   transform: translateX(-120px);
   z-index: -1;
+  width: 100%;
 }
 
 #astronaut {
   position: absolute;
   z-index:999;
   left: 100px;
-  animation: spaceBreathing 10s ease-out infinite;
+  animation: spaceBreathing 30s linear infinite;
 }
 
 #astronaut-gradients {
