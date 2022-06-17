@@ -22,6 +22,10 @@ h1, .logo {
   overflow: hidden;
 }
 
+#after-hero .content {
+  width: 94%;
+}
+
 .keypoints {
   grid-template-columns: 1fr !important;
   text-align: center;

@@ -4,6 +4,7 @@
 body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing : grayscale;
   font-weight: 300;
 }
 
@@ -32,6 +33,10 @@ h2 {
   line-height: 1.1;
   letter-spacing:-0.1px;
   margin-top: 16px;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 section {

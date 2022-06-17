@@ -6,6 +6,7 @@
 /* Config */
 @import url('config/spacing.css');
 @import url('config/colors.css');
+@import url('config/fonts.css');
 
 /* Components */
 @import url('components/navbar.css');
