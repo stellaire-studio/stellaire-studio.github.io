@@ -56,3 +56,9 @@ body {
 [aria-hidden="true"] {
   display: none;
 }
+
+.tally-submit-button button {
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 20px;
+}

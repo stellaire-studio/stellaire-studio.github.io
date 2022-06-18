@@ -99,4 +99,10 @@
     position: initial;
     height: 100% !important;
   }
+
+  /* Form */
+  .tally-block input,
+  .tally-block textarea {
+    width: 100%;
+  }
 }
