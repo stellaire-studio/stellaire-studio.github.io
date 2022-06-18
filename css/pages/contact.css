@@ -2,11 +2,14 @@
   background: transparent;
   height: auto !important;
   padding-top: 0 !important;
+  grid-template-columns: 4fr 2fr;
 }
+
+
 
 .hero-contact .value-prop {
   margin-top: 0 !important;
-  width: 100% !important;
+  width: 82% !important;
   padding: 0 !important;
   padding-right: var(--half-spacing) !important;
   text-align: left !important;

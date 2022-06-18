@@ -13,13 +13,16 @@
   padding: 200px var(--large-spacing) !important;
   grid-template-columns: 1fr;
   min-height: fit-content;
+  font-size: 24px;
 }
 
 .after-hero--manifesto .content {
-  width: 45%;
+  width: 60% !important;
   margin: 0 auto;
   text-align: center;
 }
+
+
 
 #manifesto-planet-gradients {
   position: absolute;
