@@ -20,7 +20,7 @@
   }
 
   #index-hero-cta {
-    margin-top: 80px;
+    margin-top: 24px;
   }
 
   section {
@@ -34,8 +34,16 @@
   .hero-gradient {
     height: 10vh !important;
   }
+  .keypoints h2 {
+    width: 100%;
+    text-align: left;
+  }
   .keypoints-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  #contact {
+    padding-top: 15vh !important;
   }
   /* AOS OVERRIDES */
   [data-aos^=fade] {
@@ -60,7 +68,7 @@
   }
 
   #home-astronaut-animation-wrapper {
-    order: 1;
+    order: -1;
   }
 
   #astronaut-animation-svg {
