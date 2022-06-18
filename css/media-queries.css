@@ -4,6 +4,7 @@
   }
   .hero .value-prop {
     width: 100% !important;
+    text-align: center !important;
   }
   h1 {
     font-size: 35px;
@@ -92,8 +93,11 @@
   }
   #after-hero .content {
     padding: 80px var(--large-spacing);
-    text-align: left !important;
+    text-align: center !important;
     width: 100%;
+  }
+  #contact .content {
+    text-align: center;
   }
   #manifesto-planet-animation {
     position: initial;
