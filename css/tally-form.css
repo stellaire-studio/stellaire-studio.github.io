@@ -48,7 +48,8 @@ body {
   background-color: transparent;
   border: 1px solid var(--white);
   color: var(--white);
-  padding: 16px 0;
+  padding: 16px 8px;
+  width: 80%;
 }
 
 
