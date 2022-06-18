@@ -103,6 +103,6 @@
   /* Form */
   .tally-block input,
   .tally-block textarea {
-    width: 100%;
+    width: 100% !important;
   }
 }

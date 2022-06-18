@@ -57,8 +57,7 @@ body {
   display: none;
 }
 
-.tally-submit-button button {
+.tally-submit-button button, .tally-submit-button button:hover  {
   background-color: var(--white);
   color: var(--black);
-  font-size: 20px;
 }
