@@ -16,6 +16,7 @@ h1, .logo {
 }
  .star {
   opacity: 0;
+  transform-origin: center center;
 }
 
 #home-astronaut-animation-wrapper {
@@ -30,7 +31,7 @@ h1, .logo {
   grid-template-columns: 1fr !important;
   text-align: center;
   min-height: auto !important;
-  padding: 0 var(--large-spacing);
+  padding: 0 var(--large-spacing) var(--large-spacing) var(--large-spacing);
 }
 
 .keypoints h2 {
