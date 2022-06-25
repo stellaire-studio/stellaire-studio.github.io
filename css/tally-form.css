@@ -47,8 +47,10 @@ body {
 .tally-block textarea {
   background-color: transparent;
   border: 1px solid var(--white);
+  border-radius: 0px !important;
   color: var(--white);
   padding: 16px 8px;
+  height: 32px !important;
   width: 100%;
 }
 
@@ -61,5 +63,5 @@ body {
   background-color: var(--white);
   color: var(--black);
   height: 48px;
-  width: 100%;
+  width: 100% !important;
 }
