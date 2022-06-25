@@ -7,6 +7,9 @@ h1, .logo {
   opacity: 1;
 }
 
+#index-hero-cta {
+  margin-top: var(--half-spacing);
+}
 
 .stars {
   position: absolute;
@@ -44,10 +47,13 @@ h1, .logo {
   grid-template-columns: repeat(4, 1fr);
   margin-top: 32px;
 }
-
+.section-title {
+  grid-template-columns: 1fr;
+  padding: var(--large-spacing) var(--large-spacing) 0 var(--large-spacing) ;
+  min-height: auto;
+}
 #contact {
   align-items: flex-start;
+  padding-top: 0 !important;
 }
-#contact iframe {
-  margin-top: 200px;
-}
+
