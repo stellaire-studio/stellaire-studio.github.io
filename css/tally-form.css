@@ -52,6 +52,9 @@ body {
   width: 100%;
 }
 
+.tally-required-indicator {
+  display: none !important;
+}
 
 [aria-hidden="true"] {
   display: none;

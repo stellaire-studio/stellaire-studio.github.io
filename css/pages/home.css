@@ -44,4 +44,9 @@ h1, .logo {
   margin-top: 32px;
 }
 
-
+#contact {
+  align-items: flex-start;
+}
+#contact iframe {
+  margin-top: 200px;
+}
