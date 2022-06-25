@@ -35,7 +35,7 @@ lottie-player {
   position: absolute;
   z-index:999;
   left: 100px;
-  animation: spaceBreathing 30s linear infinite;
+  animation: spaceBreathing 10s linear;
 }
 
 #astronaut-gradients {
@@ -98,18 +98,8 @@ lottie-player {
     top: -10px;
   }
 
-  25% {
+  100% {
     transform: scale(1);
     top: 10px;
-  }
-
-  60% {
-    transform: scale(0.7);
-    top: -10px;
-  }
-
-  100% {
-    transform: scale(0.7);
-    top: -10px;
   }
 }

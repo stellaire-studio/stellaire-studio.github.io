@@ -1,0 +1,16 @@
+.shaderless {
+  background-image:  url('../../images/bg.png');
+  background-size: cover;
+}
+
+.shaderless canvas {
+  opacity: 0;
+}
+
+.shaderless #after-hero, .shaderless section, .shaderless #contact {
+  background-color: transparent;
+}
+
+.shaderless #after-hero {
+  padding-top: 0;
+}
