@@ -56,11 +56,10 @@ body {
   display: none !important;
 }
 
-[aria-hidden="true"] {
-  display: none;
-}
 
 .tally-submit-button button, .tally-submit-button button:hover  {
   background-color: var(--white);
   color: var(--black);
+  height: 48px;
+  width: 100%;
 }
