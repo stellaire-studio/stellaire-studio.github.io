@@ -1,8 +1,9 @@
 .hero-contact {
   background: transparent;
   height: auto !important;
-  padding-top: 0 !important;
+  padding-top: var(--large-spacing) !important;
   grid-template-columns: 4fr 2fr;
+  align-items: flex-start;
 }
 
 

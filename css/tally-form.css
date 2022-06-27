@@ -62,6 +62,12 @@ body {
   display: none !important;
 }
 
+.tally-submit-button {
+  background-color: var(--white);
+  color: var(--black);
+  height: 48px;
+  width: 100% !important;
+}
 
 .tally-submit-button button, .tally-submit-button button:hover  {
   background-color: var(--white);
