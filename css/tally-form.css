@@ -15,7 +15,7 @@ html, .tally-app {
 }
 
 .tally-app {
-  height: 520px;
+  height: 550px;
 }
 
 body {
@@ -67,11 +67,5 @@ body {
   color: var(--black);
   height: 48px;
   width: 100% !important;
-}
-
-.tally-submit-button button, .tally-submit-button button:hover  {
-  background-color: var(--white);
-  color: var(--black);
-  height: 48px;
-  width: 100% !important;
+  justify-content: center;
 }
