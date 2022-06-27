@@ -14,8 +14,12 @@ html, .tally-app {
   color: var(--white) !important;
 }
 
+.tally-app {
+  height: 520px;
+}
+
 body {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Epilogue', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   font-weight: 300;
   color: var(--white);
@@ -23,7 +27,7 @@ body {
 
 .tally-block-heading-1,
 .tally-block-heading-2 {
-  font-family: 'Epilogue', sans-serif;
+  font-family: 'Epilogue', sans-serif !important;
 }
 
 .tally-block-heading-1 {
