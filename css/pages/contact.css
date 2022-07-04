@@ -1,3 +1,8 @@
+.contact {
+   background-image:  url('../../images/bg-contact-min.png');
+  background-size: cover;
+}
+
 .hero-contact {
   background: transparent;
   height: auto !important;
@@ -5,8 +10,6 @@
   grid-template-columns: 4fr 2fr;
   align-items: flex-start;
 }
-
-
 
 .hero-contact .value-prop {
   margin-top: 0 !important;

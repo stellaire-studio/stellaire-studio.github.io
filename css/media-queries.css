@@ -79,6 +79,12 @@
   }
   footer {
     flex-direction: column;
+    align-items: center;
+  }
+
+  footer h3 {
+    margin-bottom: 4px;
+    margin-top: 32px;
   }
 
   /* ANIMATION */
