@@ -37,7 +37,3 @@ nav .logo {
   width: 100%;
   left: 0;
 }
-
-.nav-link:first-child {
-  margin-right: var(--half-spacing);
-}
