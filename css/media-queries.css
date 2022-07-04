@@ -54,9 +54,11 @@
   #after-hero .content {
     padding-top: 0 !important;
   }
-
+  .section-title {
+    text-align: center;
+  }
   #contact {
-    padding-top: 15vh !important;
+    padding-top: 0vh !important;
   }
   /* AOS OVERRIDES */
   [data-aos^=fade] {
@@ -86,7 +88,7 @@
 
   #astronaut-animation-svg {
     width: 100vw;
-    height: 600px;
+    height: 500px;
   }
   #astronaut {
     left: -60px;

@@ -62,7 +62,7 @@ body {
   display: none !important;
 }
 
-.tally-submit-button {
+.tally-submit-button button {
   background-color: var(--white);
   color: var(--black);
   height: 48px;
