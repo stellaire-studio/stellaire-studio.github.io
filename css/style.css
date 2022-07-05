@@ -28,6 +28,10 @@
   scroll-behavior: smooth !important;
 }
 
+img {
+  content-visibility: auto;
+}
+
 ::-moz-selection { /* Code for Firefox */
   color: var(--black);
   background: var(--white);
