@@ -14,10 +14,6 @@ html, .tally-app {
   color: var(--white) !important;
 }
 
-.tally-app {
-  height: 550px;
-}
-
 body {
   font-family: 'Epilogue', sans-serif !important;
   -webkit-font-smoothing: antialiased;
@@ -65,7 +61,7 @@ body {
 .tally-submit-button button {
   background-color: var(--white);
   color: var(--black);
-  height: 48px;
+  height: 40px;
   width: 100% !important;
   justify-content: center;
 }
