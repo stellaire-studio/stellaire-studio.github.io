@@ -34,6 +34,7 @@ lottie-player {
   z-index:999;
   left: 100px;
   animation: spaceBreathing 10s linear;
+  animation-fill-mode: forwards;
 }
 
 #astronaut-gradients {
