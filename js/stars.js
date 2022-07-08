@@ -9,15 +9,13 @@ let tl2 = anime.timeline({
 })
 
 let tl = anime.timeline({
-  loop:true
+  //loop:true
 })
 .add({
   targets: '.star',
   opacity: [
     {value: 0, easing: 'easeOutSine', duration: 100},
-    {value: 0.55, easing: 'easeInOutQuad', duration: 6000},
-    {value: 0, easing: 'easeInOutQuad', duration: 2000}
+    {value: 0.55, easing: 'easeInOutQuad', duration: 6000}
   ],
   delay: anime.stagger(60, {grid: [50, 5], from: 'center'})
 });
-

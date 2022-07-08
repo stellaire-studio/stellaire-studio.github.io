@@ -18,9 +18,11 @@ h1, .logo {
   z-index: -1;
 }
  .star {
-  opacity: 0;
   transform-origin: center center;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
+
 
 #home-astronaut-animation-wrapper {
   overflow: hidden;
