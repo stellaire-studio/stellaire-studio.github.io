@@ -14,10 +14,6 @@ html, .tally-app {
   color: var(--white) !important;
 }
 
-.tally-app {
-  height: 550px;
-}
-
 body {
   font-family: 'Epilogue', sans-serif !important;
   -webkit-font-smoothing: antialiased;
