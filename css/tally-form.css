@@ -65,7 +65,7 @@ body {
 .tally-submit-button button {
   background-color: var(--white);
   color: var(--black);
-  height: 48px;
+  height: 40px;
   width: 100% !important;
   justify-content: center;
 }
