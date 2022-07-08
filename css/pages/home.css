@@ -42,6 +42,10 @@ h1, .logo {
   margin: 0 auto;
 }
 
+.keypoint h3 {
+  margin-top: -20px;
+}
+
 .keypoints-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
