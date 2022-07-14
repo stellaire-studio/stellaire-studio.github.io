@@ -31,14 +31,9 @@ img {
   content-visibility: auto;
 }
 
-::-moz-selection { /* Code for Firefox */
-  color: var(--black);
-  background: var(--white);
-}
-
 ::selection {
-  color:  var(--black);
-  background: #F85044;
+  color:      var(--black);
+  background: var(--red);
 }
 
 body {
