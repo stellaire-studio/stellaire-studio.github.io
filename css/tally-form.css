@@ -10,6 +10,11 @@
   --gradient: linear-gradient(175.24deg, #F85044 7.96%, #3F5EFB 96.16%);
 }
 
+::selection {
+  color:      var(--black);
+  background: var(--red);
+}
+
 html, .tally-app {
   /* no bg color for the contact page */
   /* background-color: var(--black) !important; */
@@ -56,6 +61,10 @@ body {
   width: 100%;
 }
 
+.tally-block input:focus, .tally-block textarea:focus {
+  box-shadow: var(--white) 0px 0px 0px 2px !important;
+}
+
 .tally-required-indicator {
   display: none !important;
 }
@@ -66,4 +75,9 @@ body {
   height: 40px;
   width: 100% !important;
   justify-content: center;
+}
+
+.tally-submit-button button:hover {
+  background-color: var(--black);
+  color: var(--white);
 }
