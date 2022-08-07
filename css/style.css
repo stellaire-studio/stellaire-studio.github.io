@@ -17,6 +17,7 @@
 @import url("pages/contact.css");
 @import url("pages/manifesto.css");
 @import url("pages/shaderless.css");
+@import url("pages/projets.css");
 
 /* Responsive */
 @import url('media-queries.css');
