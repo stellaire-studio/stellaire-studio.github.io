@@ -1,0 +1,17 @@
+::selection {
+  color:      var(--black);
+  background: var(--red);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+img {
+  content-visibility: auto;
+}

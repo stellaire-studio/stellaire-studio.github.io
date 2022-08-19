@@ -7,6 +7,7 @@
 @import url("config/spacing.css");
 @import url("config/colors.css");
 @import url("config/fonts.css");
+@import url("config/layout.css");
 
 /* Components */
 @import url("components/navbar.css");
@@ -21,25 +22,6 @@
 
 /* Responsive */
 @import url("media-queries.css");
-
-
-* {
-  box-sizing: border-box;
-  scroll-behavior: smooth !important;
-}
-
-img {
-  content-visibility: auto;
-}
-
-::selection {
-  color:      var(--black);
-  background: var(--red);
-}
-
-body {
-  overscroll-behavior: none;
-}
 
 section {
   min-height: 100vh;
