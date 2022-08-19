@@ -7,7 +7,6 @@ body {
   font-weight: 500;
 }
 
-
 h1, h2 {
   font-family: 'Epilogue', sans-serif;
 }
@@ -17,7 +16,6 @@ h1 {
   line-height: 1.1;
   margin: 8px auto;
   letter-spacing: -0.5px;
-  text-shadow: 0px 0px 10px rgba(0,0,0,.2);
   overflow: hidden;
   opacity: 0;
 }
