@@ -36,7 +36,7 @@
 
 .header p {
   font-size: 1.3em;
-  line-height: 2em;
+  line-height: 2;
 }
 
 .projects-wrapper .header {
@@ -45,41 +45,37 @@
 }
 
 .project {
-  text-align: left;
-  background-size: 200%;
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border-radius: 24px;
   align-items: flex-end;
+  text-align: left;
+
+  border-radius: 12px;
+
   margin-bottom: 80px;
+  padding: 0 5em;
+  padding-top: 5em;
+
   transition: 0.3s;
-  padding-top: 48px;
 }
 
 .project:nth-child(odd) .project-image {
-  order: 1;
-}
-
-#kwali-use-case {
-  background: linear-gradient(103.54deg, green 24.06%, #00C289 86.08%);
-}
-
-#astreinte-use-case {
-  background: linear-gradient(255.53deg, #17223A 8.04%, #08225A 89.86%);
+  order: 0;
 }
 
 .project-image {
-  text-align: center;
+  display: flex;
 }
 
 .project-info {
-  padding: 32px;
-
+  padding-bottom: 2em;
+  padding-right: 2em;
 }
 
 .project-description {
-  line-height: 1.6;
+  font-size: 1.15em;
+  line-height: 1.7;
+  margin-bottom: 2em;
 }
 
 .kpis {
@@ -88,13 +84,16 @@
 }
 
 .kpi {
-  background-color: rgba(255,255,255,0.3);
+  min-width: 115px;
   padding: 8px 12px;
-  border: 1px solid white;
   display: flex;
   flex-direction: column;
   border-radius: 4px;
   margin-right: 32px;
+
+  /* To override per project */
+  background-color: rgba(255,255,255,0.3);
+  border: 1px solid white;
 }
 
 .kpi-name {
@@ -103,7 +102,6 @@
   line-height: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #004C08;
   margin-bottom: 8px;
 }
 
@@ -111,5 +109,29 @@
   font-style: normal;
   font-size: 14px;
   line-height: 14px;
+}
+
+/* Project Kwali */
+
+#kwali-use-case {
+  background: linear-gradient(103.54deg, #61C763 24.06%, #00C289 86.08%);
+}
+
+#kwali-use-case .project-image {
+  margin-top: 2em;
+}
+
+#kwali-use-case .kpis {
   color: #004C08;
+}
+
+#kwali-use-case .kpi {
+  background-color: #8ED791;
+  border: 1px solid #BEE7C1;
+}
+
+/* Project Astreinte Vitale */
+
+#astreinte-use-case {
+  background: linear-gradient(255.53deg, #17223A 8.04%, #08225A 89.86%);
 }
