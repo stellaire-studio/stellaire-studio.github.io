@@ -1,20 +1,22 @@
 footer {
+  --footer-primary-color:    var(--background-color);
+  --footer-background-color: var(--primary-color);
+
   padding: var(--half-spacing) var(--large-spacing);
   display: flex;
   justify-content: space-between;
   align-items:flex-start;
-  background-color: var(--white);
-  color: var(--black);
 
+  color: var(--footer-primary-color);
+  background-color: var(--footer-background-color);
 }
 
 footer img{
   width: 200px;
 }
 
-
 footer a {
-  color: var(--black);
+  color: var(--footer-primary-color);
   display: block;
   line-height: 24px;
 }

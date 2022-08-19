@@ -35,7 +35,7 @@ section {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   position: relative;
-  background-color: var(--black);
+  background-color: var(--background-color);
 }
 
 iframe {

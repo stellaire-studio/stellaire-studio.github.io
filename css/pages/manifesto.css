@@ -1,6 +1,6 @@
 .hero-manifesto {
   text-align: center;
-  color: var(--white);
+  color: var(--primary-color);
 }
 
 .hero-manifesto .content {
@@ -19,8 +19,6 @@
   margin: 0 auto;
   text-align: center;
 }
-
-
 
 #manifesto-planet-gradients {
   position: absolute;

@@ -60,5 +60,5 @@ strong, section b {
   font-size: 15px;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--primary-color);
 }
