@@ -1,16 +1,16 @@
 /* Base */
-@import url("../base/normalize.css");
+@import url("/css/base/normalize.css");
 
 /* Config */
-@import url("../config/spacing.css");
-@import url("../config/colors.css");
-@import url("../config/fonts.css");
-@import url("../config/layout.css");
+@import url("/css/config/spacing.css");
+@import url("/css/config/colors.css");
+@import url("/css/config/fonts.css");
+@import url("/css/config/layout.css");
 
 /* Components */
-@import url("../components/navbar.css");
-@import url("../components/footer.css");
-@import url("../components/buttons.css");
+@import url("/css/components/navbar.css");
+@import url("/css/components/footer.css");
+@import url("/css/components/buttons.css");
 
 :root {
   --primary-color:    var(--black);
