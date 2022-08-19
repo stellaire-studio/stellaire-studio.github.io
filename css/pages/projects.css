@@ -12,6 +12,11 @@
 @import url("../components/footer.css");
 @import url("../components/buttons.css");
 
+:root {
+  --primary-color:    var(--black);
+  --background-color: var(--white);
+}
+
 .projects-wrapper {
   max-width: 1280px;
   margin: 0 auto;
