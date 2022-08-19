@@ -1,7 +1,7 @@
 /* Base */
-@import url("normalize.css");
-@import url("animation.css");
-@import url("cursor.css");
+@import url("base/normalize.css");
+@import url("base/animation.css");
+@import url("base/cursor.css");
 
 /* Config */
 @import url("config/spacing.css");
