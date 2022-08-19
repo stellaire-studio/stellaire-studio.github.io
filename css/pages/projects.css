@@ -59,12 +59,17 @@
   transition: 0.3s;
 }
 
+.project:nth-child(odd) .project-info {
+  order: 1;
+}
+
 .project:nth-child(odd) .project-image {
-  order: 0;
+  padding-right: 5em; /* projuct padding */
 }
 
 .project-image {
   display: flex;
+  justify-content: center;
 }
 
 .project-info {
@@ -132,6 +137,24 @@
 
 /* Project Astreinte Vitale */
 
-#astreinte-use-case {
+#astreinte-vitale-use-case {
   background: linear-gradient(255.53deg, #17223A 8.04%, #08225A 89.86%);
+  overflow: hidden; /* for the drop-shadow */
+}
+
+#astreinte-vitale-use-case .project-description {
+  color: #FFF;
+}
+
+#astreinte-vitale-use-case .project-image img {
+  filter: drop-shadow(0px 14px 42px rgba(0, 0, 0, 0.8));
+}
+
+#astreinte-vitale-use-case .kpis {
+  color: #C7E0FF;
+}
+
+#astreinte-vitale-use-case .kpi {
+  background-color: #324264;
+  border: 1px solid #66728C;
 }
