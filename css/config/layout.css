@@ -9,7 +9,14 @@
 }
 
 body {
+  color:            var(--primary-color);
+  background-color: var(--background-color);
+
   overscroll-behavior: none;
+}
+
+h1, .logo {
+  opacity: 1;
 }
 
 img {

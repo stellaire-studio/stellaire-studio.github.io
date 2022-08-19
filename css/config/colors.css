@@ -7,8 +7,3 @@
 
   --gradient: linear-gradient(175.24deg, #F85044 7.96%, #3F5EFB 96.16%);
 }
-
-body {
-  background-color: var(--black);
-  color: var(--white);
-}
