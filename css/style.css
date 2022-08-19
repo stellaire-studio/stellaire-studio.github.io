@@ -3,14 +3,14 @@
 @import url("cursor.css");
 
 /* Config */
-@import url('config/spacing.css');
-@import url('config/colors.css');
-@import url('config/fonts.css');
+@import url("config/spacing.css");
+@import url("config/colors.css");
+@import url("config/fonts.css");
 
 /* Components */
-@import url('components/navbar.css');
-@import url('components/footer.css');
-@import url('components/buttons.css');
+@import url("components/navbar.css");
+@import url("components/footer.css");
+@import url("components/buttons.css");
 
 /* Pages */
 @import url("pages/home.css");
@@ -20,7 +20,7 @@
 @import url("pages/projects.css");
 
 /* Responsive */
-@import url('media-queries.css');
+@import url("media-queries.css");
 
 
 * {
