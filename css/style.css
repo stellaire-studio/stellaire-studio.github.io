@@ -23,6 +23,11 @@
 /* Responsive */
 @import url("media-queries.css");
 
+:root {
+  --primary-color:    var(--white);
+  --background-color: var(--black);
+}
+
 section {
   min-height: 100vh;
   padding: var(--large-spacing);
