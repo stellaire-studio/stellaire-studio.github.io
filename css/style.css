@@ -1,3 +1,4 @@
+/* Base */
 @import url("normalize.css");
 @import url("animation.css");
 @import url("cursor.css");
@@ -17,7 +18,6 @@
 @import url("pages/contact.css");
 @import url("pages/manifesto.css");
 @import url("pages/shaderless.css");
-@import url("pages/projects.css");
 
 /* Responsive */
 @import url("media-queries.css");
@@ -99,15 +99,6 @@ ul > li  {
 ul > li img {
   margin-top: 8px;
   margin-right: 8px;
-}
-
-.footer {
-  background-color: var(--white);
-  color: var(--black);
-  overflow: hidden;
-  margin-top: 200px;
-  opacity: 1 !important;
-  white-space: nowrap;
 }
 
 #after-hero, #contact {
