@@ -1,6 +1,3 @@
-@import url('../config/spacing.css');
-@import url('../config/colors.css');
-
 footer {
   padding: var(--half-spacing) var(--large-spacing);
   display: flex;
