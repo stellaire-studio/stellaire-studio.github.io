@@ -1,3 +1,17 @@
+/* Base */
+@import url("../base/normalize.css");
+
+/* Config */
+@import url("../config/spacing.css");
+@import url("../config/colors.css");
+@import url("../config/fonts.css");
+@import url("../config/layout.css");
+
+/* Components */
+@import url("../components/navbar.css");
+@import url("../components/footer.css");
+@import url("../components/buttons.css");
+
 .projects-wrapper {
   max-width: 1280px;
   margin: 0 auto;
