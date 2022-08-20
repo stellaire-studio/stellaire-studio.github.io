@@ -1,8 +1,3 @@
-::selection {
-  color:      var(--black);
-  background: var(--red);
-}
-
 * {
   box-sizing: border-box;
   scroll-behavior: smooth !important;

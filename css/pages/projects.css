@@ -225,6 +225,11 @@
   background: linear-gradient(103.54deg, #61C763 24.06%, #00C289 86.08%);
 }
 
+#kwali-use-case *::selection {
+  color:      var(--white);
+  background: #053f5c;
+}
+
 #kwali-use-case .kpis {
   color: #004C08;
 }
@@ -249,6 +254,11 @@
 
 [data-theme=dark] #astreinte-vitale-use-case {
   background: linear-gradient(255.53deg, #08225A 8.04%, #08225A 89.86%);
+}
+
+#astreinte-vitale-use-case *::selection {
+  color:      var(--white);
+  background: #f83469;
 }
 
 #astreinte-vitale-use-case .project-description {
@@ -296,6 +306,11 @@
 
 [data-theme=dark] #new-project--contact-us {
   color: var(--primary-color);
+}
+
+#new-project--contact-us *::selection {
+  color: var(--black);
+  background-color: var(--white);
 }
 
 #new-project--contact-us h2 {
