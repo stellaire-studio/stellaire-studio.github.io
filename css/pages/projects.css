@@ -1,5 +1,6 @@
 /* Base */
 @import url("/css/base/normalize.css");
+@import url("/css/base/utilities.css");
 
 /* Config */
 @import url("/css/config/spacing.css");
@@ -150,6 +151,7 @@
 
 .project-description {
   font-size: 1.15em;
+  font-weight: 400;
   line-height: 1.7;
   margin-bottom: 1em;
 }
