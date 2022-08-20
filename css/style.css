@@ -34,13 +34,18 @@ h1 {
 }
 
 section {
-  min-height: 100vh;
   padding: var(--large-spacing);
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   position: relative;
-  background-color: var(--background-color);
+  padding-bottom: 150px;
+}
+
+@media (min-width: 768px) {
+  section {
+    min-height: 100vh;
+  }
 }
 
 iframe {
@@ -69,12 +74,10 @@ ul > li img {
 }
 
 .hero {
-  height: 100vh;
+  height: calc(100vh - 65px); /* navbar height */
   overflow: hidden;
   position: relative;
   z-index: 999;
-  position: relative;
-
 }
 
 .hero .value-prop {
@@ -96,13 +99,10 @@ ul > li img {
   bottom: 0;
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
 }
-#after-hero, #contact {
-  background-color: black;
+
+#after-hero, #nous-contacter {
   width: 100vw;
   margin-left: 0;
-  padding: var(--large-spacing);
-}
-
-#contact .content {
-  padding-right: var(--half-spacing);
+  padding-left: var(--large-spacing);
+  padding-right: var(--large-spacing);
 }

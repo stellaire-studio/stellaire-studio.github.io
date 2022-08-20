@@ -316,7 +316,13 @@
 }
 
 #new-project--contact-us h2 {
-  font-size: 2em;
+  font-size: 1.6em;
+}
+
+@media (min-width: 768px) {
+  #new-project--contact-us h2 {
+    font-size: 2em;
+  }
 }
 
 #new-project--contact-us .project-image {
