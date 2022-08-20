@@ -22,7 +22,9 @@
 
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme=light]) {
-    color-scheme: dark;
+    /* DO NOT SETUP color-scheme ! */
+    /* Firefox adds a white background to iframes */
+    /* color-scheme: dark; */
 
     --primary-color:    var(--white);
     --background-color: var(--black);
@@ -275,15 +277,25 @@
 /* New project - Contact us */
 
 #new-project--contact-us {
-  --project-primary-color:    var(--background-color);
-  --project-background-color: var(--primary-color);
-
-  color:            var(--project-primary-color);
-  background-color: var(--project-background-color);
-
   align-items: flex-start;
-
   padding-bottom: 1em;
+
+  background: linear-gradient(103.54deg, #f17c5f 24.06%, #d92c01 86.08%);
+}
+
+[data-theme=light] #new-project--contact-us,
+:root:not([data-theme=dark]) #new-project--contact-us {
+  color: var(--background-color);
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]) #new-project--contact-us {
+    color: var(--primary-color);
+  }
+}
+
+[data-theme=dark] #new-project--contact-us {
+  color: var(--primary-color);
 }
 
 #new-project--contact-us h2 {
