@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&family=Inter:wght@300;500&display=swap');
-@import url('colors.css');
 
 body {
   font-family: 'Epilogue', sans-serif;
@@ -7,7 +6,6 @@ body {
   -moz-osx-font-smoothing : grayscale;
   font-weight: 500;
 }
-
 
 h1, h2 {
   font-family: 'Epilogue', sans-serif;
@@ -18,7 +16,6 @@ h1 {
   line-height: 1.1;
   margin: 8px auto;
   letter-spacing: -0.5px;
-  text-shadow: 0px 0px 10px rgba(0,0,0,.2);
   overflow: hidden;
   opacity: 0;
 }
@@ -61,5 +58,5 @@ strong, section b {
   font-size: 15px;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--primary-color);
 }

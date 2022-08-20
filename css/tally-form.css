@@ -8,6 +8,9 @@
   --red:    #F85044;
 
   --gradient: linear-gradient(175.24deg, #F85044 7.96%, #3F5EFB 96.16%);
+
+  --primary-color:    var(--white);
+  --background-color: var(--black);
 }
 
 ::selection {
@@ -18,14 +21,14 @@
 html, .tally-app {
   /* no bg color for the contact page */
   /* background-color: var(--black) !important; */
-  color: var(--white) !important;
+  color: var(--primary-color) !important;
 }
 
 body {
   font-family: 'Epilogue', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   font-weight: 300;
-  color: var(--white);
+  color: var(--primary-color);
 }
 
 .tally-block-heading-1,
@@ -53,16 +56,22 @@ body {
 .tally-block input,
 .tally-block textarea {
   background-color: transparent;
-  border: 1px solid var(--white);
+  border: 1px solid var(--primary-color);
   border-radius: 0px !important;
-  color: var(--white);
+  color: var(--primary-color);
+  caret-color: var(--primary-color);
   padding: 16px 8px;
   height: 32px !important;
   width: 100%;
 }
 
 .tally-block input:focus, .tally-block textarea:focus {
-  box-shadow: var(--white) 0px 0px 0px 2px !important;
+  box-shadow: var(--primary-color) 0px 0px 0px 2px !important;
+}
+
+.tally-block textarea::placeholder {
+  color: var(--primary-color);
+  opacity: 0.6;
 }
 
 .tally-required-indicator {
@@ -70,14 +79,14 @@ body {
 }
 
 .tally-submit-button button {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--primary-color);
+  color: var(--background-color);
   height: 40px;
   width: 100% !important;
   justify-content: center;
 }
 
 .tally-submit-button button:hover {
-  background-color: var(--black);
-  color: var(--white);
+  color: var(--primary-color);
+  background-color: var(--background-color);
 }

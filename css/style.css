@@ -1,16 +1,18 @@
-@import url("normalize.css");
-@import url("animation.css");
-@import url("cursor.css");
+/* Base */
+@import url("base/normalize.css");
+@import url("base/animation.css");
+@import url("base/cursor.css");
 
 /* Config */
-@import url('config/spacing.css');
-@import url('config/colors.css');
-@import url('config/fonts.css');
+@import url("config/spacing.css");
+@import url("config/colors.css");
+@import url("config/fonts.css");
+@import url("config/layout.css");
 
 /* Components */
-@import url('components/navbar.css');
-@import url('components/footer.css');
-@import url('components/buttons.css');
+@import url("components/navbar.css");
+@import url("components/footer.css");
+@import url("components/buttons.css");
 
 /* Pages */
 @import url("pages/home.css");
@@ -19,25 +21,15 @@
 @import url("pages/shaderless.css");
 
 /* Responsive */
-@import url('media-queries.css');
+@import url("media-queries.css");
 
-
-* {
-  box-sizing: border-box;
-  scroll-behavior: smooth !important;
+:root {
+  --primary-color:    var(--white);
+  --background-color: var(--black);
 }
 
-img {
-  content-visibility: auto;
-}
-
-::selection {
-  color:      var(--black);
-  background: var(--red);
-}
-
-body {
-  overscroll-behavior: none;
+h1 {
+  text-shadow: 0px 0px 10px rgba(0,0,0,.2);
 }
 
 section {
@@ -47,7 +39,7 @@ section {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   position: relative;
-  background-color: var(--black);
+  background-color: var(--background-color);
 }
 
 iframe {
@@ -98,15 +90,6 @@ ul > li  {
 ul > li img {
   margin-top: 8px;
   margin-right: 8px;
-}
-
-.footer {
-  background-color: var(--white);
-  color: var(--black);
-  overflow: hidden;
-  margin-top: 200px;
-  opacity: 1 !important;
-  white-space: nowrap;
 }
 
 #after-hero, #contact {
