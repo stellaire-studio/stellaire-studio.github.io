@@ -2,6 +2,7 @@
 @import url("base/normalize.css");
 @import url("base/animation.css");
 @import url("base/cursor.css");
+@import url("base/utilities.css");
 
 /* Config */
 @import url("config/spacing.css");
