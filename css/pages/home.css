@@ -27,7 +27,6 @@
   grid-template-columns: 1fr !important;
   text-align: center;
   min-height: auto !important;
-  padding: 0 var(--large-spacing) var(--large-spacing) var(--large-spacing);
 }
 
 .keypoints h2 {
@@ -36,7 +35,7 @@
 }
 
 .keypoint h3 {
-  margin-top: -20px;
+  margin-top: -0.2em;
 }
 
 .keypoints-list {
@@ -44,13 +43,13 @@
   grid-template-columns: repeat(4, 1fr);
   margin-top: 32px;
 }
+
 .section-title {
   grid-template-columns: 1fr;
-  padding: var(--large-spacing) var(--large-spacing) 0 var(--large-spacing) ;
   min-height: auto;
 }
-#contact {
+
+#nous-contacter {
   align-items: flex-start;
-  padding-top: 0 !important;
   min-height: auto;
 }

@@ -8,7 +8,7 @@
   opacity: 0;
 }
 
-.shaderless #after-hero, .shaderless section, .shaderless #contact {
+.shaderless #after-hero, .shaderless section, .shaderless #nous-contacter {
   background-color: transparent;
 }
 
