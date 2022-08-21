@@ -1,28 +1,28 @@
 /* Base */
-@import url("base/normalize.css");
-@import url("base/animation.css");
-@import url("base/cursor.css");
-@import url("base/utilities.css");
+@import url("/assets/css/base/normalize.css");
+@import url("/assets/css/base/animation.css");
+@import url("/assets/css/base/cursor.css");
+@import url("/assets/css/base/utilities.css");
 
 /* Config */
-@import url("config/spacing.css");
-@import url("config/colors.css");
-@import url("config/fonts.css");
-@import url("config/layout.css");
+@import url("/assets/css/config/spacing.css");
+@import url("/assets/css/config/colors.css");
+@import url("/assets/css/config/fonts.css");
+@import url("/assets/css/config/layout.css");
 
 /* Components */
-@import url("components/navbar.css");
-@import url("components/footer.css");
-@import url("components/buttons.css");
+@import url("/assets/css/components/navbar.css");
+@import url("/assets/css/components/footer.css");
+@import url("/assets/css/components/buttons.css");
 
 /* Pages */
-@import url("pages/home.css");
-@import url("pages/contact.css");
-@import url("pages/manifesto.css");
-@import url("pages/shaderless.css");
+@import url("/assets/css/pages/home.css");
+@import url("/assets/css/pages/contact.css");
+@import url("/assets/css/pages/manifesto.css");
+@import url("/assets/css/pages/shaderless.css");
 
 /* Responsive */
-@import url("media-queries.css");
+@import url("/assets/css/media-queries.css");
 
 :root {
   --primary-color:    var(--white);
