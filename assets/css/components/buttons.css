@@ -12,26 +12,47 @@ a:hover {
 
 .btn-primary {
   padding: 8px 16px;
-  border: 1px solid var(--primary-color);
-  font-size: 18px;
-  font-weight: 500;
+  background: var(--green) !important;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  text-transform: uppercase;
+  color: var(--black);
+  letter-spacing: 1px;
+  font-weight: 700;
   position: relative;
   overflow: hidden;
   background: transparent;
   transition: .3s;
+  cursor: pointer !important;
 }
 
 .btn-primary:hover {
-  background: var(--primary-color);
-  color: #3A345D;
+  background: transparent !important;
+  color: var(--green);
   transition: .3s;
+}
+
+.btn-primary:hover::after {
+  opacity: 0.3;
 }
 
 .btn-large {
   padding: 16px 24px;
 }
 
+.btn-secondary {
+  padding: 8px 16px;
+  border: .5px solid var(--white);
+  transition: .3s;
+}
 
-.btn-primary:hover::after {
-  opacity: 0.3;
+.btn-secondary:hover {
+  background: var(--white);
+  color: var(--black);
+  border: .5px solid var(--white);
+  transition: .3s;
+}
+
+.btn-secondary a:hover:after {
+  width: 0%;
 }

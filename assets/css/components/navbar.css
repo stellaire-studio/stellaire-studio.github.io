@@ -12,6 +12,7 @@ nav .logo {
 }
 .nav-links {
   display: flex;
+  align-items: center;
 }
 
 .nav-links a {
@@ -19,6 +20,7 @@ nav .logo {
   text-decoration: none;
   display: inline-block;
   position: relative;
+  margin-left: var(--half-spacing);
 }
 
 .nav-links a:after {

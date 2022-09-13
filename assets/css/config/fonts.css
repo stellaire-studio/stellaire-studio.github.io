@@ -60,3 +60,7 @@ strong, section b {
   text-transform: uppercase;
   color: var(--primary-color);
 }
+
+.emphaze {
+  color: var(--green);
+}
