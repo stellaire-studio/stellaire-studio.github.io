@@ -56,8 +56,8 @@
     filter: blur(150px);
   }
   .planets {
-    right: -320px;
-    transform: scale(.3);
+    right: -50px;
+    top: 140px;
   }
   .planet-blue {
     width: 80vw;
