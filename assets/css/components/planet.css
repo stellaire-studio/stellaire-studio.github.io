@@ -30,7 +30,7 @@
   width: 30vw;
   height: 30vw;
   top: 5vh;
-  opacity: .7;
+  opacity: .8;
   right: -10vw;
   transform: rotate(100deg);
   background: var(--orange);

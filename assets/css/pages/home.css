@@ -3,7 +3,7 @@
 }
 
 .planets {
-  position: absolute; top: 0; right:-200px;
+  position: absolute; top: 0; right:-40%;
 }
 .stars {
   position: absolute;
