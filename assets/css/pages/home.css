@@ -1,3 +1,10 @@
+.homepage {
+  background: var(--black);
+}
+
+.planets {
+  position: absolute; top: 0; right:-200px;
+}
 .stars {
   position: absolute;
   top: 0;

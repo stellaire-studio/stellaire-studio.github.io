@@ -1,9 +1,10 @@
 :root {
-  --black:  #232025;
+  --black:  #000000;
   --white:  #FFF8E7;
   --green:  #00C289;
   --orange: #FF896A;
   --red:    #F85044;
+  --blue:  #2A27AC;;
 
   --gradient: linear-gradient(175.24deg, #F85044 7.96%, #3F5EFB 96.16%);
 }

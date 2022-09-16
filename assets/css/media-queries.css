@@ -7,6 +7,10 @@
     grid-template-columns: 1fr !important;
   }
 
+  .hide-mobile {
+    display: none !important;
+  }
+
   .hero .value-prop {
     width: 100% !important;
     text-align: center !important;
@@ -47,6 +51,27 @@
 
   .stars {
     display: none;
+  }
+  .planet {
+    filter: blur(150px);
+  }
+  .planets {
+    right: -320px;
+    transform: scale(.3);
+  }
+  .planet-blue {
+    width: 80vw;
+    height: 80vw;
+    top: 53vh;
+  }
+  .planet-orange {
+    width: 50vw;
+    height: 50vw;
+    top: 40vh;
+    right: 10vw;
+  }
+  .planet-gradient {
+    opacity: .5;
   }
 
   canvas {
