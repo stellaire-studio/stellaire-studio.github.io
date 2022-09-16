@@ -1,12 +1,12 @@
 .planet {
   mix-blend-mode: lighten;
-  filter: blur(250px);
+  filter: blur(180px);
   position: absolute;
 }
 
 .planet-gradient {
   top: -10vw;
-  left: -10vw;
+  left: -30vw;
   z-index: -1;
   opacity: .25;
   background: linear-gradient(175.24deg, #F85044 7.96%, #3F5EFB 96.16%);
@@ -16,10 +16,10 @@
 }
 
 .planet-blue {
-  top: 10vh;
+  top: 20vh;
   right: 20vw;
   z-index: -1;
-  opacity: .5;
+  opacity: 1;
   background: var(--blue);
   transform: rotate(-160deg);
   width: 30vw;
