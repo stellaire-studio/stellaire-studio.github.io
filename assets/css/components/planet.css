@@ -1,0 +1,37 @@
+.planet {
+  mix-blend-mode: lighten;
+  filter: blur(250px);
+  position: absolute;
+}
+
+.planet-gradient {
+  top: -10vw;
+  left: -10vw;
+  z-index: -1;
+  opacity: .25;
+  background: linear-gradient(175.24deg, #F85044 7.96%, #3F5EFB 96.16%);
+  transform: rotate(-33.8deg);
+  width: 90vw;
+  height: 90vw;
+}
+
+.planet-blue {
+  top: 10vh;
+  right: 20vw;
+  z-index: -1;
+  opacity: .5;
+  background: var(--blue);
+  transform: rotate(-160deg);
+  width: 30vw;
+  height: 30vw;
+}
+
+.planet-orange {
+  width: 30vw;
+  height: 30vw;
+  top: 5vh;
+  opacity: .7;
+  right: -10vw;
+  transform: rotate(100deg);
+  background: var(--orange);
+}

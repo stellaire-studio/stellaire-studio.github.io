@@ -32,8 +32,11 @@
     <meta property="twitter:title"       content="stellaire.studio • Le startup studio SaaS qui tacle vos problématiques métier">
     <meta property="twitter:description" content="Entrepreneurs, designers et développeurs, nous travaillons avec des experts métier de toutes industries pour venir révolutionner le quotidien de leurs collaborateurs.">
     <meta property="twitter:image"       content="/assets/images/meta-banners/meta-image-home.png">
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
-  <body class="manifesto shaderless">
+  <body class="homepage">
+    <!-- Stars -->
     <svg width="100%" height="100%" class="stars" viewBox="0 0 1920 1152" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_1132_1711)">
       <path class="star" opacity="0.4" d="M662 831L663.54 847.46L680 849L663.54 850.54L662 867L660.46 850.54L644 849L660.46 847.46L662 831Z" fill="#FFF8E7"/>
@@ -1302,12 +1305,50 @@
     </defs>
   </svg>
 
+  <!-- Planet -->
+  <svg width="1047" height="1047" class="planets" viewBox="0 0 1047 1047" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="524" cy="523" r="267" fill="black" style="z-index=99"/>
+    <path d="M186.5,523a337.5,337.5 0 1,0 675,0a337.5,337.5 0 1,0 -675,0"
+          fill="none"
+          id="smallCircle"
+          stroke="white"
+          stroke-width="1"
+          opacity="0.4"
+    />
+    <circle cx="" cy="" r="6" fill="#white">
+      <animateMotion dur="10s" repeatCount="indefinite">
+        <mpath xlink:href="#largeCircle"/>
+      </animateMotion>
+    </circle>
+
+    <path d="M1,523a523,523 0 1,0 1046,0a523,523 0 1,0 -1046,0"
+          fill="none"
+          id="largeCircle"
+          stroke="white"
+          stroke-width="1"
+          opacity="0.05"
+    />
+    <circle opacity="0.3" cx="523.5" cy="523.5" r="523" stroke="white"/>
+    <circle cx="" cy="" r="12" fill="white">
+      <animateMotion dur="25s" repeatCount="indefinite">
+        <mpath xlink:href="#smallCircle"/>
+      </animateMotion>
+    </circle>
+  </svg>
+
+  <!-- Gradients -->
+
+  <div class="planet planet-gradient"></div>
+  <div class="planet planet-blue"></div>
+  <div class="planet planet-orange"></div>
+
     <nav>
        <a href="/">
         <img src="/assets/images/stellaire-studio-logo.svg" width="180" height="29" class="logo" alt="stellaire.studio" loading="lazy">
       </a>
       <div class="nav-links">
-        <a href="/projets/" class="nav-link">Nos startups</a>
+
+        <a href="/projets/" class="nav-link hide-mobile">Nos stratup</a>
         <a href="/contact/" class="nav-link btn-secondary">Nous contacter</a>
       </div>
     </nav>
@@ -1363,7 +1404,7 @@
 
     <section>
       <div class="content">
-        <h2 data-aosooo="fade-up">Un studio<br><span class="emphaze">pour créer des startups </span></h2>
+        <h2 data-aosooo="fade-up">Un studio <span class="emphaze">pour créer <br>des startups </span></h2>
         <div class="subtitle">Développer un logiciel et surtout créer une entreprise</div>
         <ul class="bullets">
           <li>Exploration marché</li>
@@ -1372,6 +1413,7 @@
           <li>Tech & Développment</li>
           <li>Marketing et Sales</li>
         </ul>
+        <a href="#nous-contacter" class="btn-primary btn-large">Voir nos startups</a>
       </div>
       <div data-aosooooo="fade-up" id="home-astronaut-animation-wrapper" class="animation-wrapper">
       </div>

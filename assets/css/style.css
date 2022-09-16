@@ -14,6 +14,7 @@
 @import url("/assets/css/components/navbar.css");
 @import url("/assets/css/components/footer.css");
 @import url("/assets/css/components/buttons.css");
+@import url("/assets/css/components/planet.css");
 
 /* Pages */
 @import url("/assets/css/pages/home.css");
@@ -83,15 +84,15 @@ ul > li img {
   margin-top: 8vh;
   padding: var(--large-spacing);
   z-index: 99;
-  width: 80%;
+  width: 65%;
 }
 
 .value-prop__subtitle {
-  width: 60%;
+  width: 100%;
 }
 
 .hero h1 {
-  margin-bottom: 0.6em;
+  margin-bottom: 0;
 }
 
 .hero-gradient {
