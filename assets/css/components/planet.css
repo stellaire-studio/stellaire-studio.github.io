@@ -1,3 +1,15 @@
+.hero-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.planets {
+  opacity: 0;
+  transition: 1s;
+}
 .planet {
   mix-blend-mode: lighten;
   filter: blur(180px);

@@ -54,7 +54,7 @@ iframe {
 }
 
 ul {
-  padding-left: 20px;
+  padding: 0px;
 }
 
 ul > li  {
@@ -63,10 +63,6 @@ ul > li  {
   margin: 12px auto;
 }
 
-ul > li img {
-  margin-top: 8px;
-  margin-right: 8px;
-}
 
 .align-right {
   grid-column: 2;
