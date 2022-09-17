@@ -43,6 +43,21 @@
   transform: scale(1.3);
 }
 
+.bullets-illustration {
+  position: absolute;
+  right: 0;
+}
+
+#bullets-points .planet-gradient {
+  top: 20%;
+  left: -90px;
+  opacity: .35;
+  transform: rotate(36.2deg);
+  width: 30vw;
+  height: 70vh;
+  filter: blur(150px);
+}
+
 .keypoints {
   grid-template-columns: 1fr !important;
   text-align: center;

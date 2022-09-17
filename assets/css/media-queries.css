@@ -99,6 +99,14 @@
     text-align: center;
   }
 
+  .bullets-illustration {
+    position: initial;
+  }
+
+  .bullets-illustration img {
+    width: 100vw;
+  }
+
   /* AOS OVERRIDES */
   [data-aos^=fade] {
     opacity: 1 !important;
