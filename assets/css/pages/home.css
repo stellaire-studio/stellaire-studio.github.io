@@ -18,20 +18,63 @@
   animation-fill-mode: forwards;
 }
 
-#home-astronaut-animation-wrapper {
+#after-hero {
   overflow: hidden;
 }
-
 #after-hero .content {
   width: 94%;
 }
+.illustration img {
+   position: absolute;
+}
+#after-hero .illustration {
+  left: 0;
+}
+
+#after-hero .planet-blue {
+  opacity: .4;
+}
+
+#after-hero .planet-gradient {
+  width: 300px;
+  height: 300px;
+  opacity: 1;
+  left: 80vw;
+  top: 20%;
+  transform: rotate(-20deg);
+}
+
+
 .bullets {
-  list-style-image: url("../../images/sparkle-icon-small.svg");
   font-size: 16px;
 }
 
-::marker {
-  margin-top: 120px;
+.bullets li {
+  display: flex;
+}
+
+.bullets li img {
+  margin-right: 8px;
+  transition: .5s;
+}
+
+.bullets li:hover img {
+  transition: .5s;
+  transform: scale(1.3);
+}
+
+.bullets .illustration {
+  right: 0;
+}
+
+#bullets-points .planet-gradient {
+  top: 20%;
+  left: -90px;
+  opacity: .35;
+  transform: rotate(36.2deg);
+  width: 30vw;
+  height: 70vh;
+  filter: blur(150px);
 }
 
 .keypoints {

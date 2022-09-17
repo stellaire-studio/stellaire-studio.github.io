@@ -32,8 +32,8 @@ a:hover {
   transition: .3s;
 }
 
-.btn-primary:hover::after {
-  opacity: 0.3;
+.btn-primary:hover:after {
+  width: 0 !important;
 }
 
 .btn-large {
@@ -53,6 +53,6 @@ a:hover {
   transition: .3s;
 }
 
-.btn-secondary a:hover:after {
-  width: 0%;
+.btn-secondary:hover:after {
+  width: 0 !important;
 }

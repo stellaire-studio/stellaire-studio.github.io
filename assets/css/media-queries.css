@@ -99,6 +99,27 @@
     text-align: center;
   }
 
+  #bullets-points {
+    text-align: center;
+  }
+
+  .bullets {
+    margin-left: 20%;
+  }
+
+  #bullets-points .illustration {
+    position: initial;
+  }
+
+  #bullets-points .animation-wrapper {
+    overflow: visible;
+  }
+
+  #bullets-points .illustration img {
+    width: 100vw;
+    right: -24px;
+  }
+
   /* AOS OVERRIDES */
   [data-aos^=fade] {
     opacity: 1 !important;
@@ -120,6 +141,17 @@
 
   #home-astronaut-animation-wrapper {
     order: -1;
+    height: 350px;
+  }
+
+  #home-astronaut-animation-wrapper img {
+    width: 100%;
+  }
+
+  #after-hero .planet-gradient {
+    width: 250px;
+    height: 210px;
+    top: 10%;
   }
 
   #astronaut-animation-svg {
