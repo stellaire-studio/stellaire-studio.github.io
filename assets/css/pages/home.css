@@ -67,6 +67,15 @@
   right: 0;
 }
 
+#bullets-points {
+  overflow: hidden;
+}
+
+#bullets-points img {
+  bottom: 0;
+}
+
+
 #bullets-points .planet-gradient {
   top: 20%;
   left: -90px;
