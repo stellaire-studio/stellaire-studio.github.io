@@ -44,18 +44,20 @@
   transform: rotate(-20deg);
 }
 
-
 .bullets {
   font-size: 16px;
 }
 
 .bullets li {
   display: flex;
+  align-items: center;
 }
 
 .bullets li img {
   margin-right: 8px;
   transition: .5s;
+  width:  1.1em;
+  margin-bottom: 4px;
 }
 
 .bullets li:hover img {
@@ -74,7 +76,6 @@
 #bullets-points img {
   bottom: 0;
 }
-
 
 #bullets-points .planet-gradient {
   top: 20%;
@@ -110,8 +111,6 @@
   width: 200px;
   margin: 0px 32px;
 }
-
-
 
 #nous-contacter {
   align-items: flex-start;

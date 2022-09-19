@@ -13,16 +13,11 @@
 
   .hero .value-prop {
     width: 100% !important;
-    text-align: center !important;
   }
 
   h1, .hero-contact h1 {
     font-size: 35px;
     width: 100%;
-  }
-
-  .hero-contact h1 {
-    text-align: left;
   }
 
   h2 {
@@ -35,10 +30,6 @@
 
   .value-prop__subtitle {
     font-size: 18px;
-  }
-
-  .hero-contact .value-prop__subtitle {
-    text-align: left;
   }
 
   #index-hero-cta {
@@ -93,18 +84,6 @@
   .keypoints-list {
     flex-direction: column;
     align-items: center;
-  }
-
-  .section-title {
-    text-align: center;
-  }
-
-  #bullets-points {
-    text-align: center;
-  }
-
-  .bullets {
-    margin-left: 20%;
   }
 
   #bullets-points .illustration {
@@ -167,12 +146,7 @@
   }
 
   #after-hero .content {
-    text-align: center !important;
     width: 100%;
-  }
-
-  #nous-contacter .content {
-    text-align: center;
   }
 
   #manifesto-planet-animation {
