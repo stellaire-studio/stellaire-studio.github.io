@@ -24,6 +24,7 @@ a:hover {
   background: transparent;
   transition: .3s;
   cursor: pointer !important;
+  text-align: center;
 }
 
 .btn-primary:hover {
