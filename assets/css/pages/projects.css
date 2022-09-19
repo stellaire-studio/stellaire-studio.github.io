@@ -13,6 +13,9 @@
 @import url("/assets/css/components/footer.css");
 @import url("/assets/css/components/buttons.css");
 
+/* Responsive */
+@import url("/assets/css/media-queries.css");
+
 [data-theme=light],
 :root:not([data-theme=dark]) {
   color-scheme: light;
