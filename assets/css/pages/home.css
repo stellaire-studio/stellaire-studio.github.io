@@ -51,11 +51,14 @@
 
 .bullets li {
   display: flex;
+  align-items: center;
 }
 
 .bullets li img {
   margin-right: 8px;
   transition: .5s;
+  width:  1.1em;
+  margin-bottom: 4px;
 }
 
 .bullets li:hover img {
@@ -74,7 +77,6 @@
 #bullets-points img {
   bottom: 0;
 }
-
 
 #bullets-points .planet-gradient {
   top: 20%;
