@@ -7,9 +7,7 @@ nav {
   font-weight: 500;
 }
 
-nav .logo {
-  width: 180px;
-}
+
 .nav-links {
   display: flex;
   align-items: center;
