@@ -53,6 +53,10 @@
   align-items: center;
 }
 
+.bullets li:last-child {
+  margin-bottom: 35px;
+}
+
 .bullets li img {
   margin-right: 8px;
   transition: .5s;
