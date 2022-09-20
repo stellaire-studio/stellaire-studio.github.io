@@ -12,7 +12,7 @@
 }
 .planet {
   mix-blend-mode: lighten;
-  filter: blur(100px);
+  filter: blur(180px);
   position: absolute;
 }
 
@@ -20,7 +20,7 @@
   top: -10vw;
   left: -30vw;
   z-index: -1;
-  opacity: .25;
+  opacity: .35;
   background: linear-gradient(175.24deg, #F85044 7.96%, #3F5EFB 96.16%);
   transform: rotate(-33.8deg);
   width: 90vw;
@@ -31,18 +31,18 @@
   top: 20vh;
   right: 20vw;
   z-index: -1;
-  opacity: .5;
+  opacity: .7;
   background: var(--blue);
   transform: rotate(-160deg);
-  width: 30vw;
-  height: 30vw;
+  width: 350px;
+  height: 350px;
 }
 
 .planet-orange {
   width: 30vw;
   height: 30vw;
   top: 5vh;
-  opacity: .4;
+  opacity: .8;
   right: -10vw;
   transform: rotate(100deg);
   background: var(--orange);
@@ -61,8 +61,15 @@
 .mask {
   background: var(--black);
   mix-blend-mode: normal;
-  filter: blur(75px);
-  top: 80vh;
-  width: 100vw;
+  filter: blur(55px);
+  bottom: -70px;
+  left: -10vw;
+  width: 120vw;
   height: 200px;
+}
+
+@supports (-moz-appearance:none) {
+  .planet {
+    filter: blur(100px)
+  }
 }
