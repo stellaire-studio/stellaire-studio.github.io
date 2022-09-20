@@ -106,6 +106,10 @@
   margin-top: -0.2em;
 }
 
+.keypoints .planet-green {
+  top: 0;
+}
+
 .keypoints-list {
   display: flex;
   justify-content: center;
