@@ -24,6 +24,16 @@
   --background-color: var(--white);
 }
 
+@media (prefers-color-scheme: light) {
+    .projects-page .btn-secondary:hover {
+
+    background: var(--black);
+    color: var(--white);
+    border: .5px solid var(--black);
+    transition: .3s;
+  }
+}
+
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme=light]) {
     /* DO NOT SETUP color-scheme ! */

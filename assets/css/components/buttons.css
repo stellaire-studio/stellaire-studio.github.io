@@ -55,13 +55,6 @@ a:hover {
   transition: .3s;
 }
 
-.projects-page .btn-secondary:hover {
-  background: var(--black);
-  color: var(--white);
-  border: .5px solid var(--black);
-  transition: .3s;
-}
-
 .btn-secondary:hover:after {
   width: 0 !important;
 }
