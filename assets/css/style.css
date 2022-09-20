@@ -22,8 +22,13 @@
 @import url("/assets/css/pages/manifesto.css");
 @import url("/assets/css/pages/shaderless.css");
 
+/* Animation */
+@import url("/assets/css/librairies/aos.css");
+
 /* Responsive */
 @import url("/assets/css/media-queries.css");
+
+
 
 :root {
   --primary-color:    var(--white);
