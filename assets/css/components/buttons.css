@@ -12,8 +12,8 @@ a:hover {
 
 .btn-primary {
   padding: 8px 16px;
-  background: var(--green) !important;
-  border: 1px solid var(--green);
+  background: var(--orange) !important;
+  border: 1px solid var(--orange);
   border-radius: 4px;
   text-transform: uppercase;
   color: var(--black);
@@ -29,7 +29,7 @@ a:hover {
 
 .btn-primary:hover {
   background: transparent !important;
-  color: var(--green);
+  color: var(--orange);
   transition: .3s;
 }
 
