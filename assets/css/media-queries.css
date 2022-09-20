@@ -96,8 +96,8 @@
 
   #bullets-points .illustration img {
     width: 100vw;
-    right: -24px;
-  }
+    position:initial;
+}
 
   /* AOS OVERRIDES */
   [data-aos^=fade] {
@@ -116,11 +116,12 @@
   /* ANIMATION */
   .animation-wrapper {
     overflow: hidden;
+    min-height: auto;
   }
 
   #home-astronaut-animation-wrapper {
     order: -1;
-    height: 350px;
+    height: 320px;
   }
 
   #home-astronaut-animation-wrapper img {
