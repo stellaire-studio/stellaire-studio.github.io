@@ -59,12 +59,10 @@
 }
 
 .mask {
-  background: var(--black);
-  mix-blend-mode: normal;
-  filter: blur(55px);
-  bottom: -70px;
-  left: -10vw;
-  width: 120vw;
+  position: absolute;
+  background: linear-gradient(to top, black, rgba(0,0,0,0));
+  bottom: 0px;
+  width: 100vw;
   height: 200px;
 }
 
