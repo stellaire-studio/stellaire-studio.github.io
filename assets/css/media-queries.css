@@ -33,7 +33,7 @@
   }
 
   #index-hero-cta {
-    margin-top: 24px;
+    margin-top: 2px;
   }
 
   section {
@@ -79,6 +79,17 @@
 
   .keypoints h2 {
     width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .keypoints h2, .keypoints .subtitle {
+    text-align: left;
+  }
+
+  .keypoints .planet-green {
+    filter: blur(50px);
+    width: 30vw;
+    height: 60vw;
   }
 
   .keypoints-list {
@@ -88,15 +99,27 @@
 
   #bullets-points .illustration {
     position: initial;
-  }
-
-  #bullets-points .animation-wrapper {
-    overflow: visible;
+    margin-right: -24px;
   }
 
   #bullets-points .illustration img {
     width: 100vw;
-    right: -24px;
+    position:initial;
+  }
+
+  #bullets-points .content {
+    width: calc(100% - var(--large-spacing));
+  }
+
+  .bullets li:last-child{
+    margin-bottom: 27px;
+  }
+
+  #nous-contacter .planet-gradient {
+    width: 80vw;
+    top: 10%;
+    filter: blur(50px);
+    opacity: .5;
   }
 
   /* AOS OVERRIDES */
@@ -116,11 +139,12 @@
   /* ANIMATION */
   .animation-wrapper {
     overflow: hidden;
+    min-height: auto;
   }
 
   #home-astronaut-animation-wrapper {
     order: -1;
-    height: 350px;
+    height: 320px;
   }
 
   #home-astronaut-animation-wrapper img {

@@ -12,7 +12,7 @@
 }
 .planet {
   mix-blend-mode: lighten;
-  filter: blur(180px);
+  filter: blur(100px);
   position: absolute;
 }
 
@@ -31,7 +31,7 @@
   top: 20vh;
   right: 20vw;
   z-index: -1;
-  opacity: 1;
+  opacity: .5;
   background: var(--blue);
   transform: rotate(-160deg);
   width: 30vw;
@@ -42,10 +42,20 @@
   width: 30vw;
   height: 30vw;
   top: 5vh;
-  opacity: .8;
+  opacity: .4;
   right: -10vw;
   transform: rotate(100deg);
   background: var(--orange);
+}
+
+.planet-green {
+  width: 20vw;
+  height: 40vw;
+  top: 10vh;
+  opacity: .35;
+  right: -5vw;
+  transform: rotate(100deg);
+  background: var(--green);
 }
 
 .mask {

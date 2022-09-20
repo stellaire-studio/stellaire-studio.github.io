@@ -38,7 +38,7 @@
 #after-hero .planet-gradient {
   width: 300px;
   height: 300px;
-  opacity: 1;
+  opacity: .5;
   left: 80vw;
   top: 20%;
   transform: rotate(-20deg);
@@ -51,6 +51,10 @@
 .bullets li {
   display: flex;
   align-items: center;
+}
+
+.bullets li:last-child {
+  margin-bottom: 35px;
 }
 
 .bullets li img {
@@ -78,19 +82,19 @@
 }
 
 #bullets-points .planet-gradient {
-  top: 20%;
+  top: 25%;
   left: -90px;
-  opacity: .35;
+  opacity: .5;
   transform: rotate(36.2deg);
   width: 30vw;
-  height: 70vh;
-  filter: blur(150px);
+  height: 20vh;
 }
 
 .keypoints {
   grid-template-columns: 1fr !important;
   text-align: center;
   min-height: auto !important;
+  overflow: hidden;
 }
 
 .keypoints h2 {
@@ -115,4 +119,14 @@
 #nous-contacter {
   align-items: flex-start;
   min-height: auto;
+  overflow: hidden;
+}
+
+#nous-contacter .planet-gradient {
+  width: 25vw;
+  height: 50vw;
+  opacity: .25;
+  bottom: -10%;
+  left: initial;
+  top: initial;
 }
