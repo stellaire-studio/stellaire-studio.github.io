@@ -6,6 +6,17 @@
   top: 0;
   left: 0;
 }
+
+@-moz-document url-prefix() {
+  .hero-wrapper {
+    background: linear-gradient(45deg, rgba(63, 94, 251, 0.2), rgba(63, 94, 251, 0) 70.71%),
+      linear-gradient(127deg, rgba(63, 94, 251, 0.15), rgba(75, 28, 35, 0) 70.71%),
+      linear-gradient(225deg, rgba(248, 80, 68, 0.3), rgba(248, 80, 68, 0) 70.71%);
+
+    z-index: -1;
+  }
+}
+
 .planets {
   opacity: 0;
   transition: 1s;
@@ -14,6 +25,12 @@
   mix-blend-mode: lighten;
   filter: blur(180px);
   position: absolute;
+}
+
+@-moz-document url-prefix() {
+  .planet {
+    border-radius: 30%;
+  }
 }
 
 .planet-gradient {
@@ -27,6 +44,12 @@
   height: 90vw;
 }
 
+@-moz-document url-prefix() {
+  .hero-wrapper .planet-gradient {
+    opacity: 0;
+  }
+}
+
 .planet-blue {
   top: 20vh;
   right: 20vw;
@@ -38,14 +61,35 @@
   height: 350px;
 }
 
+@-moz-document url-prefix() {
+  .hero-wrapper .planet-blue {
+    opacity: 0;
+  }
+}
+
 .planet-orange {
   width: 30vw;
   height: 30vw;
   top: 5vh;
-  opacity: .8;
   right: -10vw;
   transform: rotate(100deg);
+
   background: var(--orange);
+  opacity: .8;
+}
+
+@-moz-document url-prefix() {
+  .planet-orange {
+    width: 50vw;
+    height: 50vw;
+    top: -5vh;
+    right: -15vw;
+
+    opacity: 0.75;
+    border-radius: 50%;
+
+    background: radial-gradient(circle, rgba(255, 93, 51, 90%) 0%, rgba(204,94,65,0.17) 55%);
+  }
 }
 
 .planet-green {
