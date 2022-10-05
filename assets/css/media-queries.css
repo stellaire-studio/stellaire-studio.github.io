@@ -21,7 +21,7 @@
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   h3 {
@@ -90,6 +90,7 @@
     filter: blur(50px);
     width: 30vw;
     height: 60vw;
+    top: 5%;
   }
 
   .keypoints-list {
@@ -147,6 +148,10 @@
     height: 320px;
   }
 
+  #home-astronaut-animation-wrapper .planet-blue {
+    display: none;
+  }
+
   #home-astronaut-animation-wrapper img {
     width: 100%;
   }
@@ -154,7 +159,7 @@
   #after-hero .planet-gradient {
     width: 250px;
     height: 210px;
-    top: 10%;
+    top: 15%;
   }
 
   #astronaut-animation-svg {
