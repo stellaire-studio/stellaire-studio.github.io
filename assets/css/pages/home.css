@@ -14,7 +14,7 @@
 
 .star {
   transform-origin: center center;
-  opacity: .2;
+  opacity: 0.2;
   animation-fill-mode: forwards;
 }
 
