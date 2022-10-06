@@ -15,8 +15,20 @@
 .star {
   transform-origin: center center;
   opacity: 0.2;
+  /*animation:  fadeIn 2s linear;*/
   animation-fill-mode: forwards;
+  will-change: transform;
 }
+
+/*@keyframes fadeIn {
+  0% {
+    transform: scale(.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}*/
 
 #after-hero {
   overflow: hidden;
