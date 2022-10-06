@@ -14,7 +14,7 @@
 
 .star {
   transform-origin: center center;
-  opacity: 0;
+  opacity: 0.4;
   animation-fill-mode: forwards;
 }
 
@@ -112,14 +112,11 @@
 }
 
 .keypoints-list {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   margin-top: 32px;
 }
-.keypoint {
-  width: 200px;
-  margin: 0px 32px;
-}
+
 
 #nous-contacter {
   align-items: flex-start;
