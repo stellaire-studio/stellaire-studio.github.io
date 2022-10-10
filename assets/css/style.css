@@ -21,14 +21,13 @@
 @import url("/assets/css/pages/contact.css");
 @import url("/assets/css/pages/manifesto.css");
 @import url("/assets/css/pages/shaderless.css");
+@import url("/assets/css/pages/faq.css");
 
 /* Animation */
 @import url("/assets/css/librairies/aos.css");
 
 /* Responsive */
 @import url("/assets/css/media-queries.css");
-
-
 
 :root {
   --primary-color:    var(--white);

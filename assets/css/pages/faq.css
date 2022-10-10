@@ -1,0 +1,125 @@
+/* Base */
+@import url("/assets/css/base/normalize.css");
+@import url("/assets/css/base/utilities.css");
+
+/* Config */
+@import url("/assets/css/config/spacing.css");
+@import url("/assets/css/config/colors.css");
+@import url("/assets/css/config/fonts.css");
+@import url("/assets/css/config/layout.css");
+
+/* Components */
+@import url("/assets/css/components/navbar.css");
+@import url("/assets/css/components/footer.css");
+@import url("/assets/css/components/buttons.css");
+@import url("/assets/css/components/planet.css");
+
+/* Responsive */
+@import url("/assets/css/media-queries.css");
+
+:root {
+  --primary-color:    var(--white);
+  --background-color: var(--black);
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+}
+
+.header {
+  text-align: center;
+  overflow: hidden;
+}
+
+.planet-gradient {
+  left: auto;
+  right: 0;
+  width: 60vw;
+  height: 50vw;
+}
+
+.faqs {
+  padding: var(--half-spacing) var(--large-spacing);
+}
+
+.faq {
+  margin-top: var(--half-spacing);
+}
+
+.headline {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headline h3{
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.headline:hover {
+  cursor: pointer;
+}
+
+.content-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: .3s;
+  transform-origin: top center;
+  margin-top: 12px;
+}
+
+.show-description {
+  max-height: 200px
+}
+
+.faq-description {
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.6;
+  opacity: .8;
+  width: 60%;
+}
+
+.icon {
+  transform-origin: center center;
+}
+
+.icon, .rotate-icon {
+  transition: .3s;
+}
+
+.rotate-icon {
+  transform: rotate(45deg);
+}
+
+#nous-contacter {
+  overflow: hidden;
+  padding: var(--large-spacing);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+  margin-bottom: 150px;
+}
+
+#nous-contacter .planet-gradient {
+  width: 250px;
+  height: 450px;
+  opacity: .5;
+  bottom: -10%;
+  left: initial;
+  top: initial;
+}
+
+iframe {
+  height: 530px;
+}
+
+@media (max-width:768px){
+  .faq-description {
+    width: 100%;
+    font-size: 16px;
+  }
+}
