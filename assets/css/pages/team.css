@@ -1,0 +1,69 @@
+/* Base */
+@import url("/assets/css/base/normalize.css");
+@import url("/assets/css/base/utilities.css");
+
+/* Config */
+@import url("/assets/css/config/spacing.css");
+@import url("/assets/css/config/colors.css");
+@import url("/assets/css/config/fonts.css");
+@import url("/assets/css/config/layout.css");
+
+/* Components */
+@import url("/assets/css/components/navbar.css");
+@import url("/assets/css/components/footer.css");
+@import url("/assets/css/components/buttons.css");
+@import url("/assets/css/components/planet.css");
+
+/* Responsive */
+@import url("/assets/css/media-queries.css");
+
+.team-hero {
+  height: auto !important;
+}
+
+.team-section {
+  display:grid;
+  grid-template-columns:  repeat(3, 1fr);
+  grid-row-gap: var(--large-spacing);
+  grid-column-gap: var(--half-spacing);
+  width: 90%;
+}
+
+
+.team {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-picture {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.team-linkedin {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+}
+
+.team-status {
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.team-name {
+  font-size: 32px;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.team-description {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+}
