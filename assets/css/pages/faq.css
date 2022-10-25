@@ -30,12 +30,12 @@ body {
 .header {
   text-align: center;
   overflow: hidden;
-  padding-top: 10vh;
+  padding: var(--large-spacing);
 }
 
 .header p {
   font-size: 24px;
-  line-height: 32px;
+  line-height: 1.4;
 }
 
 .planet-gradient {
@@ -147,8 +147,28 @@ iframe {
 }
 
 @media (max-width:768px){
+  .header {
+    text-align: left;
+  }
+  .header p {
+    font-size: 18px;
+  }
   .faq-description {
     width: 100%;
     font-size: 16px;
+  }
+  .faq {
+    padding: 16px 0;
+  }
+  .faq:hover {
+    padding: 16px 0;
+    background: transparent;
+  }
+  .headline {
+    align-items: flex-start;
+  }
+  .icon {
+    transform: scale(0.5);
+    transform-origin: top;
   }
 }
