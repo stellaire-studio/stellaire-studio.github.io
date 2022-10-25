@@ -30,6 +30,12 @@ body {
 .header {
   text-align: center;
   overflow: hidden;
+  padding-top: 10vh;
+}
+
+.header p {
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .planet-gradient {
@@ -44,17 +50,39 @@ body {
 }
 
 .faq {
-  margin-top: var(--half-spacing);
+  display: inline-block;
+  position: relative;
+  padding: 16px var(--half-spacing) 16px 0;
+  transition: .45s;
+  width: 100%;
+}
+
+.faq:hover {
+  padding: 16px var(--half-spacing) 16px 16px ;
+  background: rgba(255,255,255,0.05);
+  transition: .3s;
+}
+
+
+.faq::after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color:rgba(255,255,255,0.2);
 }
 
 .headline {
   text-align: left;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .headline h3{
-  margin-bottom: 0;
+  margin: 0;
   font-size: 20px;
 }
 
@@ -68,10 +96,11 @@ body {
   transition: .3s;
   transform-origin: top center;
   margin-top: 12px;
+  position: relative;
 }
 
 .show-description {
-  max-height: 200px
+  max-height: 100vh;
 }
 
 .faq-description {
