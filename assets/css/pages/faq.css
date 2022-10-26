@@ -169,8 +169,13 @@ iframe {
   .headline {
     align-items: flex-start;
   }
+
   .icon {
+    transform-origin: center;
+    margin-top: -12px;
+  }
+  .icon svg {
     transform: scale(0.5);
-    transform-origin: top;
+    
   }
 }
