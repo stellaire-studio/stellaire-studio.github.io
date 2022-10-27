@@ -7,6 +7,7 @@
 @import url("/assets/css/config/colors.css");
 @import url("/assets/css/config/fonts.css");
 @import url("/assets/css/config/layout.css");
+@import url("/assets/css/config/spacing.css");
 
 /* Components */
 @import url("/assets/css/components/navbar.css");
@@ -19,14 +20,19 @@
 
 .team-hero {
   height: auto !important;
+  padding-bottom: 0 !important;
+}
+
+.team-hero .value-prop {
+  width: 80% !important;
 }
 
 .team-section {
+  z-index: 999;
   display:grid;
   grid-template-columns:  repeat(3, 1fr);
   grid-row-gap: var(--large-spacing);
   grid-column-gap: var(--half-spacing);
-  width: 90%;
 }
 
 
@@ -35,19 +41,46 @@
   flex-direction: column;
 }
 
+.team:hover {
+  cursor: auto;
+}
+
+
+.team:hover .team-linkedin, .team:hover .btn-tertiary {
+  opacity: 1;
+  transition: .3s;
+}
+
+/*.team:hover .team-picture-portrait {
+  transform: scale(1.1);
+  transition: .5s;
+}
+*/
+.team .btn-tertiary {
+  opacity: 0;
+  transition: .3s;
+}
+
 .team-picture {
   position: relative;
-  border-radius: 4px;
   overflow: hidden;
+}
+
+.team-picture-portrait {
+  width: 30%;
+  transition: .5s;
 }
 
 .team-linkedin {
   position: absolute;
   bottom: 12px;
   left: 12px;
+  opacity: 0;
+  transition: .3s;
 }
 
 .team-status {
+  margin-top: 8px;
   font-size: 13px;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -58,7 +91,7 @@
 .team-name {
   font-size: 32px;
   letter-spacing: -0.01em;
-  margin: 0;
+  margin: 8px 0 0 0;
 }
 
 .team-description {
@@ -66,4 +99,23 @@
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.01em;
+  opacity: .8;
+}
+
+@media (max-width: 1280px) {
+  .hero {
+    text-align: left !important;
+  }
+  .team-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team:not:first-child {
+    margin-top: var(--large-spacing);
+  }
+
+  .team .team-linkedin, .team .btn-tertiary {
+    opacity: 1;
+  }
+
 }
