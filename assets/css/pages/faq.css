@@ -111,6 +111,11 @@ body {
   width: 60%;
 }
 
+.faq-description a {
+  font-size: inherit;
+  color: var(--orange);
+}
+
 .icon {
   transform-origin: center center;
 }
