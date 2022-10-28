@@ -29,7 +29,7 @@
     width: 100% !important;
   }
 
-  h1, .hero-contact h1 {
+  h1, .hero-contact h1, .hero h1 {
     font-size: 35px;
     width: 100%;
   }
