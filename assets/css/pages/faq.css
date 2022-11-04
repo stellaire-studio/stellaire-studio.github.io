@@ -33,7 +33,7 @@ body {
   padding: var(--large-spacing);
 }
 
-.header h2 {
+.header p {
   font-size: 24px;
   line-height: 1.4;
   font-weight: 500;
@@ -157,9 +157,11 @@ iframe {
   }
   .header {
     text-align: left;
+    margin-bottom: 1em;
   }
   .header p {
     font-size: 18px;
+    line-height: 1.5;
   }
   .faq-description {
     width: 100%;
@@ -182,6 +184,6 @@ iframe {
   }
   .icon svg {
     transform: scale(0.5);
-    
+
   }
 }
