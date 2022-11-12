@@ -26,6 +26,7 @@
 
 .team-hero .value-prop {
   width: 80% !important;
+  padding-bottom: 0 !important;
 }
 
 .team-hero .planet-gradient{
@@ -63,23 +64,28 @@
 }
 
 .team:hover .team-picture-portrait {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: .5s;
 }
 
 .team .btn-tertiary {
   opacity: 0;
   transition: .3s;
+  color: var(--orange);
 }
 
 .team-picture {
   position: relative;
   overflow: hidden;
+  border-radius: 8px;
+  height: 390px;
 }
 
 .team-picture-portrait {
   width: 100%;
   transition: .5s;
+  min-height: 100%;
+  object-fit: cover;
 }
 
 .team-linkedin {
@@ -91,7 +97,7 @@
 }
 
 .team-status {
-  margin-top: 8px;
+  margin-top: 16px;
   font-size: 13px;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -121,7 +127,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .team:not:first-child {
+  .team:not(:first-child) {
     margin-top: var(--large-spacing);
   }
 
