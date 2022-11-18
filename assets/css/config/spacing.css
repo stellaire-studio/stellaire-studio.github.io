@@ -9,3 +9,7 @@
     --half-spacing:  16px;
   }
 }
+
+.mx-auto {
+  margin: 0 auto;
+}
