@@ -126,13 +126,14 @@
   .team-section {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .team:not(:first-child) {
-    margin-top: var(--large-spacing);
-  }
-
   .team .team-linkedin, .team .btn-tertiary {
     opacity: 1;
   }
 
+}
+
+@media (max-width:768px) {
+  .team:not(:first-child) {
+    margin-top: var(--large-spacing);
+  }
 }
