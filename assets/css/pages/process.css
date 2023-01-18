@@ -31,7 +31,7 @@
 
 .process-section {
     display: flex;
-    width:60%;
+    width:700px;
     gap:16px;
     margin:var(--large-spacing) 0;
 }
