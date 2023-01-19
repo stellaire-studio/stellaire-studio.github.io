@@ -99,7 +99,7 @@
   opacity: .35;
   right: -5vw;
   transform: rotate(100deg);
-  background: var(--green);
+  background: var(--green) !important;
 }
 
 .mask {
