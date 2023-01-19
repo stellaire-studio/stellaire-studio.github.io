@@ -66,6 +66,7 @@
     margin-left:calc(var(--large-spacing) * 2)
 }
 
+
 .process-content {
     display:flex;
     flex-direction: column;
@@ -122,4 +123,35 @@
     padding:8px 16px;
     transform: rotate(-2deg);
     width: fit-content;
+}
+
+.form-section {
+    display:flex;
+}
+
+/* Responsive */
+@media (max-width:992px) {
+    .process-section {
+        margin:0 !important;
+        flex-direction: column;
+        width:100%;
+    }
+
+    .process-keypoints {
+        flex-wrap:wrap;
+    }
+
+    .process-keypoint {
+        flex: 1;
+    }
+
+    .process-wrapper svg {
+        display:none;
+    }
+
+    .milestone {
+        width:auto;
+        transform: none;
+        margin:32px 0;
+    }
 }

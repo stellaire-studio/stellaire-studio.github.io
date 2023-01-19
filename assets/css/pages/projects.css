@@ -84,19 +84,6 @@
   }
 }
 
-.header p {
-  font-size: 1.15em;
-  line-height: 2;
-  text-align: left;
-}
-
-@media (min-width: 992px) {
-  .header p {
-    font-size: 1.3em;
-    text-align: center;
-  }
-}
-
 .projects-wrapper .header {
   max-width: 952px;
   margin-bottom: 1em;

@@ -57,3 +57,17 @@ strong, section b {
 .emphaze {
   color: var(--orange);
 }
+
+
+.header p {
+  font-size: 1.15em;
+  line-height: 2;
+  text-align: left;
+}
+
+@media (min-width: 992px) {
+  .header p {
+    font-size: 1.3em;
+    /*text-align: center;*/
+  }
+}
