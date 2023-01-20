@@ -19,10 +19,13 @@
 
 .process-page {
     background: var(--white);
+    position: relative;
+    z-index: -1;
 }
 
-.process-page nav {
+.process-page nav, .process-page footer {
     color:var(--white);
+    background:var(--black);
 }
 .header {
     padding:var(--large-spacing);
@@ -32,7 +35,7 @@
 
 /* Gradients */
 .gradient-top {
-    top: 10vw;
+    top: -30vw;
     left: -10vw;
     opacity: .5;
     background: linear-gradient(175.24deg, #F85044 7.96%, #3F5EFB 96.16%);
@@ -74,12 +77,17 @@
     letter-spacing: -0.01em;
     opacity: 0.2;
     color:transparent;
-    -webkit-text-stroke: 1.5px #000000;
+    -webkit-text-stroke: 1px #000000;
 }
 
 .process-section svg {
     position: absolute;
     z-index: 0;
+}
+
+.line {
+    stroke-dasharray: 10 10;
+    transition: 1s;
 }
 
 .svg-right {
@@ -94,12 +102,28 @@
     top:-233px;
 }
 
+.svg-bottom {
+    bottom: -250px;
+}
+
+
 #process-1 {
     margin-left:calc(var(--large-spacing) * 2) !important;
 }
 
 #process-3 {
     margin-left:calc(var(--large-spacing) * 4) !important;
+}
+
+#process-3 .process-illus {
+    left:-30vw;
+    top:-80vh;
+    transform: scaleX(-1);
+}
+
+#process-4 .process-illus {
+    top: -40vh;
+    right: -40vw;
 }
 
 .process-content {
@@ -154,7 +178,9 @@
     margin: calc(var(--large-spacing) * 2) 0;
     z-index: 99;
     position: relative;
+    transform-origin: center center;
 }
+
 
 .milestone-description {
     background:var(--white);
@@ -170,11 +196,28 @@
     transform: rotate(-2deg);
     width: fit-content;
     margin-top:-12px;
+    font-weight: 700;
 }
 
 .form-section {
     display:flex;
+    margin-top:80px;
 }
+/* Animation */
+.dash-animate {
+    animation: dashAnimate 30s linear infinite forwards;
+}  
+
+@keyframes dashAnimate {
+    0% {
+        /*stroke-dasharray: 10 10;*/
+        stroke-dashoffset: 1;
+    } 100% {
+        /*stroke-dasharray: 200 1;*/
+        stroke-dashoffset: -1000;
+    }
+}
+
 
 /* Responsive */
 @media (max-width:992px) {
@@ -192,10 +235,12 @@
         flex: 1;
     }
 
-    .process-wrapper svg {
+    .process-wrapper svg, .process-wrapper img {
         display:none;
     }
-
+    #process-1, #process-3 {
+        margin-left:auto !important;
+    }
     .milestone {
         width:auto;
         transform: none;
