@@ -21,7 +21,7 @@ h1 {
 /* Douteux ici ? */
 h2,.hero-contact h1, .hero h1  {
   font-size: 48px;
-  line-height: 1.2;
+  line-height: 1.1;
   letter-spacing:-0.1px;
   margin-top: 16px;
 }
@@ -56,4 +56,18 @@ strong, section b {
 
 .emphaze {
   color: var(--orange);
+}
+
+
+.header p {
+  font-size: 1.15em;
+  line-height: 2;
+  text-align: left;
+}
+
+@media (min-width: 992px) {
+  .header p {
+    font-size: 1.3em;
+    /*text-align: center;*/
+  }
 }
