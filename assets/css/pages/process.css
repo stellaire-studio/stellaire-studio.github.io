@@ -23,13 +23,21 @@
     z-index: -1;
 }
 
+.process-page .hero {
+    background:url('../../images/process/bg-page-process.svg');
+}
+
 .process-page nav, .process-page footer {
     color:var(--white);
     background:var(--black);
 }
-.header {
+.process-page nav  {
+    background:transparent;
+}
+
+.process-page .header {
+    width:70%;
     padding:var(--large-spacing);
-    background:var(--black);
     color:var(--white);
 }
 
