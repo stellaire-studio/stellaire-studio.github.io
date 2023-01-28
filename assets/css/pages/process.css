@@ -87,6 +87,10 @@
     padding-top: 40px;
 }
 
+#process-3 {
+    margin-bottom: var(--large-spacing);
+}
+
 #process-4 {
     text-align: center;
     margin:0 auto;
@@ -173,7 +177,7 @@
     gap:16px;
 }
 
-.process-keypoint {
+.process-keypoint, .process-kpis {
     padding: 16px 16px 10px 16px;
     box-shadow: white 0px 30px 40px -2em inset;
     border:1px solid var(--black-300);
@@ -181,7 +185,7 @@
     font-size: 13px;
 }
 
-.process-keypoint h3 {
+.process-keypoint h3, .process-kpis h3 {
     font-weight: 700;
     margin:0;
     font-size: 13px;
@@ -190,10 +194,19 @@
     color:var(--black-700);
 }
 
-.process-keypoint span {
+.process-kpis {
+    width:fit-content;
+}
+
+.process-keypoint span { 
    color:var(--black-700);
    font-weight: 700;
 }
+
+.process-kpis span {
+    color:var(--black-700);
+    font-weight: 500;
+} 
 
 .process-description {
     font-size: 16px;
@@ -213,7 +226,7 @@
     width:100%;
     font-size: 16px;
     /*transform: translateX(30vw);*/
-    margin: var(--half-spacing) 0;
+    margin: 0;
     z-index: 99;
     position: relative;
     transform-origin: center center;
