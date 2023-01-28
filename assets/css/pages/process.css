@@ -31,6 +31,7 @@
     background-size:cover;
 }
 
+
 .process-page nav, .process-page footer {
     color:var(--white);
     background:var(--black);
@@ -82,7 +83,8 @@
 }
 
 #process-1 {
-    margin-top:var(--large-spacing);
+    margin-top:0;
+    padding-top: 40px;
 }
 
 #process-4 {
