@@ -58,7 +58,7 @@
 }
 
 .gradient-right {
-    right: -60vw;
+    right: -40vw;
     height: 40vw;
     width: 30vw;
     opacity: .5;
@@ -86,7 +86,8 @@
 }
 
 #process-4 {
-    margin-bottom:0;
+    text-align: center;
+    margin:0 auto;
 }
 
 .process-section h2 {
@@ -103,18 +104,46 @@
     -webkit-text-stroke: 1px rgba(255,118,82,0.4);
 }
 
-.process-section svg, .milestone svg {
+.process-section svg, .milestone svg, .milestone .svg, .line {
     position: absolute;
     z-index: 0;
 }
 
+.milestone svg, .milestone .svg {
+    animation: floating 6s ease-in-out infinite;
+}
+
 .line {
+    margin-top:24px;
     stroke-dasharray: 10 10;
     transition: 1s;
 }
 
+.line-right {
+    right: 10%;
+}
+
+.line-left {
+    left: -20%;
+}
+
+.line-top {
+    top:-69%;
+}
+
 .svg-right {
     right:-10%;
+}
+
+.svg-step-1 {
+    right: -160px;
+    /*transform: scale(1.2);*/
+    top:-190%;
+}
+
+.svg-step-2 {
+    left: -20%;
+    top: -200%;
 }
 
 .svg-top {
@@ -128,6 +157,7 @@
 .svg-left {
     left:-10%;
 }
+
 
 .process-content {
     display:flex;
@@ -181,7 +211,7 @@
     width:100%;
     font-size: 16px;
     /*transform: translateX(30vw);*/
-    margin: var(--large-spacing) 0;
+    margin: var(--half-spacing) 0;
     z-index: 99;
     position: relative;
     transform-origin: center center;
@@ -230,7 +260,7 @@
 
 /* Animation */
 .dash-animate {
-    animation: dashAnimate 30s linear infinite forwards;
+    animation: dashAnimate 60s linear infinite forwards;
 }  
 
 @keyframes dashAnimate {
@@ -240,6 +270,18 @@
     } 100% {
         /*stroke-dasharray: 200 1;*/
         stroke-dashoffset: -1000;
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
     }
 }
 
