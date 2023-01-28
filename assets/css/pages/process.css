@@ -246,10 +246,23 @@
 
 /* Responsive */
 @media (max-width:992px) {
+
+    .process-page .header {
+        width: 100%;
+    }
     .process-section {
         margin:0 !important;
         flex-direction: column;
         width:100%;
+        gap:0px;
+    }
+    .process-section .figure {
+        font-size:120px;
+        line-height: 1;
+        color: rgba(255,118,82,1);
+    }
+    .process-section h2 {
+        font-size: 28px;
     }
 
     .process-keypoints {
@@ -270,5 +283,18 @@
         width:auto;
         transform: none;
         margin:32px 0;
+    }
+
+    .milestone-card {
+        width:85%;
+        margin:calc(var(--large-spacing)*4) 0;
+    }
+
+    .milestone-choice {
+        flex-direction: column;
+    }
+
+    .milestone-choice .milestone-card {
+        margin: 0;
     }
 }
