@@ -14,6 +14,9 @@
 @import url("/assets/css/components/buttons.css");
 @import url("/assets/css/components/planet.css");
 
+/* Animation */
+@import url("/assets/css/librairies/aos.css");
+
 /* Responsive */
 @import url("/assets/css/media-queries.css");
 
@@ -25,6 +28,7 @@
 
 .process-page .hero {
     background:url('../../images/process/bg-page-process.svg');
+    background-size:cover;
 }
 
 .process-page nav, .process-page footer {
@@ -73,8 +77,12 @@
 .process-section {
     display: flex;
     width:850px;
-    gap:16px;
-    margin:var(--large-spacing) 0;
+    gap:24px;
+    margin: calc(var(--large-spacing) * 2) auto;
+}
+
+#process-1 {
+    margin-top:var(--large-spacing);
 }
 
 .process-section h2 {
@@ -83,12 +91,12 @@
 }
 
 .process-section .figure {
-    font-size: 150px;
+    font-size: 160px;
+    margin-top:4px;
     line-height: 150px;
     letter-spacing: -0.01em;
-    opacity: 0.2;
-    color:transparent;
-    -webkit-text-stroke: 1px #000000;
+    color:rgba(255,118,82,0.1);
+    -webkit-text-stroke: 1px rgba(255,118,82,0.4);
 }
 
 .process-section svg {
@@ -150,7 +158,8 @@
 }
 
 .process-keypoint {
-    padding: 10px 16px;
+    padding: 16px 16px 10px 16px;
+    box-shadow: white 0px 30px 40px -2em inset;
     border:1px solid var(--black-300);
     border-radius:4px;
     font-size: 13px;
@@ -162,10 +171,12 @@
     font-size: 13px;
     letter-spacing: 1px;
     text-transform: uppercase;
+    color:var(--black-700);
 }
 
 .process-keypoint span {
    color:var(--black-700);
+   font-weight: 700;
 }
 
 .process-description {
@@ -183,21 +194,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:350px;
+    width:400px;
     font-size: 16px;
     /*transform: translateX(30vw);*/
     /*margin: calc(var(--large-spacing) * 2) 0;*/
     z-index: 99;
     position: relative;
     transform-origin: center center;
+    
 }
 
 
 .milestone-description {
-    background:var(--white);
+    box-shadow: white 0px 30px 40px -2em inset;
     padding:24px;
     border-radius:8px;
     box-shadow: 10px 0px 200px var(--orange);
+    border:1px solid var(--black-300);
+    text-align: center;
 }
 
 .milestone-cta {
@@ -208,6 +222,8 @@
     width: fit-content;
     margin-top:-12px;
     font-weight: 700;
+    border-radius:4px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2) ;
 }
 
 .form-section {
