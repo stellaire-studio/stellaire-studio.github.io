@@ -192,7 +192,7 @@
 .process-keypoint h3, .process-kpis h3 {
     font-weight: 700;
     margin:0;
-    font-size: 13px;
+    font-size: 0.8em;
     letter-spacing: 1px;
     text-transform: uppercase;
     color:var(--black-700);
@@ -203,13 +203,15 @@
 }
 
 .process-keypoint span { 
-   color:var(--black-700);
+   color:var(--orange);
    font-weight: 700;
+   font-size: 1.4em;
 }
 
 .process-kpis span {
     color:var(--black-700);
     font-weight: 500;
+    font-size: 1.2em;
 } 
 
 .process-description {
