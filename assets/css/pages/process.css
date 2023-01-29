@@ -40,6 +40,10 @@
     background:transparent;
 }
 
+.process-page .nav-links a:after {
+  background: var(--white);
+}
+
 .process-page .header {
     width:70%;
     padding:var(--large-spacing);
