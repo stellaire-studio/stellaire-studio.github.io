@@ -119,9 +119,9 @@
     z-index: 0;
 }
 
-.milestone svg, .milestone .svg {
+/* .milestone svg, .milestone .svg {
     animation: floating 6s ease-in-out infinite;
-}
+} */
 
 .line {
     margin-top:24px;
@@ -138,7 +138,18 @@
 }
 
 .line-top {
-    top:-69%;
+    top:-49%;
+}
+
+#line-step-1 {
+    top: -325%;
+    z-index: -1;
+}
+
+#line-step-2 {
+    top: -97%;
+    left: 9%;
+    z-index: -1;
 }
 
 .svg-right {
