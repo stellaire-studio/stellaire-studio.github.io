@@ -449,7 +449,7 @@
         </section>
 
 
-        <section id="process-4" class="process-section relative" data-aos="fade-up" style="margin-bottom: 20px">
+        <section id="process-4" class="process-section relative" data-aos="fade-up">
             <div class="process-content" data-aos="fade-up">
                 <h2>C'est quoi <span class="emphaze">la suite</span> ?</h2>
                 <div class="process-description" data-aos="fade-up">
@@ -458,7 +458,7 @@
             </div>
         </section>
 
-        <section class="milestone milestone-choice" style="">
+        <section class="milestone milestone-choice">
             <div class="milestone-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="milestone-description">
                     Le marché est porteur, nous avons des cartes à jouer pour aller chercher l'hyper-croissance, et l'équipe qui s'est constituée a de fortes ambitions ?
@@ -479,13 +479,12 @@
 
         <img src="../assets/images/process/bottom-page-process.svg" class="bottom-illustration"
             alt="Une fusée décolle dans l'espace pour découvrir de nouvelles planètes">
-        <section class="form-section"
-            style="background-color: black; margin-left: -80px; margin-right: -80px;padding: 80px; color: white; margin-bottom: -80px; display: grid;grid-template-columns: 1fr 1fr;">
-            <div class="form-section-info" style="margin-right: 1.5em">
-                <h2 style="font-size: 1.5em">Vous êtes expert dans votre métier et avez une idée de logiciel
-                    révolutionnaire pour votre industrie ?</h2>
+        <section class="form-section">
+            <div class="form-section-info" >
+                <h2>Vous êtes expert dans votre métier et avez une idée de logiciel
+                    révolutionnaire pour votre industrie&nbsp;?</h2>
 
-                <p class="project-description" style="font-size: 0.8em">
+                <p class="project-description">
                     Si vous avez des questions sur nos projets ou si vous souhaitez nous parler du vôtre,
                     contactez-nous, et discutons-en.
                 </p>
@@ -494,8 +493,8 @@
             <iframe
                 src="https://forms.stellaire.studio/nous-contacter?alignLeft=1&hideTitle=1&transparentBackground=1&embed=1"
                 width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
-                title="Formulaire de contact"
-                style="width: 100% !important;height: 690px;padding: 0 !important;"></iframe>
+                title="Formulaire de contact" class="iframe-form"
+               ></iframe>
         </section>
     </main>
 
@@ -526,37 +525,5 @@
         const angle = (Math.random() - 0.5) * 5
         cta.style.transform = `rotate(${angle}deg)`
     })
-
 </script>
-<script>
-    const lines = document.querySelectorAll('.line')
-    const projectObserver = new IntersectionObserver((lines) => {
-
-        lines.forEach((line) => {
-            if (line.isIntersecting) {
-                //line.target.children[0].style.dashOffset = '-310'
-
-                //line.target.children[0].style.fill = 'red'
-                document.body.addEventListener('scroll', (e) => {
-                    console.log(e)
-                })
-                //line.target.children[0].style.strokeDasharray = '10 10'
-                line.target.classList.add('dash-animate')
-            } else {
-                //line.target.children[0].style.fill = 'blue'
-                line.target.classList.remove('dash-animate')
-            }
-        });
-    },
-        {
-            threshold: 0.2
-        }
-    );
-
-    // 🔥
-    lines.forEach((el, i) => {
-        projectObserver.observe(el);
-    });
-</script>
-
 </html>
