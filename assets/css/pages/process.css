@@ -14,6 +14,9 @@
 @import url("/assets/css/components/buttons.css");
 @import url("/assets/css/components/planet.css");
 
+/* Animation */
+@import url("/assets/css/librairies/aos.css");
+
 /* Responsive */
 @import url("/assets/css/media-queries.css");
 
@@ -23,13 +26,27 @@
     z-index: -1;
 }
 
+.process-page .hero {
+    background:url('../../images/process/bg-page-process.svg');
+    background-size:cover;
+}
+
+
 .process-page nav, .process-page footer {
     color:var(--white);
     background:var(--black);
 }
-.header {
+.process-page nav  {
+    background:transparent;
+}
+
+.process-page .nav-links a:after {
+  background: var(--white);
+}
+
+.process-page .header {
+    width:70%;
     padding:var(--large-spacing);
-    background:var(--black);
     color:var(--white);
 }
 
@@ -46,7 +63,7 @@
 }
 
 .gradient-right {
-    right: -60vw;
+    right: -40vw;
     height: 40vw;
     width: 30vw;
     opacity: .5;
@@ -65,8 +82,22 @@
 .process-section {
     display: flex;
     width:850px;
-    gap:16px;
-    margin:var(--large-spacing) 0;
+    gap:24px;
+    margin: calc(var(--large-spacing) * 2) auto;
+}
+
+#process-1 {
+    margin-top:0;
+    padding-top: 40px;
+}
+
+#process-3 {
+    margin-bottom: var(--large-spacing);
+}
+
+#process-4 {
+    text-align: center;
+    margin:0 auto;
 }
 
 .process-section h2 {
@@ -75,30 +106,65 @@
 }
 
 .process-section .figure {
-    font-size: 150px;
+    font-size: 160px;
+    margin-top:4px;
     line-height: 150px;
     letter-spacing: -0.01em;
-    opacity: 0.2;
-    color:transparent;
-    -webkit-text-stroke: 1px #000000;
+    color:rgba(255,118,82,0.1);
+    -webkit-text-stroke: 1px rgba(255,118,82,0.4);
 }
 
-.process-section svg {
+.process-section svg, .milestone svg, .milestone .svg, .line {
     position: absolute;
     z-index: 0;
 }
 
+/* .milestone svg, .milestone .svg {
+    animation: floating 6s ease-in-out infinite;
+} */
+
 .line {
+    margin-top:24px;
     stroke-dasharray: 10 10;
     transition: 1s;
 }
 
-.svg-right {
-    right:calc(var(--large-spacing) * 2);
+.line-right {
+    right: 10%;
 }
 
-.svg-right-large {
-    right:-30%;
+.line-left {
+    left: -20%;
+}
+
+.line-top {
+    top:-49%;
+}
+
+#line-step-1 {
+    top: -325%;
+    z-index: -1;
+}
+
+#line-step-2 {
+    top: -97%;
+    left: 9%;
+    z-index: -1;
+}
+
+.svg-right {
+    right:-10%;
+}
+
+.svg-step-1 {
+    right: -160px;
+    /*transform: scale(1.2);*/
+    top:-190%;
+}
+
+.svg-step-2 {
+    left: -20%;
+    top: -200%;
 }
 
 .svg-top {
@@ -109,25 +175,10 @@
     bottom: -250px;
 }
 
-
-/*#process-1 {
-    margin-left:calc(var(--large-spacing) * 2) !important;
+.svg-left {
+    left:-10%;
 }
 
-#process-3 {
-    margin-left:calc(var(--large-spacing) * 4) !important;
-}
-
-#process-3 .process-illus {
-    left:-30vw;
-    top:-80vh;
-    transform: scaleX(-1);
-}
-
-#process-4 .process-illus {
-    top: -40vh;
-    right: -40vw;
-}*/
 
 .process-content {
     display:flex;
@@ -141,24 +192,42 @@
     gap:16px;
 }
 
-.process-keypoint {
-    padding: 10px 16px;
+.process-keypoint, .process-kpis {
+    padding: 16px 16px 10px 16px;
+    box-shadow: white 0px 30px 40px -2em inset;
     border:1px solid var(--black-300);
     border-radius:4px;
     font-size: 13px;
 }
 
-.process-keypoint h3 {
+.process-keypoint h3, .process-kpis h3 {
     font-weight: 700;
     margin:0;
-    font-size: 13px;
+    font-size: 0.8em;
     letter-spacing: 1px;
     text-transform: uppercase;
+    color:var(--black-700);
 }
 
-.process-keypoint span {
-   color:var(--black-700);
+.process-kpis {
+    width: 100%;
 }
+
+.process-kpis h3 {
+  margin-bottom: 0.5em;
+}
+
+.process-keypoint span { 
+   color:var(--orange);
+   font-weight: 700;
+   font-size: 1.4em;
+}
+
+.process-kpis span {
+    color:var(--black-700);
+    font-weight: 500;
+    font-size: 1.2em;
+} 
 
 .process-description {
     font-size: 16px;
@@ -170,26 +239,71 @@
     right:-10vw;
 }
 
+.form-section {
+    width:100vw;
+    background-color: var(--black); 
+    margin: 0 0 -80px 0; 
+    padding: var(--large-spacing); 
+    color: var(--white); 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-section-info {
+    margin-right:var(--large-spacing);
+}
+
+.form-section h2 {
+    font-size: 1.5em;
+    line-height: 1.3;
+}
+
+.iframe-form {
+    width: 100% !important;
+    height: 540px;
+    padding: 0 !important;
+}
+
 /* Milestone */
 .milestone {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:350px;
+    width:100%;
     font-size: 16px;
-    /*transform: translateX(30vw);*/
-    /*margin: calc(var(--large-spacing) * 2) 0;*/
+    margin: 0;
     z-index: 99;
     position: relative;
     transform-origin: center center;
 }
 
+.milestone-choice {
+    flex-direction: row;
+    gap:80px;
+    justify-content: center;
+    margin-bottom: -120px;
+    margin-top:  40px;
+}
+
+.milestone-card {
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .milestone-description {
+    box-shadow: white 0px 30px 40px -2em inset;
     background:var(--white);
     padding:24px;
     border-radius:8px;
     box-shadow: 10px 0px 200px var(--orange);
+    border:1px solid var(--black-300);
+    text-align: center;
+}
+
+.bottom-illustration {
+    width:100vw;
 }
 
 .milestone-cta {
@@ -200,15 +314,14 @@
     width: fit-content;
     margin-top:-12px;
     font-weight: 700;
+    border-radius:4px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2) ;
 }
 
-.form-section {
-    display:flex;
-    margin-top:80px;
-}
+
 /* Animation */
 .dash-animate {
-    animation: dashAnimate 30s linear infinite forwards;
+    animation: dashAnimate 60s linear infinite forwards;
 }  
 
 @keyframes dashAnimate {
@@ -221,13 +334,43 @@
     }
 }
 
+@keyframes floating {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
 
 /* Responsive */
+@media (min-width:1441px) {
+    #line-step-2 {
+        left: 350px;
+    }   
+}
 @media (max-width:992px) {
+
+    .process-page .header {
+        width: 100%;
+    }
     .process-section {
         margin:0 !important;
         flex-direction: column;
         width:100%;
+        gap:0px;
+    }
+    .process-section .figure {
+        font-size:120px;
+        line-height: 1;
+        color: rgba(255,118,82,1);
+    }
+    .process-section h2 {
+        font-size: 28px;
     }
 
     .process-keypoints {
@@ -241,12 +384,30 @@
     .process-wrapper svg, .process-wrapper img {
         display:none;
     }
-    /*#process-1, #process-3 {
-        margin-left:auto !important;
-    }*/
+
+    #process-3 {
+        margin-bottom: var(--large-spacing) !important;
+    }
     .milestone {
         width:auto;
         transform: none;
         margin:32px 0;
+    }
+
+    .milestone-card {
+        width:85%;
+        margin:calc(var(--large-spacing)*4) 0;
+    }
+
+    .milestone-choice {
+        flex-direction: column;
+    }
+
+    .milestone-choice .milestone-card {
+        margin: 0;
+    }
+
+    .iframe-form {
+        height:580px;
     }
 }

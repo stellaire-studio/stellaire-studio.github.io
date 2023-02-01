@@ -7,7 +7,6 @@
 @import url("/assets/css/config/colors.css");
 @import url("/assets/css/config/fonts.css");
 @import url("/assets/css/config/layout.css");
-@import url("/assets/css/config/spacing.css");
 
 /* Components */
 @import url("/assets/css/components/navbar.css");
@@ -22,7 +21,6 @@
   height: auto !important;
   padding-bottom: 0 !important;
 }
-
 
 .team-hero .value-prop {
   width: 80% !important;

@@ -33,7 +33,13 @@ nav {
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
+
 .nav-links a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-links a.nav-link-active:after {
   width: 100%;
   left: 0;
 }

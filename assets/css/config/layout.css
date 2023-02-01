@@ -21,3 +21,7 @@ img {
 .text-center {
   text-align: center;
 }
+
+.d-none {
+  display:none;
+}
