@@ -260,7 +260,7 @@
 
 .iframe-form {
     width: 100% !important;
-    height: 690px;
+    height: 540px;
     padding: 0 !important;
 }
 
@@ -384,9 +384,10 @@
     .process-wrapper svg, .process-wrapper img {
         display:none;
     }
-    /*#process-1, #process-3 {
-        margin-left:auto !important;
-    }*/
+
+    #process-3 {
+        margin-bottom: var(--large-spacing) !important;
+    }
     .milestone {
         width:auto;
         transform: none;
@@ -404,5 +405,9 @@
 
     .milestone-choice .milestone-card {
         margin: 0;
+    }
+
+    .iframe-form {
+        height:580px;
     }
 }
