@@ -5,6 +5,8 @@ nav {
   width: 100vw;
   padding: var(--half-spacing) var(--large-spacing);
   font-weight: 500;
+  position:relative;
+  z-index: 9999;
 }
 
 
