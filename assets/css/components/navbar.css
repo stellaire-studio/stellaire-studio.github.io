@@ -5,8 +5,17 @@ nav {
   width: 100vw;
   padding: var(--half-spacing) var(--large-spacing);
   font-weight: 500;
-  position:relative;
+  position:sticky;
+  top:0;
   z-index: 9999;
+  transition:.5s;
+}
+
+.scrolled {
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(15px);
+  padding:16px var(--large-spacing);
+  transition:.5s;
 }
 
 
