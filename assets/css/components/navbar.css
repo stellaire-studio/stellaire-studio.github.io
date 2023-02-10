@@ -9,13 +9,15 @@ nav {
   top:0;
   z-index: 9999;
   transition:.5s;
+  border-bottom:1px solid rgba(255,255,255, 0)
 }
 
 .scrolled {
-  background: rgba(0,0,0,0.8);
-  backdrop-filter: blur(15px);
+  background: rgba(0,0,0,0.6);
   padding:16px var(--large-spacing);
   transition:.5s;
+  backdrop-filter: blur(8px);
+  border-bottom:1px solid rgba(255,255,255, 0.2)
 }
 
 
