@@ -29,6 +29,7 @@
 
 @-moz-document url-prefix() {
   .planet {
+    mix-blend-mode: normal;
     border-radius: 30%;
   }
 }
@@ -42,6 +43,28 @@
   transform: rotate(-33.8deg);
   width: 90vw;
   height: 90vw;
+}
+
+@-moz-document url-prefix() {
+  .planet-gradient {
+    /* not displayed on firefox mobile devices */
+    display: none;
+
+    top: -15vh;
+
+    width:  95vh;
+    height: 95vh;
+  }
+}
+
+
+@media (min-width: 768px) {
+  @-moz-document url-prefix() {
+    .planet-gradient {
+      /* displayed on bigger firefox screens */
+      display: inherit;
+    }
+  }
 }
 
 @-moz-document url-prefix() {
