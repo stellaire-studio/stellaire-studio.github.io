@@ -26,8 +26,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-    .projects-page .btn-secondary:hover {
-
+  .projects-page .btn-secondary:hover {
     background: var(--black);
     color: var(--white);
     border: .5px solid var(--black);
@@ -54,6 +53,9 @@
 }
 
 .projects-wrapper {
+  /* planet-gradient overflows main tag */
+  min-height: calc(90vh - 150px);
+
   max-width: 1280px;
   margin: 0 auto;
   margin-top: 3em;
