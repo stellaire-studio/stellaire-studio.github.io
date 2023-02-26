@@ -247,7 +247,7 @@
 /* Project Astreinte Vitale */
 
 #astreinte-vitale-use-case {
-  background: linear-gradient(255.53deg, #17223A 8.04%, #08225A 89.86%);
+  background: linear-gradient(255.53deg, #07213B 8.04%, #08225A 89.86%);
   overflow: hidden; /* for the drop-shadow */
 }
 
@@ -264,6 +264,11 @@
 #astreinte-vitale-use-case *::selection {
   color:      var(--white);
   background: #f83469;
+}
+
+#astreinte-vitale-use-case .project-logo {
+  max-width:  100%;
+  max-height: 76px;
 }
 
 #astreinte-vitale-use-case .project-description {
