@@ -87,6 +87,21 @@
     border-radius: 200px;
 }
 
+@-moz-document url-prefix() {
+  .process-page .planet-green {
+    top: 2vh;
+    right: -80vh;
+    width: 92vh;
+    height: 80vh;
+
+    background: radial-gradient(
+      circle,
+      var(--green) 0%,
+      rgba(0, 194, 137, 0.1) 70%
+    ) !important;
+  }
+}
+
 .process-wrapper {
     display:  flex;
     flex-direction: column;
