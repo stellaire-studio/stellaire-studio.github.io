@@ -73,6 +73,12 @@
     height: 70vw;
 }
 
+@-moz-document url-prefix() {
+  .gradient-top {
+    background: linear-gradient(175.24deg, rgba(248, 80, 68, 0.9) 7.96%, rgba(63, 94, 251, 0.5) 96.16%);
+  }
+}
+
 .gradient-right {
     right: -40vw;
     height: 40vw;
