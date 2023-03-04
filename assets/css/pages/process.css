@@ -31,6 +31,17 @@
     background-size:cover;
 }
 
+@-moz-document url-prefix() {
+  .process-page .hero {
+    background-image: url('../../images/process/bg-page-process-transparent.svg'),
+      linear-gradient(45deg, rgba(63, 94, 251, 0.1), rgba(63, 94, 251, 0) 90%),
+      linear-gradient(127deg, rgba(63, 94, 251, 0.15), rgba(75, 28, 35, 0) 70%),
+      linear-gradient(225deg, rgba(248, 80, 68, 0.3), rgba(248, 80, 68, 0) 42%),
+      linear-gradient(var(--black), var(--black));
+
+    z-index: -1;
+  }
+}
 
 .process-page nav, .process-page footer {
     color:var(--white);
