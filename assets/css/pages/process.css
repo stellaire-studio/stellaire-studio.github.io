@@ -439,7 +439,7 @@
     }
 
     #process-3 {
-        margin-bottom: var(--large-spacing) !important;
+        margin-bottom: calc(var(--large-spacing) * 4) !important;
     }
     .milestone {
         width:auto;
