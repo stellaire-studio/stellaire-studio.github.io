@@ -27,13 +27,13 @@
 }
 
 .process-page .hero {
-    background:url('../../images/process/bg-page-process.svg');
+    background:url('/assets/images/process/bg-page-process.svg');
     background-size:cover;
 }
 
 @-moz-document url-prefix() {
   .process-page .hero {
-    background-image: url('../../images/process/bg-page-process-transparent.svg'),
+    background-image: url('/assets/images/process/bg-page-process-transparent.svg'),
       linear-gradient(45deg, rgba(63, 94, 251, 0.1), rgba(63, 94, 251, 0) 90%),
       linear-gradient(127deg, rgba(63, 94, 251, 0.15), rgba(75, 28, 35, 0) 70%),
       linear-gradient(225deg, rgba(248, 80, 68, 0.3), rgba(248, 80, 68, 0) 42%),
