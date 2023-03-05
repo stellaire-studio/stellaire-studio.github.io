@@ -335,6 +335,12 @@
     text-align: center;
 }
 
+.bottom-illustration-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .bottom-illustration {
     width:100vw;
 }
