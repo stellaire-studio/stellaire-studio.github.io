@@ -1,0 +1,30 @@
+.faq-tooltip {
+  display:       inline-block;
+  padding-right: 0.5ch;
+  padding-left:  0.5ch;
+  color:         color: var(--white);
+  cursor:        help;
+}
+
+.faq-tooltip .faq-tooltip-question-mark {
+  display:     inline-block;
+  transform:   translate(10%, -30%);
+  color:       var(--orange);
+  font-weight: 800;
+  font-size:   0.9em;
+}
+
+.tippy-box .faq-tooltip-content-title {
+  display:        block;
+  margin-bottom:  0.5em;
+  font-size:      1.2em;
+  color:          var(--orange);
+}
+
+.tippy-box[data-theme~='stellaire-dark'] {
+  padding:          0.8em;
+  background-color: var(--black);
+  color:            var(--white);
+  border:           2px solid var(--orange);
+  font-size: 1em;
+}
