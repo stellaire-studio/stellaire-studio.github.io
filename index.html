@@ -1388,8 +1388,6 @@
       <div class="mask"></div>
     </main>
 
-
-
     <section id="after-hero">
       <div data-aos="fade-up" id="home-astronaut-animation-wrapper" class="animation-wrapper illustration">
         <img src="assets/images/home-illustrations/cosmonaut.svg" loading="lazy" alt="">
@@ -1411,13 +1409,27 @@
     <section id="bullets-points">
       <div class="content">
         <h2 data-aos="fade-up">Le savoir faire pour créer <span class="emphaze">des startups qui décollent</span></h2>
-        <p class="subtitle" data-aos="fade-up">Nous développons des logiciels SAAS avec l'ambition d'en faire des entreprises autonomes.</p>
+        <p class="subtitle" data-aos="fade-up">Nous développons des logiciels<span class="faq-tooltip">SaaS<sup class="faq-tooltip-question-mark">?</sup>
+            <template class="faq-tooltip-content">
+              <strong class="faq-tooltip-content-title">SaaS, <em>Software As A Service</em></strong>
+              Un modèle de logiciel accessible de n'importe quel appareil connecté à Internet, facturé de manière flexible et prévisible, bénéficiant de mises à jour en continu, sans surcoût, tout en étant intégrable avec d'autres outils.
+              <br><br>
+              Ce modèle permet aux entreprises d'économiser de l'argent, de travailler à distance, de s'adapter aux besoins changeants et de se concentrer sur leur cœur de métier, tout en bénéficiant d'une technologie de pointe.
+            </template>
+          </span>avec l'ambition d'en faire des entreprises autonomes.</p>
         <ul class="bullets">
           <li data-aos="fade-up" data-aos-delay="0">
-            <img src="assets/images/sparkle-icon-small.svg" loading="lazy" height="20" width="20" alt="">Exploration marché & Go To Market
+            <img src="assets/images/sparkle-icon-small.svg" loading="lazy" height="20" width="20" alt="">Exploration marché & <span class="faq-tooltip">Go To Market<sup class="faq-tooltip-question-mark">?</sup>
+              <template class="faq-tooltip-content">
+                <strong class="faq-tooltip-content-title"><em>Go To Market</em></strong>
+                Une stratégie pour lancer un produit ou un service sur le marché, en atteignant efficacement les clients cibles et en générant des ventes.
+                <br><br>
+                La mise sur le marché implique généralement une combinaison de marketing, de vente, de distribution et d'autres activités pour atteindre les objectifs commerciaux.
+              </template>
+            </span>
           </li>
           <li data-aos="fade-up" data-aos-delay="50">
-            <img src="assets/images/sparkle-icon-small.svg" loading="lazy" height="20" width="20" alt="">Design UX
+            <img src="assets/images/sparkle-icon-small.svg" loading="lazy" height="20" width="20" alt="">Design UI & UX
           </li>
           <li data-aos="fade-up" data-aos-delay="100">
             <img src="assets/images/sparkle-icon-small.svg" loading="lazy" height="20" width="20" alt="">Tech & Développment
@@ -1494,6 +1506,10 @@
       </div>
     </footer>
   </body>
+
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="/assets/js/faq-tooltip.js"></script>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script> AOS.init({disable: 'mobile'}); </script>
