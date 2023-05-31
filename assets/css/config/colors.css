@@ -9,6 +9,10 @@
   --black-700: #33322E;
 
   --gradient: linear-gradient(175.24deg, #F85044 7.96%, #3F5EFB 96.16%);
+
+  --astreinte-vitale-primary: #E30D0D;
+  --kwali-primary: #61C763;
+  --kwali-secondary:  #003B49;
 }
 
 ::selection {
