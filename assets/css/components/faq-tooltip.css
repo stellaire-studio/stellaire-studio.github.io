@@ -37,3 +37,31 @@
   color:            var(--black);
   box-shadow:       0px 5px 10px rgba(0,0,0,0.2);
 }
+
+.tippy-box[data-theme~='kwali'] {
+  background-color: var(--kwali-secondary);
+  color:            var(--white);
+  box-shadow:       0px 5px 10px rgba(0,0,0,0.2);
+}
+
+.tippy-box[data-theme~='kwali'] .faq-tooltip-content-title {
+  color: var(--kwali-primary);
+}
+
+.faq-tooltip[data-tooltip-theme~='kwali'] .faq-tooltip-question-mark {
+  color: var(--kwali-secondary);
+}
+
+.tippy-box[data-theme~='astreinte-vitale'] {
+  background-color: var(--astreinte-vitale-primary);
+  color:            var(--white);
+  box-shadow:       0px 5px 10px rgba(0,0,0,0.2);
+}
+
+.tippy-box[data-theme~='astreinte-vitale'] .faq-tooltip-content-title {
+  color: var(--astreinte-vitale-secondary);
+}
+
+.faq-tooltip[data-tooltip-theme~='astreinte-vitale'] .faq-tooltip-question-mark {
+  color: var(--astreinte-vitale-primary);
+}
