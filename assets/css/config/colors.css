@@ -11,8 +11,9 @@
   --gradient: linear-gradient(175.24deg, #F85044 7.96%, #3F5EFB 96.16%);
 
   --astreinte-vitale-primary: #E30D0D;
+  --astreinte-vitale-secondary: #07213B;
   --kwali-primary: #61C763;
-  --kwali-secondary:  #003B49;
+  --kwali-secondary:  #063F5D;
 }
 
 ::selection {
