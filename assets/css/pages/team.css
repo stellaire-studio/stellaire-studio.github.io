@@ -31,7 +31,7 @@
   top: -100px;
   left: auto;
   background: linear-gradient(175.24deg, #F85044 7.96%, #3F5EFB 96.16%);
-    transform: rotate(76.2deg);
+  transform: rotate(76.2deg);
   width: 50vw;
   height: 50vw;
 }
@@ -73,6 +73,7 @@
 }
 
 .team-picture {
+  margin-bottom: 16px;
   position: relative;
   overflow: hidden;
   border-radius: 8px;
@@ -95,7 +96,6 @@
 }
 
 .team-status {
-  margin-top: 16px;
   font-size: 13px;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -114,7 +114,11 @@
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.01em;
-  opacity: .8;
+  opacity: 0.9;
+}
+
+.team-description .emphaze {
+  font-weight: 600;
 }
 
 @media (max-width: 1280px) {
