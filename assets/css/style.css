@@ -51,12 +51,6 @@ section {
   padding-bottom: 150px;
 }
 
-@media (min-width: 768px) {
-  section {
-    min-height: 100vh;
-  }
-}
-
 iframe {
   height: 530px;
 }
