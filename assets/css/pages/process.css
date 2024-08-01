@@ -21,6 +21,10 @@
 /* Responsive */
 @import url("/assets/css/media-queries.css");
 
+body {
+  height: 100vh;
+}
+
 .process-page {
     background: var(--white);
     position: relative;
