@@ -57,9 +57,8 @@
 }
 
 .process-page .header {
-    width:70%;
-    padding:var(--large-spacing);
-    color:var(--white);
+  padding:var(--large-spacing);
+  color:var(--white);
 }
 
 /* Gradients */
