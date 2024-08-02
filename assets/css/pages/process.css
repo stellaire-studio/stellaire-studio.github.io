@@ -120,15 +120,15 @@ body {
     display: flex;
     width:850px;
     gap:24px;
-    margin: calc(var(--large-spacing) * 2) auto;
+    margin: calc(var(--large-spacing) * 1) auto;
 }
 
-#process-1 {
+#process-1, #offer-1 {
     margin-top:0;
     padding-top: 40px;
 }
 
-#process-3 {
+#process-3, #offer-3 {
     margin-bottom: var(--large-spacing);
 }
 
