@@ -55,8 +55,7 @@
   cursor: auto;
 }
 
-
-.team:hover .team-linkedin, .team:hover .btn-tertiary {
+.team:hover .team-linkedin, .team:hover .link-primary {
   opacity: 1;
   transition: .3s;
 }
@@ -66,10 +65,14 @@
   transition: .5s;
 }
 
-.team .btn-tertiary {
+.team .link-primary {
   opacity: 0;
   transition: .3s;
   color: var(--orange);
+}
+
+.team .link-primary.always-visible {
+  opacity: 1;
 }
 
 .team-picture {
