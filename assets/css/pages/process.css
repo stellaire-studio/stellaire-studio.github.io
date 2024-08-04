@@ -21,6 +21,10 @@
 /* Responsive */
 @import url("/assets/css/media-queries.css");
 
+body {
+  height: 100vh;
+}
+
 .process-page {
     background: var(--white);
     position: relative;
@@ -57,9 +61,8 @@
 }
 
 .process-page .header {
-    width:70%;
-    padding:var(--large-spacing);
-    color:var(--white);
+  padding:var(--large-spacing);
+  color:var(--white);
 }
 
 /* Gradients */
@@ -117,15 +120,15 @@
     display: flex;
     width:850px;
     gap:24px;
-    margin: calc(var(--large-spacing) * 2) auto;
+    margin: calc(var(--large-spacing) * 1) auto;
 }
 
-#process-1 {
+#process-1, #offer-1 {
     margin-top:0;
     padding-top: 40px;
 }
 
-#process-3 {
+#process-3, #offer-3 {
     margin-bottom: var(--large-spacing);
 }
 

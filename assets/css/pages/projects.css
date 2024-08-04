@@ -53,6 +53,10 @@
   --background-color: var(--black);
 }
 
+body {
+  height: 100vh;
+}
+
 .projects-wrapper {
   /* planet-gradient overflows main tag */
   min-height: calc(90vh - 150px);

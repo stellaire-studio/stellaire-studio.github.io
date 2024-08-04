@@ -62,3 +62,22 @@ a:hover {
 .btn-secondary:hover:after {
   width: 0 !important;
 }
+
+.btn-secondary.active {
+  background: var(--white) !important;
+  color: var(--black) !important;
+}
+
+.link-underlined {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-transform: uppercase;
+}
+
+.link-primary {
+  color: var(--orange);
+}
+
+.link-secondary {
+  color: var(--white);
+}

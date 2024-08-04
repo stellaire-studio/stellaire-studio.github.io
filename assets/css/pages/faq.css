@@ -25,6 +25,7 @@
 body {
   background: var(--black);
   color: var(--white);
+  height: 100vh;
 }
 
 .header {

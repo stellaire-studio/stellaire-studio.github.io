@@ -104,6 +104,10 @@
     text-align: left;
   }
 
+  .keypoints ol {
+    width: 90vw;
+  }
+
   .keypoints .planet-green {
     filter: blur(50px);
     width: 30vw;
@@ -189,5 +193,3 @@
     height: 100% !important;
   }
 }
-
-
