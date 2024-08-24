@@ -63,10 +63,15 @@
 }
 
 .keypoints {
-  grid-template-columns: 1fr !important;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+
   min-height: auto !important;
   overflow: hidden;
+
+  text-align: center;
 }
 
 .keypoints h2 {
@@ -90,6 +95,57 @@
 
 .keypoints .planet-green {
   top: 0;
+}
+
+#what-next {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+}
+
+.offers-grid {
+  display: grid;
+  gap: 2em;
+  padding: 0em 2em;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .offers-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .offers-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2em;
+  border: 4px var(--orange) solid;
+  border-bottom: 0;
+  border-radius: 0.5em 0.5em 0em 0em;
+}
+
+.offer-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offer-header p {
+  font-size: 1.1em;
+}
+
+.offer-description {
+  font-size: 1rem;
+  text-align: left;
 }
 
 #nous-contacter {
