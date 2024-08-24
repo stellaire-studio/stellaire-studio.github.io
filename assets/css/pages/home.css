@@ -107,7 +107,6 @@
 .offers-grid {
   display: grid;
   gap: 2em;
-  padding: 0em 2em;
   grid-template-columns: 1fr;
 }
 
@@ -141,6 +140,8 @@
 
 .offer-header p {
   font-size: 1.1em;
+  min-height: calc(2 * 1.1em + 1em); /* 2 lines + 1 line height */
+  text-align: center;
 }
 
 .offer-description {
