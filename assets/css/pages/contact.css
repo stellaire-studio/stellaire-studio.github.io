@@ -18,9 +18,3 @@
   padding-right: var(--half-spacing) !important;
   text-align: left !important;
 }
-
-@media (min-width: 768px) {
-  #nous-contacter .content {
-    padding-right: var(--half-spacing);
-  }
-}

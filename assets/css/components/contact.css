@@ -1,0 +1,5 @@
+@media (min-width: 768px) {
+  #nous-contacter {
+    gap: var(--half-spacing);
+  }
+}
