@@ -131,7 +131,7 @@
   .team-section {
     grid-template-columns: repeat(2, 1fr);
   }
-  .team .team-linkedin, .team .btn-tertiary {
+  .team .team-linkedin {
     opacity: 1;
   }
 

@@ -1,8 +1,5 @@
 /* Tablets */
 @media (min-device-width : 768px) and (max-width:1024px) {
-  .keypoints-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
   h1 {
     font-size: 48px;
   }
@@ -46,10 +43,6 @@
     font-size: 18px;
   }
 
-  #index-hero-cta {
-    margin-top: 2px;
-  }
-
   section {
     font-size: 18px;
   }
@@ -91,10 +84,6 @@
     height: 10vh !important;
   }
 
-  .keypoints-list {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
   .keypoints h2 {
     width: 100%;
     margin-bottom: 15px;
@@ -127,10 +116,6 @@
 
   #bullets-points .content {
     width: calc(100% - var(--large-spacing));
-  }
-
-  .bullets li:last-child{
-    margin-bottom: 27px;
   }
 
   #nous-contacter .planet-gradient {

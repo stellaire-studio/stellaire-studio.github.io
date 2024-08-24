@@ -55,10 +55,6 @@ a:hover {
   transition: .3s;
 }
 
-.btn-tertiary:hover {
-  cursor: pointer;
-}
-
 .btn-secondary:hover:after {
   width: 0 !important;
 }
