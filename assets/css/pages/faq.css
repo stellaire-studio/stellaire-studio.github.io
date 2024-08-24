@@ -183,3 +183,9 @@ iframe {
 
   }
 }
+
+@media (min-width: 768px) {
+  .header p {
+    text-align: center;
+  }
+}
