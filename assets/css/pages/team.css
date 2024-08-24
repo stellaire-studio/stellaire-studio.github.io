@@ -20,7 +20,7 @@
 
 .team-hero {
   height: auto !important;
-  padding-bottom: 0 !important;
+  padding-bottom: var(--large-spacing);
 }
 
 .team-hero .value-prop {
@@ -43,8 +43,13 @@
   grid-template-columns:  repeat(3, 1fr);
   grid-row-gap: var(--large-spacing);
   grid-column-gap: 80px;
+  align-items: baseline;
+  padding-top: 0;
 }
 
+.team-section-name {
+  padding-left: var(--large-spacing);
+}
 
 .team {
   display: flex;
