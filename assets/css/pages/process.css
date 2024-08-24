@@ -197,6 +197,10 @@ body {
     z-index: 1;
 }
 
+.process-topic {
+  text-transform: uppercase; font-size: 1.2rem; font-weight: 600; color: var(--black-700);
+}
+
 .process-kpis {
     padding: 16px 16px 10px 16px;
     box-shadow: white 0px 30px 40px -2em inset;
