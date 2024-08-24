@@ -190,6 +190,7 @@ body {
 }
 
 .process-content {
+    width: 100%;
     display:flex;
     flex-direction: column;
     gap:24px;
@@ -298,6 +299,10 @@ body {
     box-shadow: 10px 0px 200px var(--orange);
     border:1px solid var(--black-300);
     text-align: center;
+}
+
+.milestone-description-outline {
+  border: 2px var(--orange) solid;
 }
 
 .bottom-illustration-wrapper {
