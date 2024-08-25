@@ -12,6 +12,7 @@
 @import url("/assets/css/components/navbar.css");
 @import url("/assets/css/components/footer.css");
 @import url("/assets/css/components/buttons.css");
+@import url("/assets/css/components/contact.css");
 @import url("/assets/css/components/planet.css");
 
 /* Responsive */
@@ -19,7 +20,7 @@
 
 .team-hero {
   height: auto !important;
-  padding-bottom: 0 !important;
+  padding-bottom: var(--large-spacing);
 }
 
 .team-hero .value-prop {
@@ -42,8 +43,13 @@
   grid-template-columns:  repeat(3, 1fr);
   grid-row-gap: var(--large-spacing);
   grid-column-gap: 80px;
+  align-items: baseline;
+  padding-top: 0;
 }
 
+.team-section-name {
+  padding-left: var(--large-spacing);
+}
 
 .team {
   display: flex;
@@ -131,7 +137,7 @@
   .team-section {
     grid-template-columns: repeat(2, 1fr);
   }
-  .team .team-linkedin, .team .btn-tertiary {
+  .team .team-linkedin {
     opacity: 1;
   }
 

@@ -72,6 +72,5 @@ strong, section b {
 @media (min-width: 992px) {
   .header p {
     font-size: 1.3em;
-    /*text-align: center;*/
   }
 }

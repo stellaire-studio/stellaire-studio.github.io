@@ -14,7 +14,6 @@ a:hover {
   padding: 8px 16px;
   background: var(--orange) !important;
   border: 1px solid var(--orange);
-  border: 1px solid var(--orange);
   border-radius: 4px;
   text-transform: uppercase;
   color: var(--black);
@@ -38,6 +37,37 @@ a:hover {
   width: 0 !important;
 }
 
+.btn-outline-primary {
+  padding: 8px 16px;
+  background: transparent !important;
+  border: 1px solid var(--orange);
+  border-radius: 4px;
+  text-transform: uppercase;
+  color: var(--orange);
+  letter-spacing: 1px;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  transition: .3s;
+  cursor: pointer !important;
+  text-align: center;
+}
+
+.btn-outline-primary:hover {
+  color: var(--black);
+  background: var(--orange) !important;
+  transition: .3s;
+}
+
+.btn-outline-primary:hover:after {
+  width: 0 !important;
+}
+
+.btn-sm {
+  font-size: 0.75rem;
+}
+
 .btn-large {
   padding: 16px 24px;
 }
@@ -53,10 +83,6 @@ a:hover {
   color: var(--black);
   border: .5px solid var(--white);
   transition: .3s;
-}
-
-.btn-tertiary:hover {
-  cursor: pointer;
 }
 
 .btn-secondary:hover:after {
