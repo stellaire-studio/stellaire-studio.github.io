@@ -384,3 +384,66 @@ body {
 #new-project--contact-us iframe {
   min-height: 530px;
 }
+
+/* Sunsetted projects */
+.sunsetted-projects-spacer {
+  padding-bottom: 350px;
+}
+
+.sunsetted-projects-wrapper {
+  /* required by the spacer */
+  padding-top: 1px;
+
+  background-color: var(--black);
+  text-align: center;
+}
+
+.sunsetted-projects-illustration {
+  height: 350px;
+  margin-left: -1px;
+  margin-top: -350px;
+  background-image:
+    url('/assets/images/projects/planet-banner.svg'),
+    url('/assets/images/projects/planet-banner-stars.png'),
+    linear-gradient(var(--black), var(--black));
+
+  background-size: auto 540px;
+  background-position: 155vw 52%;
+  clip-path: ellipse(150% 100% at bottom);
+}
+
+@media (min-width: 768px) {
+  .sunsetted-projects-illustration {
+    height: 300px;
+    margin-top: -300px;
+
+    background-size: auto 400px;
+    background-position: center 52%;
+    clip-path: ellipse(100% 100% at bottom);
+  }
+}
+
+@media (min-width: 992px) {
+  .sunsetted-projects-illustration {
+    background-size: cover;
+    background-position: center 52%;
+    clip-path: ellipse(70% 100% at bottom);
+  }
+}
+
+.sunsetted-projects-wrapper .projects-wrapper {
+  margin-top: 0;
+}
+
+.sunsetted-projects-wrapper .projects-wrapper .header {
+  margin: 0;
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+
+.sunsetted-projects-wrapper .projects-wrapper .header h2 {
+  margin: 0;
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: 600;
+}
