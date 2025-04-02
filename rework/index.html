@@ -11,8 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
 
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-
     <title>Créons ensemble non pas votre futur produit, mais votre future startup</title>
 
     <meta name="description" content="Entrepreneurs, designers et développeurs, nous travaillons avec des experts métier de toutes industries pour tansfomer leur filière en y lançant les startups logicielles de demain">
@@ -39,8 +37,14 @@
 
     <!-- Pixel Code for https://app.tinyanalytics.io/ -->
     <script defer src="https://app.tinyanalytics.io/pixel/ECdBwhHtMPsWGATc"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body class="homepage">
+    <div data-controller="hello">
+      <input data-hello-target="name" type="text">
+    </div>
+
     <nav>
       <a href="/">
         <img src="/assets/images/stellaire-studio-logo.svg" width="180" height="29" class="logo" alt="stellaire.studio" loading="lazy">
@@ -109,18 +113,18 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-16 items-start">
-          <div class="space-y-4">
+          <div class="space-y-4" x-data="{ currentProfile: null }">
             <!-- Profile Selection -->
             <div class="space-y-3">
-              <label class="flex items-center gap-4 p-4 rounded-lg border border-orange-500/20 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/40">
-                <input type="radio" name="profile" class="w-5 h-5 accent-orange-500" checked>
+              <label x-on:click="currentProfile = 'product-tech'" class="flex items-center gap-4 p-4 rounded-lg border border-orange-500/20 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/40">
+                <input type="radio" name="profile" class="w-5 h-5 accent-orange-500" >
                 <div class="space-y-2">
                   <p class="font-bold text-white">Je suis plutôt orienté produit & tech</p>
                   <p class="text-white text-sm">Développeur, ingénieur, produit</p>
                 </div>
               </label>
 
-              <label class="flex items-center gap-4 p-4 rounded-lg border border-gray-800 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/20">
+              <label x-on:click="currentProfile = 'vision-market'" class="flex items-center gap-4 p-4 rounded-lg border border-gray-800 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/20">
                 <input type="radio" name="profile" class="w-5 h-5 accent-orange-500">
                 <div class="space-y-2">
                   <p class="font-bold text-white">Je suis plutôt orienté vision & marché</p>
@@ -128,7 +132,7 @@
                 </div>
               </label>
 
-              <label class="flex items-center gap-4 p-4 rounded-lg border border-gray-800 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/20">
+              <label x-on:click="currentProfile = 'execution-operations'" class="flex items-center gap-4 p-4 rounded-lg border border-gray-800 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/20">
                 <input type="radio" name="profile" class="w-5 h-5 accent-orange-500">
                 <div class="space-y-2">
                   <p class="font-bold text-white">Je suis plutôt orienté exécution & opérations</p>
@@ -138,11 +142,11 @@
             </div>
 
             <!-- Profile Details -->
-            <div class="mt-8 p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
+            <div x-show="currentProfile === 'product-tech'" class="mt-8 p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
               <h3 class="text-2xl font-bold text-orange-500 mb-4">🏗️ Produit & tech</h3>
 
               <p class="text-white mb-6 leading-6">
-                Vous savez construire votre produit techniquement, mais avez besoin de renforcer votre stratégie business, marketing et votre go-to-market.
+                Vous savez comment construire votre produit, mais avez besoin de renforcer votre stratégie business, marketing et votre go-to-market.
               </p>
 
               <p class="text-orange-500 mb-2 font-bold">Votre besoin</p>
@@ -158,7 +162,7 @@
                 </li>
               </ul>
             </div>
-            <div class="mt-8 p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
+            <div x-show="currentProfile === 'vision-market'" class="mt-8 p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
               <h3 class="text-2xl font-bold text-orange-500 mb-4">🌟 Vision & marché</h3>
 
               <p class="text-white mb-6 leading-6">
@@ -178,7 +182,7 @@
               </ul>
             </div>
 
-            <div class="mt-8 p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
+            <div x-show="currentProfile === 'execution-operations'" class="mt-8 p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
               <h3 class="text-2xl font-bold text-orange-500 mb-4">🔄 Exécution & opérations</h3>
 
               <p class="text-white mb-6 leading-6">
@@ -332,6 +336,7 @@
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="/assets/js/faq-tooltip.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
       AOS.init({
         disable: 'mobile'
