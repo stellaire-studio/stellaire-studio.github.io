@@ -106,17 +106,17 @@
     <div id="team" class="py-24 px-6 md:px-16 lg:px-24 relative">
       <div class="max-w-7xl mx-auto">
         <div class="mb-16 text-center">
-          <h2 class="text-4xl font-bold mb-6 text-white">L'équipe idéale pour votre startup</h2>
-          <p class="text-xl text-white max-w-4xl mx-auto">
+          <h2 class="text-4xl font-bold mb-6 text-white" data-aos="fade-up" data-aos-delay="100">L'équipe idéale pour votre startup</h2>
+          <p class="text-xl text-white max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
             Nous matchons vos compétences et vos expertises pour créer l'équipe initiale parfaite en fonction de votre profil, et lancer votre startup dans les meilleurs conditions.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-16 items-start">
-          <div class="space-y-4" x-data="{ currentProfile: null }">
+        <div class="grid md:grid-cols-2 gap-16 items-start" x-data="{ currentProfile: null }">
+          <div class="space-y-4">
             <!-- Profile Selection -->
             <div class="space-y-3">
-              <label x-on:click="currentProfile = 'product-tech'" class="flex items-center gap-4 p-4 rounded-lg border border-orange-500/20 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/40">
+              <label x-on:click="currentProfile = 'product-tech'" data-aos="fade-up" data-aos-delay="100" class="flex items-center gap-4 p-4 rounded-lg border border-orange-500/20 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/40">
                 <input type="radio" name="profile" class="w-5 h-5 accent-orange-500" >
                 <div class="space-y-2">
                   <p class="font-bold text-white">Je suis plutôt orienté <span class="text-orange-500">produit & tech</span></p>
@@ -124,7 +124,7 @@
                 </div>
               </label>
 
-              <label x-on:click="currentProfile = 'vision-market'" class="flex items-center gap-4 p-4 rounded-lg border border-gray-800 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/20">
+              <label x-on:click="currentProfile = 'vision-market'" data-aos="fade-up" data-aos-delay="200" class="flex items-center gap-4 p-4 rounded-lg border border-gray-800 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/20">
                 <input type="radio" name="profile" class="w-5 h-5 accent-orange-500">
                 <div class="space-y-2">
                   <p class="font-bold text-white">Je suis plutôt orienté <span class="text-orange-500">vision & marché</span></p>
@@ -132,7 +132,7 @@
                 </div>
               </label>
 
-              <label x-on:click="currentProfile = 'execution-operations'" class="flex items-center gap-4 p-4 rounded-lg border border-gray-800 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/20">
+              <label x-on:click="currentProfile = 'execution-operations'" data-aos="fade-up" data-aos-delay="300" class="flex items-center gap-4 p-4 rounded-lg border border-gray-800 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/20">
                 <input type="radio" name="profile" class="w-5 h-5 accent-orange-500">
                 <div class="space-y-2">
                   <p class="font-bold text-white">Je suis plutôt orienté <span class="text-orange-500">exécution & opérations</span></p>
@@ -143,33 +143,36 @@
 
             <!-- Profile Details -->
             <div x-show="currentProfile === 'product-tech'" class="mt-8 p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
-              <h3 class="text-2xl font-bold text-orange-500 mb-4">🏗️ Produit & tech</h3>
+              <h3 class="text-2xl font-bold mb-4">🏗️ Produit & tech</h3>
 
               <p class="text-white mb-6 leading-6">
                 Vous savez comment construire votre produit, mais avez besoin de renforcer votre stratégie business, marketing et votre go-to-market.
               </p>
 
               <p class="text-orange-500 mb-2 font-bold">Votre besoin</p>
-              <ul class="space-y-4 text-white list-inside list-disc">
-                <li class="flex items-center gap-3">
-                  Un co-fondateur orienté marché & croissance
+              <ul class="space-y-4 text-white">
+                <li class="flex items-baseline! gap-2">
+                  <img src="/assets/images/stellaire-star.svg" alt="" class="w-3 h-3">
+                  Un co-fondateur orienté marché & acquisition
                 </li>
-                <li class="flex items-center gap-3">
-                  Mise en place rapide des canaux d'acquisition (marketing, ventes)
+                <li class="flex items-baseline! gap-2">
+                  <img src="/assets/images/stellaire-star.svg" alt="" class="w-3 h-3">
+                  Mise en place efficace des canaux d'acquisition (marketing & ventes)
                 </li>
-                <li class="flex items-center gap-3">
+                <li class="flex items-baseline! gap-2">
+                  <img src="/assets/images/stellaire-star.svg" alt="" class="w-3 h-3">
                   Validation marché et définition précise de la stratégie produit
                 </li>
               </ul>
             </div>
             <div x-show="currentProfile === 'vision-market'" class="mt-8 p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
-              <h3 class="text-2xl font-bold text-orange-500 mb-4">🌟 Vision & marché</h3>
+              <h3 class="text-2xl font-bold mb-4">🌟 Vision & marché</h3>
 
               <p class="text-white mb-6 leading-6">
                 Votre vision est claire, mais vous cherchez une équipe expérimentée pour concrétiser votre idée en produit opérationnel et valider rapidement son potentiel marché.
               </p>
               <p class="text-orange-500 mb-2 font-bold">Votre besoin</p>
-              <ul class="space-y-4 text-white list-inside list-disc">
+              <ul class="space-y-4 text-white list-inside list-image-[url(/assets/images/stellaire-star.svg)]">
                 <li class="flex items-center gap-3">
                   Un co-fondateur orienté vision & produit
                 </li>
@@ -181,15 +184,14 @@
                 </li>
               </ul>
             </div>
-
             <div x-show="currentProfile === 'execution-operations'" class="mt-8 p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
-              <h3 class="text-2xl font-bold text-orange-500 mb-4">🔄 Exécution & opérations</h3>
+              <h3 class="text-2xl font-bold mb-4">🔄 Exécution & opérations</h3>
 
               <p class="text-white mb-6 leading-6">
                 Vous maîtrisez l'exécution terrain, mais souhaitez structurer efficacement votre produit et affiner votre stratégie pour accélérer durablement votre croissance.
               </p>
               <p class="text-orange-500 mb-2 font-bold">Votre besoin</p>
-              <ul class="space-y-4 text-white list-inside list-disc">
+              <ul class="space-y-4 text-white list-image-[url(/assets/images/stellaire-star.svg)]">
                 <li class="flex items-center gap-3">
                   Un co-fondateur pour vous aider à construire une vision & à construire un produit
                 </li>
@@ -204,11 +206,12 @@
           </div>
 
           <!-- Venn Diagram -->
-          <div class="relative h-[600px] flex items-center justify-center">
+          <div class="relative h-[600px] flex items-center justify-center" data-aos="fade-up" data-aos-delay="600">
             <div class="absolute inset-0 flex items-center justify-center">
               <!-- Product & Tech Circle -->
               <div
-                class="absolute w-[300px] h-[300px] rounded-full transition-all duration-300 bg-[#1E1B2C]/70"
+                class="absolute w-[300px] h-[300px] rounded-full transition-all duration-300"
+                :class="currentProfile === 'product-tech' ? 'bg-orange-500/90' : 'bg-[#1E1B2C]/90'"
                 style="transform: translate(-37%, -37%);"
               >
                 <span class="absolute z-20 top-[20%] left-[20%] text-white font-bold">Produit & Tech</span>
@@ -216,7 +219,8 @@
 
               <!-- Vision & Market Circle -->
               <div
-                class="absolute w-[300px] h-[300px] rounded-full transition-all duration-300 bg-orange-500/70"
+                class="absolute w-[300px] h-[300px] rounded-full transition-all duration-300"
+                :class="currentProfile === 'vision-market' ? 'bg-orange-500/90' : 'bg-[#1E1B2C]/90'"
                 style="transform: translate(37%, -37%);"
               >
                 <span class="absolute z-20 top-[20%] right-[20%] text-white font-bold">Vision & Marché</span>
@@ -224,7 +228,8 @@
 
               <!-- Execution & Operations Circle -->
               <div
-                class="absolute w-[300px] h-[300px] rounded-full transition-all duration-300 bg-[#1E1B2C]/70"
+                class="absolute w-[300px] h-[300px] rounded-full transition-all duration-300"
+                :class="currentProfile === 'execution-operations' ? 'bg-orange-500/90' : 'bg-[#1E1B2C]/90'"
                 style="transform: translateY(30%);"
               >
                 <span class="absolute z-20 bottom-[20%] text-white font-bold text-center w-full">Exécution & Opérations</span>
@@ -232,7 +237,7 @@
 
               <!-- Sweet Spot -->
               <div class="absolute translate-x-[2%] -translate-y-[120%]">
-                <div class="text-orange-500 text-2xl">🔥</div>
+                <div class="text-orange-500 text-2xl">🚀</div>
               </div>
             </div>
           </div>
