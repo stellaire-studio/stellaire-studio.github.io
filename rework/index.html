@@ -50,18 +50,6 @@
         opacity: 0.3;
         cursor: not-allowed;
       }
-
-      .startup-card {
-        flex: 0 0 100%;
-        width: 100%;
-      }
-
-      @media (min-width: 768px) {
-        .startup-card {
-          flex: 0 0 calc(50% - 1rem);
-          width: calc(50% - 1rem);
-        }
-      }
     </style>
 
     <title>Créons ensemble votre future startup</title>
@@ -465,130 +453,125 @@
         </div>
 
         <!-- Startup cards slider -->
-        <div class="startup-cards-slider"
-             x-data="{
-               currentIndex: 0,
-               cardWidth: 0,
-               isMobile: window.innerWidth < 768,
-               totalCards: 0,
-               init() {
-                 this.updateCardWidth();
-                 this.updateTotalCards();
-                 window.addEventListener('resize', () => {
-                   const wasMobile = this.isMobile;
-                   this.isMobile = window.innerWidth < 768;
+        <div class="relative" x-data="{
+          currentIndex: 0,
+          cardWidth: 0,
+          isMobile: window.innerWidth < 768,
+          totalCards: 0,
+          init() {
+            this.updateCardWidth();
+            this.updateTotalCards();
+            window.addEventListener('resize', () => {
+              const wasMobile = this.isMobile;
+              this.isMobile = window.innerWidth < 768;
 
-                   // Reset position if switching between mobile and desktop
-                   if (wasMobile !== this.isMobile) {
-                     this.currentIndex = 0;
-                   }
+              if (wasMobile !== this.isMobile) {
+                this.currentIndex = 0;
+              }
 
-                   this.updateCardWidth();
-                   this.updateTotalCards();
-                   this.slideToIndex(this.currentIndex);
-                 });
-               },
-               updateTotalCards() {
-                 this.totalCards = this.$refs.cardsTrack.querySelectorAll('.startup-card').length;
-               },
-               updateCardWidth() {
-                 const card = this.$refs.cardsTrack.querySelector('.startup-card');
-                 if (card) {
-                   const gap = this.isMobile ? 16 : 32; // 16px gap on mobile, 32px on desktop
-                   this.cardWidth = card.offsetWidth + gap;
-                 }
-               },
-               slideToIndex(index) {
-                 const maxIndex = this.isMobile ? this.totalCards - 1 : this.totalCards - 2;
-                 this.currentIndex = Math.max(0, Math.min(index, maxIndex));
-                 const translateX = -this.currentIndex * this.cardWidth;
-                 this.$refs.cardsTrack.style.transform = `translateX(${translateX}px)`;
-               },
-               next() {
-                 this.slideToIndex(this.currentIndex + 1);
-               },
-               prev() {
-                 this.slideToIndex(this.currentIndex - 1);
-               }
-             }"
-             class="relative">
-
-
-          <div class="overflow-hidden my-0 -mx-1">
-            <div class="flex transition-transform duration-500 ease-in-out gap-4 md:gap-8 py-0 px-4" x-ref="cardsTrack">
+              this.updateCardWidth();
+              this.updateTotalCards();
+              this.slideToIndex(this.currentIndex);
+            });
+          },
+          updateTotalCards() {
+            this.totalCards = this.$refs.cardsTrack.children.length;
+          },
+          updateCardWidth() {
+            const card = this.$refs.cardsTrack.children[0];
+            if (card) {
+              const gap = this.isMobile ? 16 : 32;
+              this.cardWidth = card.offsetWidth + gap;
+            }
+          },
+          slideToIndex(index) {
+            const maxIndex = this.isMobile ? this.totalCards - 1 : this.totalCards - 2;
+            this.currentIndex = Math.max(0, Math.min(index, maxIndex));
+            const translateX = -this.currentIndex * this.cardWidth;
+            this.$refs.cardsTrack.style.transform = `translateX(${translateX}px)`;
+          },
+          next() {
+            this.slideToIndex(this.currentIndex + 1);
+          },
+          prev() {
+            this.slideToIndex(this.currentIndex - 1);
+          }
+        }">
+          <div class="overflow-hidden -mx-4">
+            <div class="flex transition-transform duration-500 ease-in-out gap-4 md:gap-8 px-4" x-ref="cardsTrack">
               <!-- Astreinte Vitale Card -->
-              <div class="startup-card flex-none w-full md:w-[calc(50%-1rem)] rounded-lg p-8" style="background: linear-gradient(255.53deg, #07213B 8.04%, #08225A 89.86%);">
-                <div class="project-info">
-                  <img src="/assets/images/projects/astreinte-vitale-logo.svg" class="project-logo h-[76px] mb-8" alt="Logo de l'application Astreinte Vitale">
+              <div class="flex-none w-full md:w-[calc(50%-1rem)] rounded-lg p-8" style="background: linear-gradient(255.53deg, #07213B 8.04%, #08225A 89.86%);">
+                <div class="space-y-8">
+                  <img src="/assets/images/projects/astreinte-vitale-logo.svg" class="h-[76px]" alt="Logo de l'application Astreinte Vitale">
 
-                  <div class="tags flex flex-wrap gap-2 mb-6">
-                    <span class="tag bg-[#324264] text-white px-3 py-1 rounded-full text-sm">SaaS</span>
-                    <span class="tag bg-[#324264] text-white px-3 py-1 rounded-full text-sm">HealthTech</span>
-                    <span class="tag bg-[#324264] text-white px-3 py-1 rounded-full text-sm">Coordination urgences</span>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="bg-[#324264] text-white px-3 py-1 rounded-full text-sm">SaaS</span>
+                    <span class="bg-[#324264] text-white px-3 py-1 rounded-full text-sm">HealthTech</span>
+                    <span class="bg-[#324264] text-white px-3 py-1 rounded-full text-sm">Coordination urgences</span>
                   </div>
 
-                  <p class="project-description text-white mb-8 leading-6">
+                  <p class="text-white leading-6">
                     Centralise la logistique de toutes les opérations exceptionnelles pour les <strong>services de soins</strong> en milieu hospitalier, afin d'améliorer la qualité de vie du personnel soignant et leur permettre de se concentrer sur leur cœur de métier : sauver des vies.
                   </p>
 
-                  <a href="#" class="inline-block relative py-2 px-4 rounded-sm font-medium astreinte-vitale-cta" style="background: var(--astreinte-vitale-primary) !important; border-color: var(--astreinte-vitale-primary); color: var(--white);">Lire le cas d'étude</a>
+                  <a href="#" class="inline-block py-2 px-4 rounded font-medium text-white hover:text-[var(--astreinte-vitale-primary)] transition-colors duration-300" style="background: var(--astreinte-vitale-primary)">Lire le cas d'étude</a>
                 </div>
               </div>
 
               <!-- Kwali Card -->
-              <div class="startup-card flex-none w-full md:w-[calc(50%-1rem)] rounded-lg p-8" style="background: linear-gradient(103.54deg, #61C763 24.06%, #00C289 86.08%);">
-                <div class="project-info">
-                  <img src="/assets/images/projects/kwali-logo.svg" class="project-logo h-[76px] mb-8" alt="Logo de l'application Kwali">
+              <div class="flex-none w-full md:w-[calc(50%-1rem)] rounded-lg p-8" style="background: linear-gradient(103.54deg, #61C763 24.06%, #00C289 86.08%);">
+                <div class="space-y-8">
+                  <img src="/assets/images/projects/kwali-logo.svg" class="h-[76px]" alt="Logo de l'application Kwali">
 
-                  <div class="tags flex flex-wrap gap-2 mb-6">
-                    <span class="tag bg-[#8ED791] text-[#004C08] px-3 py-1 rounded-full text-sm">SaaS</span>
-                    <span class="tag bg-[#8ED791] text-[#004C08] px-3 py-1 rounded-full text-sm">Automobile</span>
-                    <span class="tag bg-[#8ED791] text-[#004C08] px-3 py-1 rounded-full text-sm">Gestion SAV</span>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="bg-[#8ED791] text-[#004C08] px-3 py-1 rounded-full text-sm">SaaS</span>
+                    <span class="bg-[#8ED791] text-[#004C08] px-3 py-1 rounded-full text-sm">Automobile</span>
+                    <span class="bg-[#8ED791] text-[#004C08] px-3 py-1 rounded-full text-sm">Gestion SAV</span>
                   </div>
 
-                  <p class="project-description text-white mb-8 leading-6">
+                  <p class="text-white leading-6">
                     Le 1er outil de gestion SAV pour les <strong>concessionnaires VdL?</strong> supportant le pilotage opérationnel & stratégique en temps réel d'une activité au coeur de leur métier, pour déployer une qualité de SAV comparable au reste du secteur automobile.
                   </p>
 
-                  <a href="#" class="inline-block relative py-2 px-4 rounded-sm font-medium kwali-cta" style="background: var(--kwali-secondary) !important; border-color: var(--kwali-secondary); color: var(--white);">Lire le cas d'étude</a>
+                  <a href="#" class="inline-block py-2 px-4 rounded font-medium text-white hover:text-[var(--kwali-secondary)] transition-colors duration-300" style="background: var(--kwali-secondary)">Lire le cas d'étude</a>
                 </div>
               </div>
 
               <!-- Duplicate Kwali Card -->
-              <div class="startup-card flex-none w-full md:w-[calc(50%-1rem)] rounded-lg p-8" style="background: linear-gradient(103.54deg, #61C763 24.06%, #00C289 86.08%);">
-                <div class="project-info">
-                  <img src="/assets/images/projects/kwali-logo.svg" class="project-logo h-[76px] mb-8" alt="Logo de l'application Kwali">
+              <div class="flex-none w-full md:w-[calc(50%-1rem)] rounded-lg p-8" style="background: linear-gradient(103.54deg, #61C763 24.06%, #00C289 86.08%);">
+                <div class="space-y-8">
+                  <img src="/assets/images/projects/kwali-logo.svg" class="h-[76px]" alt="Logo de l'application Kwali">
 
-                  <div class="tags flex flex-wrap gap-2 mb-6">
-                    <span class="tag bg-[#8ED791] text-[#004C08] px-3 py-1 rounded-full text-sm">SaaS</span>
-                    <span class="tag bg-[#8ED791] text-[#004C08] px-3 py-1 rounded-full text-sm">Automobile</span>
-                    <span class="tag bg-[#8ED791] text-[#004C08] px-3 py-1 rounded-full text-sm">Gestion SAV</span>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="bg-[#8ED791] text-[#004C08] px-3 py-1 rounded-full text-sm">SaaS</span>
+                    <span class="bg-[#8ED791] text-[#004C08] px-3 py-1 rounded-full text-sm">Automobile</span>
+                    <span class="bg-[#8ED791] text-[#004C08] px-3 py-1 rounded-full text-sm">Gestion SAV</span>
                   </div>
 
-                  <p class="project-description text-white mb-8 leading-6">
+                  <p class="text-white leading-6">
                     Le 1er outil de gestion SAV pour les <strong>concessionnaires VdL?</strong> supportant le pilotage opérationnel & stratégique en temps réel d'une activité au coeur de leur métier, pour déployer une qualité de SAV comparable au reste du secteur automobile.
                   </p>
 
-                  <a href="#" class="inline-block relative py-2 px-4 rounded-sm font-medium kwali-cta" style="background: var(--kwali-secondary) !important; border-color: var(--kwali-secondary); color: var(--white);">Lire le cas d'étude</a>
+                  <a href="#" class="inline-block py-2 px-4 rounded font-medium text-white hover:text-[var(--kwali-secondary)] transition-colors duration-300" style="background: var(--kwali-secondary)">Lire le cas d'étude</a>
                 </div>
               </div>
 
               <!-- Duplicate Astreinte Vitale Card -->
-              <div class="startup-card flex-none w-full md:w-[calc(50%-1rem)] rounded-lg p-8" style="background: linear-gradient(255.53deg, #07213B 8.04%, #08225A 89.86%);">
-                <div class="project-info">
-                  <img src="/assets/images/projects/astreinte-vitale-logo.svg" class="project-logo h-[76px] mb-8" alt="Logo de l'application Astreinte Vitale">
+              <div class="flex-none w-full md:w-[calc(50%-1rem)] rounded-lg p-8" style="background: linear-gradient(255.53deg, #07213B 8.04%, #08225A 89.86%);">
+                <div class="space-y-8">
+                  <img src="/assets/images/projects/astreinte-vitale-logo.svg" class="h-[76px]" alt="Logo de l'application Astreinte Vitale">
 
-                  <div class="tags flex flex-wrap gap-2 mb-6">
-                    <span class="tag bg-[#324264] text-white px-3 py-1 rounded-full text-sm">SaaS</span>
-                    <span class="tag bg-[#324264] text-white px-3 py-1 rounded-full text-sm">HealthTech</span>
-                    <span class="tag bg-[#324264] text-white px-3 py-1 rounded-full text-sm">Coordination urgences</span>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="bg-[#324264] text-white px-3 py-1 rounded-full text-sm">SaaS</span>
+                    <span class="bg-[#324264] text-white px-3 py-1 rounded-full text-sm">HealthTech</span>
+                    <span class="bg-[#324264] text-white px-3 py-1 rounded-full text-sm">Coordination urgences</span>
                   </div>
 
-                  <p class="project-description text-white mb-8 leading-6">
+                  <p class="text-white leading-6">
                     Centralise la logistique de toutes les opérations exceptionnelles pour les <strong>services de soins</strong> en milieu hospitalier, afin d'améliorer la qualité de vie du personnel soignant et leur permettre de se concentrer sur leur cœur de métier : sauver des vies.
                   </p>
 
-                  <a href="#" class="inline-block relative py-2 px-4 rounded-sm font-medium astreinte-vitale-cta" style="background: var(--astreinte-vitale-primary) !important; border-color: var(--astreinte-vitale-primary); color: var(--white);">Lire le cas d'étude</a>
+                  <a href="#" class="inline-block py-2 px-4 rounded font-medium text-white hover:text-[var(--astreinte-vitale-primary)] transition-colors duration-300" style="background: var(--astreinte-vitale-primary)">Lire le cas d'étude</a>
                 </div>
               </div>
             </div>
@@ -597,34 +580,25 @@
           <!-- Navigation controls -->
           <div class="flex justify-center gap-4 mt-8">
             <button
-              class="nav-arrow"
+              class="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 bg-white/10 border border-white/20 text-white hover:bg-white/20 disabled:opacity-30 disabled:cursor-not-allowed"
               @click="prev()"
               :disabled="currentIndex === 0"
               aria-label="Previous slide">
               ←
             </button>
 
-            <!-- Navigation dots for desktop -->
             <div class="hidden md:flex items-center gap-2">
-              <button
-                class="w-3 h-3 rounded-full transition-colors duration-200 cursor-pointer"
-                :class="currentIndex === 0 ? 'bg-orange-500' : 'bg-gray-400'"
-                @click="slideToIndex(0)">
-              </button>
-              <button
-                class="w-3 h-3 rounded-full transition-colors duration-200 cursor-pointer"
-                :class="currentIndex === 1 ? 'bg-orange-500' : 'bg-gray-400'"
-                @click="slideToIndex(1)">
-              </button>
-              <button
-                class="w-3 h-3 rounded-full transition-colors duration-200 cursor-pointer"
-                :class="currentIndex === 2 ? 'bg-orange-500' : 'bg-gray-400'"
-                @click="slideToIndex(2)">
-              </button>
+              <template x-for="(_, index) in [...Array(Math.max(0, totalCards - 1))]" :key="index">
+                <button
+                  class="w-3 h-3 rounded-full transition-colors duration-200 cursor-pointer"
+                  :class="currentIndex === index ? 'bg-orange-500' : 'bg-gray-400'"
+                  @click="slideToIndex(index)">
+                </button>
+              </template>
             </div>
 
             <button
-              class="nav-arrow"
+              class="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 bg-white/10 border border-white/20 text-white hover:bg-white/20 disabled:opacity-30 disabled:cursor-not-allowed"
               @click="next()"
               :disabled="isMobile ? currentIndex >= totalCards - 1 : currentIndex >= totalCards - 2"
               aria-label="Next slide">
