@@ -27,29 +27,6 @@
       .kwali-cta:hover {
         color: var(--kwali-secondary);
       }
-
-      .nav-arrow {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        color: white;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-
-      .nav-arrow:hover:not(:disabled) {
-        background: rgba(255, 255, 255, 0.2);
-      }
-
-      .nav-arrow:disabled {
-        opacity: 0.3;
-        cursor: not-allowed;
-      }
     </style>
 
     <title>Créons ensemble votre future startup</title>
@@ -91,7 +68,7 @@
         <img src="/assets/images/stellaire-studio-logo.svg" width="180" height="29" class="logo" alt="stellaire.studio" loading="lazy">
       </a>
       <div class="nav-links">
-        <a href="/studio/" class="nav-link">modèle</a>
+        <a href="/thesis/" class="nav-link">thèse</a>
         <a href="/team/" class="nav-link hide-mobile">équipage</a>
         <a href="/startups/" class="nav-link">startups</a>
         <a href="/contact/" class="nav-link hide-mobile btn-secondary">contact</a>
@@ -300,7 +277,7 @@
           <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Notre méthodologie</h2>
           <p class="text-xl max-w-4xl mx-auto" data-aos="fade-up" >
             Pour passer de votre idée à une startup qui progresse sans faillir,
-            nous déployons une approche pragmatique qui priorise la validation avant l'investissement.
+            nous déployons une approche pragmatique qui priorise <span class="text-orange-500">la validation avant l'investissement</span>.
           </p>
         </div>
 
@@ -449,7 +426,7 @@
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Nous l'avons déjà fait plusieurs fois</h2>
-          <p class="text-xl max-w-4xl mx-auto" data-aos="fade-up">Et nous allons le refaire avec vous.</p>
+          <p class="text-xl max-w-4xl mx-auto" data-aos="fade-up">Et nous allons le refaire <span class="text-orange-500">avec vous</span>.</p>
         </div>
 
         <!-- Startup cards slider -->
@@ -580,7 +557,7 @@
           <!-- Navigation controls -->
           <div class="flex justify-center gap-4 mt-8">
             <button
-              class="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 bg-white/10 border border-white/20 text-white hover:bg-white/20 disabled:opacity-30 disabled:cursor-not-allowed"
+              class="w-10 h-10 rounded-full flex items-center! justify-center! cursor-pointer transition-all duration-300 bg-white/10 hover:bg-white/20 border border-white/20 text-white disabled:opacity-30 disabled:cursor-not-allowed"
               @click="prev()"
               :disabled="currentIndex === 0"
               aria-label="Previous slide">
@@ -598,7 +575,7 @@
             </div>
 
             <button
-              class="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 bg-white/10 border border-white/20 text-white hover:bg-white/20 disabled:opacity-30 disabled:cursor-not-allowed"
+              class="w-10 h-10 rounded-full flex items-center! justify-center! cursor-pointer transition-all duration-300 bg-white/10 hover:bg-white/20 border border-white/20 text-white disabled:opacity-30 disabled:cursor-not-allowed"
               @click="next()"
               :disabled="isMobile ? currentIndex >= totalCards - 1 : currentIndex >= totalCards - 2"
               aria-label="Next slide">
@@ -613,8 +590,8 @@
 
     <div id="nous-contacter" class="grid grid-cols-1! md:grid-cols-2! gap-8 py-24 px-6 md:px-16 lg:px-24">
       <div class="space-y-4">
-        <h2>Prêt à bâtir votre startup avec la bonne équipe ?</h2>
-        <p>
+        <h2 class="text-4xl font-bold mb-6">Prêt à bâtir votre startup <span class="text-orange-500">avec la bonne équipe</span> ?</h2>
+        <p class="text-xl max-w-4xl mx-auto">
           Prenez rendez-vous pour discuter de votre projet.
         </p>
       </div>
