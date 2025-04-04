@@ -12,15 +12,6 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 
     <style>
-      .project-cta {
-        text-decoration: none;
-        display: inline-block;
-        position: relative;
-        padding: 8px 16px;
-        border-radius: 4px;
-        font-weight: 500;
-      }
-
       .astreinte-vitale-cta {
         color: var(--white);
       }
@@ -34,36 +25,7 @@
       }
 
       .kwali-cta:hover {
-        /* background-color: transparent; */
         color: var(--kwali-secondary);
-      }
-
-      .project-cta:after {
-        background: none repeat scroll 0 0 transparent;
-        bottom: -2px;
-        content: "";
-        display: block;
-        height: 2px;
-        left: 50%;
-        position: absolute;
-        transition: width 0.3s ease 0s, left 0.3s ease 0s;
-        width: 0;
-      }
-
-      .project-cta:hover:after {
-        width: 100%;
-        left: 0;
-      }
-
-      .startup-cards-wrapper {
-        position: relative;
-      }
-
-      .nav-arrows-container {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin-top: 2rem;
       }
 
       .nav-arrow {
@@ -89,24 +51,6 @@
         cursor: not-allowed;
       }
 
-      .startup-cards-container {
-        overflow: hidden;
-        margin: 0 -1rem;
-      }
-
-      .startup-cards-track {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-        gap: 1rem;
-        padding: 0 1rem;
-      }
-
-      @media (min-width: 768px) {
-        .startup-cards-track {
-          gap: 2rem;
-        }
-      }
-
       .startup-card {
         flex: 0 0 100%;
         width: 100%;
@@ -116,16 +60,6 @@
         .startup-card {
           flex: 0 0 calc(50% - 1rem);
           width: calc(50% - 1rem);
-        }
-      }
-
-      @media (max-width: 768px) {
-        .profile-details {
-          margin-top: 1rem;
-        }
-
-        .venn-diagram {
-          display: none;
         }
       }
     </style>
@@ -261,7 +195,7 @@
             </div>
 
             <!-- Profile Details -->
-            <div x-show="currentProfile === 'product-tech'" class="mt-8 p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800 profile-details">
+            <div x-show="currentProfile === 'product-tech'" class="p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
               <h3 class="text-2xl font-bold mb-4">🏗️ Produit & tech</h3>
 
               <p class="text-white mb-6 leading-6">
@@ -284,7 +218,7 @@
                 </li>
               </ul>
             </div>
-            <div x-show="currentProfile === 'vision-market'" class="mt-8 p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800 profile-details">
+            <div x-show="currentProfile === 'vision-market'" class="p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
               <h3 class="text-2xl font-bold mb-4">🌟 Vision & marché</h3>
 
               <p class="text-white mb-6 leading-6">
@@ -303,7 +237,7 @@
                 </li>
               </ul>
             </div>
-            <div x-show="currentProfile === 'execution-operations'" class="mt-8 p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800 profile-details">
+            <div x-show="currentProfile === 'execution-operations'" class="p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
               <h3 class="text-2xl font-bold mb-4">🔄 Exécution & opérations</h3>
 
               <p class="text-white mb-6 leading-6">
@@ -536,8 +470,10 @@
                currentIndex: 0,
                cardWidth: 0,
                isMobile: window.innerWidth < 768,
+               totalCards: 0,
                init() {
                  this.updateCardWidth();
+                 this.updateTotalCards();
                  window.addEventListener('resize', () => {
                    const wasMobile = this.isMobile;
                    this.isMobile = window.innerWidth < 768;
@@ -548,8 +484,12 @@
                    }
 
                    this.updateCardWidth();
+                   this.updateTotalCards();
                    this.slideToIndex(this.currentIndex);
                  });
+               },
+               updateTotalCards() {
+                 this.totalCards = this.$refs.cardsTrack.querySelectorAll('.startup-card').length;
                },
                updateCardWidth() {
                  const card = this.$refs.cardsTrack.querySelector('.startup-card');
@@ -559,8 +499,7 @@
                  }
                },
                slideToIndex(index) {
-                 const totalCards = 4;
-                 const maxIndex = this.isMobile ? totalCards - 1 : totalCards - 2;
+                 const maxIndex = this.isMobile ? this.totalCards - 1 : this.totalCards - 2;
                  this.currentIndex = Math.max(0, Math.min(index, maxIndex));
                  const translateX = -this.currentIndex * this.cardWidth;
                  this.$refs.cardsTrack.style.transform = `translateX(${translateX}px)`;
@@ -574,8 +513,9 @@
              }"
              class="relative">
 
-          <div class="startup-cards-container">
-            <div class="startup-cards-track" x-ref="cardsTrack">
+
+          <div class="overflow-hidden my-0 -mx-1">
+            <div class="flex transition-transform duration-500 ease-in-out gap-4 md:gap-8 py-0 px-4" x-ref="cardsTrack">
               <!-- Astreinte Vitale Card -->
               <div class="startup-card flex-none w-full md:w-[calc(50%-1rem)] rounded-lg p-8" style="background: linear-gradient(255.53deg, #07213B 8.04%, #08225A 89.86%);">
                 <div class="project-info">
@@ -591,7 +531,7 @@
                     Centralise la logistique de toutes les opérations exceptionnelles pour les <strong>services de soins</strong> en milieu hospitalier, afin d'améliorer la qualité de vie du personnel soignant et leur permettre de se concentrer sur leur cœur de métier : sauver des vies.
                   </p>
 
-                  <a href="#" class="project-cta astreinte-vitale-cta" style="background: var(--astreinte-vitale-primary) !important; border-color: var(--astreinte-vitale-primary); color: var(--white);">Lire le cas d'étude</a>
+                  <a href="#" class="inline-block relative py-2 px-4 rounded-sm font-medium astreinte-vitale-cta" style="background: var(--astreinte-vitale-primary) !important; border-color: var(--astreinte-vitale-primary); color: var(--white);">Lire le cas d'étude</a>
                 </div>
               </div>
 
@@ -610,7 +550,7 @@
                     Le 1er outil de gestion SAV pour les <strong>concessionnaires VdL?</strong> supportant le pilotage opérationnel & stratégique en temps réel d'une activité au coeur de leur métier, pour déployer une qualité de SAV comparable au reste du secteur automobile.
                   </p>
 
-                  <a href="#" class="project-cta kwali-cta" style="background: var(--kwali-secondary) !important; border-color: var(--kwali-secondary); color: var(--white);">Lire le cas d'étude</a>
+                  <a href="#" class="inline-block relative py-2 px-4 rounded-sm font-medium kwali-cta" style="background: var(--kwali-secondary) !important; border-color: var(--kwali-secondary); color: var(--white);">Lire le cas d'étude</a>
                 </div>
               </div>
 
@@ -629,7 +569,7 @@
                     Le 1er outil de gestion SAV pour les <strong>concessionnaires VdL?</strong> supportant le pilotage opérationnel & stratégique en temps réel d'une activité au coeur de leur métier, pour déployer une qualité de SAV comparable au reste du secteur automobile.
                   </p>
 
-                  <a href="#" class="project-cta kwali-cta" style="background: var(--kwali-secondary) !important; border-color: var(--kwali-secondary); color: var(--white);">Lire le cas d'étude</a>
+                  <a href="#" class="inline-block relative py-2 px-4 rounded-sm font-medium kwali-cta" style="background: var(--kwali-secondary) !important; border-color: var(--kwali-secondary); color: var(--white);">Lire le cas d'étude</a>
                 </div>
               </div>
 
@@ -648,14 +588,14 @@
                     Centralise la logistique de toutes les opérations exceptionnelles pour les <strong>services de soins</strong> en milieu hospitalier, afin d'améliorer la qualité de vie du personnel soignant et leur permettre de se concentrer sur leur cœur de métier : sauver des vies.
                   </p>
 
-                  <a href="#" class="project-cta astreinte-vitale-cta" style="background: var(--astreinte-vitale-primary) !important; border-color: var(--astreinte-vitale-primary); color: var(--white);">Lire le cas d'étude</a>
+                  <a href="#" class="inline-block relative py-2 px-4 rounded-sm font-medium astreinte-vitale-cta" style="background: var(--astreinte-vitale-primary) !important; border-color: var(--astreinte-vitale-primary); color: var(--white);">Lire le cas d'étude</a>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Navigation controls -->
-          <div class="nav-arrows-container">
+          <div class="flex justify-center gap-4 mt-8">
             <button
               class="nav-arrow"
               @click="prev()"
@@ -667,17 +607,17 @@
             <!-- Navigation dots for desktop -->
             <div class="hidden md:flex items-center gap-2">
               <button
-                class="w-3 h-3 rounded-full transition-colors duration-200"
+                class="w-3 h-3 rounded-full transition-colors duration-200 cursor-pointer"
                 :class="currentIndex === 0 ? 'bg-orange-500' : 'bg-gray-400'"
                 @click="slideToIndex(0)">
               </button>
               <button
-                class="w-3 h-3 rounded-full transition-colors duration-200"
+                class="w-3 h-3 rounded-full transition-colors duration-200 cursor-pointer"
                 :class="currentIndex === 1 ? 'bg-orange-500' : 'bg-gray-400'"
                 @click="slideToIndex(1)">
               </button>
               <button
-                class="w-3 h-3 rounded-full transition-colors duration-200"
+                class="w-3 h-3 rounded-full transition-colors duration-200 cursor-pointer"
                 :class="currentIndex === 2 ? 'bg-orange-500' : 'bg-gray-400'"
                 @click="slideToIndex(2)">
               </button>
@@ -686,7 +626,7 @@
             <button
               class="nav-arrow"
               @click="next()"
-              :disabled="isMobile ? currentIndex >= 3 : currentIndex >= 2"
+              :disabled="isMobile ? currentIndex >= totalCards - 1 : currentIndex >= totalCards - 2"
               aria-label="Next slide">
               →
             </button>
