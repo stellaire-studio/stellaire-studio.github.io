@@ -55,8 +55,11 @@
 
     <!-- Pixel Code for https://app.tinyanalytics.io/ -->
     <script defer src="https://app.tinyanalytics.io/pixel/ECdBwhHtMPsWGATc"></script>
+
+
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@hotwired/stimulus@3.2.2/dist/stimulus.umd.js"></script>
+    <script src="/assets/js/stimulus/rework.js" type="module"></script>
   </head>
   <body class="homepage">
     <svg width="100%" height="100%" class="stars" viewBox="0 0 1920 1152" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1492,19 +1495,19 @@
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2! gap-16 items-start" data-aos="fade-up" data-aos-delay="200" x-data="{ currentProfile: null }">
+        <div class="grid md:grid-cols-2! gap-16 items-start" data-aos="fade-up" data-aos-delay="200" data-controller="profiles">
           <div class="space-y-4">
             <!-- Profile Selection -->
             <div class="space-y-3">
-              <label x-on:click="currentProfile = 'product-tech'" class="flex items-center gap-4 p-4 rounded-lg border border-orange-500/20 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/40">
-                <input type="radio" name="profile" class="w-5 h-5 accent-orange-500" >
+              <label data-action="click->profiles#selectProfile" data-profile-id="product-tech" class="flex items-center gap-4 p-4 rounded-lg border border-orange-500/20 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/40">
+                <input type="radio" name="profile" class="w-5 h-5 accent-orange-500">
                 <div class="space-y-2">
                   <p class="font-bold text-white">Je suis plutôt orienté <span class="text-orange-500">produit & tech</span></p>
                   <p class="text-white text-sm">Développeur, ingénieur, produit</p>
                 </div>
               </label>
 
-              <label x-on:click="currentProfile = 'vision-market'" class="flex items-center gap-4 p-4 rounded-lg border border-gray-800 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/20">
+              <label data-action="click->profiles#selectProfile" data-profile-id="vision-market" class="flex items-center gap-4 p-4 rounded-lg border border-gray-800 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/20">
                 <input type="radio" name="profile" class="w-5 h-5 accent-orange-500">
                 <div class="space-y-2">
                   <p class="font-bold text-white">Je suis plutôt orienté <span class="text-orange-500">vision & marché</span></p>
@@ -1512,7 +1515,7 @@
                 </div>
               </label>
 
-              <label x-on:click="currentProfile = 'execution-operations'" class="flex items-center gap-4 p-4 rounded-lg border border-gray-800 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/20">
+              <label data-action="click->profiles#selectProfile" data-profile-id="execution-operations" class="flex items-center gap-4 p-4 rounded-lg border border-gray-800 bg-[#1E1B2C] cursor-pointer transition duration-200 hover:border-orange-500/20">
                 <input type="radio" name="profile" class="w-5 h-5 accent-orange-500">
                 <div class="space-y-2">
                   <p class="font-bold text-white">Je suis plutôt orienté <span class="text-orange-500">exécution & opérations</span></p>
@@ -1522,7 +1525,7 @@
             </div>
 
             <!-- Profile Details -->
-            <div x-show="currentProfile === 'product-tech'" class="p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
+            <div data-profiles-target="profileCard" data-profile-id="product-tech" class="hidden p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
               <h3 class="text-2xl font-bold mb-4">🏗️ Produit & tech</h3>
 
               <p class="text-white mb-6 leading-6">
@@ -1545,7 +1548,7 @@
                 </li>
               </ul>
             </div>
-            <div x-show="currentProfile === 'vision-market'" class="p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
+            <div data-profiles-target="profileCard" data-profile-id="vision-market" class="hidden p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
               <h3 class="text-2xl font-bold mb-4">🌟 Vision & marché</h3>
 
               <p class="text-white mb-6 leading-6">
@@ -1567,7 +1570,7 @@
                 </li>
               </ul>
             </div>
-            <div x-show="currentProfile === 'execution-operations'" class="p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
+            <div data-profiles-target="profileCard" data-profile-id="execution-operations" class="hidden p-8 bg-[#1E1B2C] rounded-2xl border border-gray-800">
               <h3 class="text-2xl font-bold mb-4">🔄 Exécution & opérations</h3>
 
               <p class="text-white mb-6 leading-6">
@@ -1596,35 +1599,41 @@
             <div class="absolute inset-0 flex items-center justify-center">
               <!-- Product & Tech Circle -->
               <div
-                class="absolute w-[300px] h-[300px] rounded-full transition-all duration-300 flex items-center! justify-center"
-                :class="currentProfile === 'product-tech' ? 'bg-orange-500/70 z-10' : 'bg-[#1E1B2C]/90'"
+                data-profiles-target="profileDiagramCircle" data-profile-id="product-tech"
+                class="absolute w-[300px] h-[300px] rounded-full transition-all duration-300 flex items-center! justify-center bg-[#1E1B2C]/90"
+                data-selected-class="bg-orange-500/70 z-10"
+                data-base-class="bg-[#1E1B2C]/90"
                 style="transform: translate(-37%, -37%);"
               >
                 <span class="absolute z-20 top-[20%] left-[30%] text-white font-bold uppercase tracking-wide text-sm">Produit & Tech</span>
-                <span :class="currentProfile === 'product-tech' ? 'inline-block' : 'hidden'" class="hidden text-white font-bold">Founder</span>
-                <span :class="currentProfile && currentProfile !== 'product-tech' ? 'inline-block' : 'hidden'" class="hidden text-white font-bold">stellaire.studio</span>
+                <span data-label-founder   data-label-hidden-class="hidden" class="hidden text-white font-bold">Founder</span>
+                <span data-label-stellaire data-label-hidden-class="hidden" class="hidden text-white font-bold">stellaire.studio</span>
               </div>
 
               <!-- Vision & Market Circle -->
               <div
-                class="absolute w-[300px] h-[300px] rounded-full transition-all duration-300 flex items-center! justify-center"
-                :class="currentProfile === 'vision-market' ? 'bg-orange-500/70 z-10' : 'bg-[#1E1B2C]/90'"
+                data-profiles-target="profileDiagramCircle" data-profile-id="vision-market"
+                class="absolute w-[300px] h-[300px] rounded-full transition-all duration-300 flex items-center! justify-center bg-[#1E1B2C]/90"
+                data-selected-class="bg-orange-500/70 z-10"
+                data-base-class="bg-[#1E1B2C]/90"
                 style="transform: translate(37%, -37%);"
               >
                 <span class="absolute z-20 top-[20%] right-[25%] text-white font-bold uppercase tracking-wide text-sm">Vision & Marché</span>
-                <span :class="currentProfile === 'vision-market' ? 'inline-block' : 'hidden'" class="hidden text-white font-bold">Founder</span>
-                <span :class="currentProfile && currentProfile !== 'vision-market' ? 'inline-block' : 'hidden'" class="hidden text-white font-bold">stellaire.studio</span>
+                <span data-label-founder   data-label-hidden-class="hidden" class="hidden text-white font-bold">Founder</span>
+                <span data-label-stellaire data-label-hidden-class="hidden" class="hidden text-white font-bold">stellaire.studio</span>
               </div>
 
               <!-- Execution & Operations Circle -->
               <div
-                class="absolute w-[300px] h-[300px] rounded-full transition-all duration-300 flex items-center! justify-center"
-                :class="currentProfile === 'execution-operations' ? 'bg-orange-500/70 z-10' : 'bg-[#1E1B2C]/90'"
+                data-profiles-target="profileDiagramCircle" data-profile-id="execution-operations"
+                class="absolute w-[300px] h-[300px] rounded-full transition-all duration-300 flex items-center! justify-center bg-[#1E1B2C]/90"
+                data-selected-class="bg-orange-500/70 z-10"
+                data-base-class="bg-[#1E1B2C]/90"
                 style="transform: translateY(30%);"
               >
                 <span class="absolute z-20 bottom-[20%] text-white font-bold text-center w-full uppercase tracking-wide text-sm">Exécution & Ops</span>
-                <span :class="currentProfile === 'execution-operations' ? 'inline-block' : 'hidden'" class="hidden text-white font-bold">Founder</span>
-                <span :class="currentProfile && currentProfile !== 'execution-operations' ? 'inline-block' : 'hidden'" class="hidden text-white font-bold">stellaire.studio</span>
+                <span data-label-founder   data-label-hidden-class="hidden" class="hidden text-white font-bold">Founder</span>
+                <span data-label-stellaire data-label-hidden-class="hidden" class="hidden text-white font-bold">stellaire.studio</span>
               </div>
 
               <!-- Sweet Spot -->
@@ -1836,58 +1845,15 @@
       <div class="max-w-7xl mx-auto">
         <div class="text-left md:text-center mb-8 md:mb-16">
           <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Nous l'avons déjà fait plusieurs fois</h2>
-          <p class="text-xl max-w-4xl mx-auto" data-aos="fade-up">Et nous voulons le refaire <span class="text-orange-500">avec vous</span>.</p>
+          <p class="text-xl max-w-4xl mx-auto" data-aos="fade-up">Et nous voulons le refaire <span class="text-orange-500 font-bold">avec vous</span>.</p>
         </div>
 
         <!-- Startup cards slider -->
-        <div class="relative" data-aos="fade-up" x-data="{
-          currentIndex: 0,
-          cardWidth: 0,
-          isMobile: window.innerWidth < 768,
-          totalCards: 0,
-          init() {
-            this.updateCardWidth();
-            this.updateTotalCards();
-            window.addEventListener('resize', () => {
-              const wasMobile = this.isMobile;
-              this.isMobile = window.innerWidth < 768;
+        <div class="relative" data-aos="fade-up">
+          <div class="overflow-x-scroll -mx-4">
+            <div class="flex gap-4 px-4">
 
-              if (wasMobile !== this.isMobile) {
-                this.currentIndex = 0;
-              }
-
-              this.updateCardWidth();
-              this.updateTotalCards();
-              this.slideToIndex(this.currentIndex);
-            });
-          },
-          updateTotalCards() {
-            this.totalCards = this.$refs.cardsTrack.children.length;
-          },
-          updateCardWidth() {
-            const card = this.$refs.cardsTrack.children[0];
-            if (card) {
-              const gap = this.isMobile ? 16 : 32;
-              this.cardWidth = card.offsetWidth + gap;
-            }
-          },
-          slideToIndex(index) {
-            const maxIndex = this.isMobile ? this.totalCards - 1 : this.totalCards - 2;
-            this.currentIndex = Math.max(0, Math.min(index, maxIndex));
-            const translateX = -this.currentIndex * this.cardWidth;
-            this.$refs.cardsTrack.style.transform = `translateX(${translateX}px)`;
-          },
-          next() {
-            this.slideToIndex(this.currentIndex + 1);
-          },
-          prev() {
-            this.slideToIndex(this.currentIndex - 1);
-          }
-        }">
-          <div class="overflow-hidden -mx-4">
-            <div class="flex transition-transform duration-500 ease-in-out gap-4 md:gap-8 px-4" x-ref="cardsTrack">
-
-              <div class="flex-none w-full md:w-[calc(50%-1rem)] rounded-lg p-4 md:p-8" style="background: linear-gradient(255.53deg, #07213B 8.04%, #08225A 89.86%);">
+              <div class="flex-none w-[calc(99%-1rem)] md:w-[calc(48%-1rem)] rounded-lg p-4" style="background: linear-gradient(255.53deg, #07213B 8.04%, #08225A 89.86%);">
                 <div class="space-y-8">
                   <img src="/assets/images/projects/astreinte-vitale-logo.svg" class="h-[76px] w-auto" alt="Logo de la startup Astreinte Vitale">
 
@@ -1905,7 +1871,7 @@
                 </div>
               </div>
 
-              <div class="flex-none w-full md:w-[calc(50%-1rem)] rounded-lg p-4 md:p-8" style="background: linear-gradient(255.53deg, #0C1431 8.04%, #031121 89.86%);">
+              <div class="flex-none w-[calc(99%-1rem)] md:w-[calc(48%-1rem)] rounded-lg p-4" style="background: linear-gradient(255.53deg, #0C1431 8.04%, #031121 89.86%);">
                 <div class="space-y-8">
                   <img src="/assets/images/projects/akanema-logo.jpg" class="h-[76px] w-auto" alt="Logo de la startup Akenema">
 
@@ -1921,7 +1887,7 @@
                 </div>
               </div>
 
-              <div class="flex-none w-full md:w-[calc(50%-1rem)] rounded-lg p-4 md:p-8" style="background: linear-gradient(103.54deg, #61C763 24.06%, #00C289 86.08%);">
+              <div class="flex-none w-[calc(99%-1rem)] md:w-[calc(48%-1rem)] rounded-lg p-4" style="background: linear-gradient(103.54deg, #61C763 24.06%, #00C289 86.08%);">
                 <div class="space-y-8">
                   <img src="/assets/images/projects/kwali-logo.svg" class="h-[76px] w-auto" alt="Logo de la startup Kwali">
 
@@ -1944,7 +1910,7 @@
                 </div>
               </div>
 
-              <div class="flex-none w-full md:w-[calc(50%-1rem)] rounded-lg p-4 md:p-8" style="background: linear-gradient(103.54deg, #16120D 24.06%, #16120D 86.08%);">
+              <div class="flex-none w-[calc(99%-1rem)] md:w-[calc(48%-1rem)] rounded-lg p-4" style="background: linear-gradient(103.54deg, #16120D 24.06%, #16120D 86.08%);">
                 <div class="space-y-8">
                   <img src="/assets/images/projects/pmg-estate-logo.jpg" class="h-[76px] w-auto" alt="Logo de la startup PMG Estate">
 
@@ -1960,35 +1926,6 @@
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Navigation controls -->
-          <div class="flex justify-center gap-4 mt-8">
-            <button
-              class="w-10 h-10 rounded-full flex items-center! justify-center! cursor-pointer transition-all duration-300 bg-white/10 hover:bg-white/20 border border-white/20 text-white disabled:opacity-30 disabled:cursor-not-allowed"
-              @click="prev()"
-              :disabled="currentIndex === 0"
-              aria-label="Previous slide">
-              ←
-            </button>
-
-            <div class="hidden md:flex items-center gap-2">
-              <template x-for="(_, index) in [...Array(Math.max(0, totalCards - 1))]" :key="index">
-                <button
-                  class="w-3 h-3 rounded-full transition-colors duration-200 cursor-pointer"
-                  :class="currentIndex === index ? 'bg-orange-500' : 'bg-gray-400'"
-                  @click="slideToIndex(index)">
-                </button>
-              </template>
-            </div>
-
-            <button
-              class="w-10 h-10 rounded-full flex items-center! justify-center! cursor-pointer transition-all duration-300 bg-white/10 hover:bg-white/20 border border-white/20 text-white disabled:opacity-30 disabled:cursor-not-allowed"
-              @click="next()"
-              :disabled="isMobile ? currentIndex >= totalCards - 1 : currentIndex >= totalCards - 2"
-              aria-label="Next slide">
-              →
-            </button>
           </div>
         </div>
       </div>
