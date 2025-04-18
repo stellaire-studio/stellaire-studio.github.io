@@ -49,26 +49,6 @@ lottie-player {
   align-items: center;
 }
 
-#astronaut-animation-svg {
-  width: 100%;
-
-  transform: scale(1.1);
-  margin-top: 1rem;
-}
-
-@media (min-width: 768px) {
-  #astronaut-animation-svg {
-    transform: scale(1.2);
-    margin-top: 6rem;
-  }
-}
-
-@media (min-width: 992px) {
-  #astronaut-animation-svg {
-    margin-top: 6.5rem;
-  }
-}
-
 #astronaut {
   transform: rotate(21deg) scale(0.7);
 
@@ -91,13 +71,6 @@ lottie-player {
     /* background-color: blueviolet; */
     transform: rotate(21deg) scale(1.15);
   }
-}
-
-
-
-#astronaut-gradients {
-  position: absolute;
-  width: 100%;
 }
 
 #stellar-sparkle {

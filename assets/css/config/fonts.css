@@ -49,19 +49,9 @@ strong, section b {
   font-weight: 700;
 }
 
-.overtitre {
-  font-family: 'Epilogue';
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: var(--primary-color);
-}
-
 .emphaze {
   color: var(--orange);
 }
-
 
 .header p {
   font-size: 1.15em;

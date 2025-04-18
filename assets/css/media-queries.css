@@ -80,10 +80,6 @@
     width: 140px !important;
   }
 
-  .hero-gradient {
-    height: 10vh !important;
-  }
-
   .keypoints h2 {
     width: 100%;
     margin-bottom: 15px;
@@ -157,24 +153,11 @@
     top: 15%;
   }
 
-  #astronaut-animation-svg {
-    width: 100vw;
-    height: 500px;
-
-    /* remove section's padding-left: take all screen width space */
-    margin-left: calc(var(--large-spacing) * -1);
-  }
-
   #astronaut {
     max-height: 100%;
   }
 
   #after-hero .content {
     width: 100%;
-  }
-
-  #manifesto-planet-animation {
-    position: initial;
-    height: 100% !important;
   }
 }
