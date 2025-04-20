@@ -53,10 +53,6 @@
   .planet {
     filter: blur(150px);
   }
-  .planets {
-    right: -50px;
-    top: 140px;
-  }
   .planet-blue {
     width: 80vw;
     height: 80vw;
@@ -80,40 +76,6 @@
     width: 140px !important;
   }
 
-  .keypoints h2 {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .keypoints h2, .keypoints .subtitle {
-    text-align: left;
-  }
-
-  .keypoints ol {
-    width: 90vw;
-  }
-
-  .keypoints .planet-green {
-    filter: blur(50px);
-    width: 30vw;
-    height: 60vw;
-    top: 5%;
-  }
-
-  #bullets-points .illustration {
-    position: initial;
-    margin-right: -24px;
-  }
-
-  #bullets-points .illustration img {
-    width: 100vw;
-    position:initial;
-  }
-
-  #bullets-points .content {
-    width: calc(100% - var(--large-spacing));
-  }
-
   #nous-contacter .planet-gradient {
     width: 80vw;
     top: 10%;
@@ -126,38 +88,7 @@
     padding: 0 !important;
   }
 
-  /* ANIMATION */
-  .animation-wrapper {
-    overflow: hidden;
-    min-height: auto;
-  }
-
-  #home-astronaut-animation-wrapper {
-    order: -1;
-    height: 320px;
-  }
-
-  #home-astronaut-animation-wrapper .planet-blue {
-    display: none;
-  }
-
-  #home-astronaut-animation-wrapper img {
-    width: 100%;
-    object-fit: contain;
-    height: 100%;
-  }
-
-  #after-hero .planet-gradient {
-    width: 250px;
-    height: 210px;
-    top: 15%;
-  }
-
   #astronaut {
     max-height: 100%;
-  }
-
-  #after-hero .content {
-    width: 100%;
   }
 }

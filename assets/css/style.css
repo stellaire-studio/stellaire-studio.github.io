@@ -81,31 +81,3 @@ ul > li  {
 .hero h1 {
   margin-bottom: 0;
 }
-
-#after-hero, #nous-contacter {
-  width: 100vw;
-  margin-left: 0;
-  padding-left: var(--large-spacing);
-  padding-right: var(--large-spacing);
-}
-
-ol.custom-counter {
-  counter-reset: list-counter;
-}
-
-ol.custom-counter li {
-  position: relative;
-  list-style: none;
-  counter-increment: list-counter;
-}
-
-ol.custom-counter li::before {
-  content: counter(list-counter) ". ";
-  font-weight: bold;
-  position: absolute;
-  left: -2em; /* Adjust as needed */
-}
-
-ol.custom-counter li.counter-primary::before {
-  color: var(--orange);
-}
