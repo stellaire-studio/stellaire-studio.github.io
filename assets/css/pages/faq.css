@@ -143,10 +143,6 @@ body {
   top: initial;
 }
 
-iframe {
-  height: 530px;
-}
-
 @media (max-width:768px){
   .planet-gradient {
     opacity:1;

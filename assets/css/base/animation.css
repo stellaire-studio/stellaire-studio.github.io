@@ -20,23 +20,6 @@ lottie-player {
   z-index: -1;
 }
 
-.animation-wrapper {
-  position: relative;
-  min-height: 500px;
-}
-
-@media (min-width: 768px) {
-  .animation-wrapper {
-    min-height: 580px;
-  }
-}
-
-@media (min-width: 992px) {
-  .animation-wrapper {
-    min-height: 100%;
-  }
-}
-
 .animation-image-wrapper {
   position: absolute;
   top: 0;
@@ -47,26 +30,6 @@ lottie-player {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-#astronaut-animation-svg {
-  width: 100%;
-
-  transform: scale(1.1);
-  margin-top: 1rem;
-}
-
-@media (min-width: 768px) {
-  #astronaut-animation-svg {
-    transform: scale(1.2);
-    margin-top: 6rem;
-  }
-}
-
-@media (min-width: 992px) {
-  #astronaut-animation-svg {
-    margin-top: 6.5rem;
-  }
 }
 
 #astronaut {
@@ -91,13 +54,6 @@ lottie-player {
     /* background-color: blueviolet; */
     transform: rotate(21deg) scale(1.15);
   }
-}
-
-
-
-#astronaut-gradients {
-  position: absolute;
-  width: 100%;
 }
 
 #stellar-sparkle {
